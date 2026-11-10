@@ -12,6 +12,10 @@ Dieses Repository ist die **maßgebliche Datenquelle** für die öffentliche, sc
 4. Die bereits vorhandenen Datensätze, IDs, Quoten und Einsatzwerte unverändert lassen, soweit keine konkrete Korrektur beauftragt wurde.
 5. `journal-data.json` per GitHub-Commit aktualisieren, danach den neuen Stand und GitHub-Pages-Deployment prüfen. Die Versionsnummer bleibt bei reinen Wett- und Ergebnisupdates gleich.
 
+## Verbindlicher Analyse-Standard
+
+Der **vollständige, aktuelle Master-Prompt** für NBA-/EuroLeague-Player-Prop-Analysen ist in [ANALYSE_STANDARD.md](ANALYSE_STANDARD.md) dokumentiert. **Diese Datei hat für neue Analysen Vorrang vor den verkürzten Hinweisen unten.** Insbesondere: keine Tipps ohne bestätigte Quote, exakte L5/L10/L20-Game-Logs, relevante historische On/Off-Vergleiche, vorsichtige EV-Schätzung, maximal zwei Picks pro Matchup, und keine Pflicht zu wetten.
+
 ## Verbindliche Regeln für künftige Picks (ab 10.11.2026)
 
 - **Pro NBA-/EuroLeague-Spiel maximal ZWEI platzierte Tipps insgesamt**. Das Limit gilt für alle Spieler und Marktarten zusammen (auch Punkte, Assists, Rebounds, Dreier, Blocks, Steals und Kombimärkte). Nicht drei Tipps aus demselben Matchup empfehlen oder spielen lassen.
