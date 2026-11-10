@@ -593,7 +593,24 @@
       "actual": null,
       "tipoffCET": "2026-11-11T03:00",
       "note": "Nutzerbestätigter PaperLab-Tipp am 10.11.2026: Over 21,5 Punkte + Assists @ 1,84 bei Betsider. Standard-Paper-Einsatz 100 €. Ergebnis ausstehend."
+    },
+    {
+      "id": 31,
+      "date": "2026-11-10",
+      "sport": "NBA",
+      "player": "Damian Lillard",
+      "matchup": "OKC @ POR",
+      "market": "Punkte",
+      "operator": "Over",
+      "line": 19.5,
+      "book": "Cryptorino",
+      "odds": 1.98,
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "tipoffCET": "2026-11-11T05:00",
+      "note": "Vom Nutzer am 10.11.2026 als gespielt bestätigt: Over 19,5 Punkte @ 1,98 bei Cryptorino. Standard-PaperLab-Stake 100 €. Einsatz und Quote nicht verändern. Ergebnis offen. Risikohinweis: Oklahoma City ist ein anspruchsvolles defensives Matchup; letzte Partie nur 20 Minuten und 12 Punkte. Eine positive EV-Bewertung für diese konkrete Quote ist nicht nachgewiesen."
     }
   ],
-  "publicUpdatedAt": "2026-11-10T09:28:14.026Z"
+  "publicUpdatedAt": "2026-11-10T09:35:47.677Z"
 }
