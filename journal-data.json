@@ -542,7 +542,58 @@
       "reb": 2,
       "ast": 3,
       "blk": 0
+    },
+    {
+      "id": 28,
+      "date": "2026-11-10",
+      "sport": "NBA",
+      "player": "Franz Wagner",
+      "matchup": "ORL @ SAC",
+      "market": "Assists",
+      "operator": "Over",
+      "line": 8.5,
+      "book": "Cryptorino",
+      "odds": 1.98,
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "tipoffCET": "2026-11-11T04:00",
+      "note": "Nutzerbestätigter PaperLab-Tipp am 10.11.2026: Over 8,5 Assists @ 1,98 bei Cryptorino. Standard-Paper-Einsatz 100 €. Ergebnis ausstehend."
+    },
+    {
+      "id": 29,
+      "date": "2026-11-10",
+      "sport": "NBA",
+      "player": "Myles Turner",
+      "matchup": "MIL @ NYK",
+      "market": "Blocks",
+      "operator": "Over",
+      "line": 1.5,
+      "book": "Cryptorino",
+      "odds": 2.1,
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "tipoffCET": "2026-11-11T01:30",
+      "note": "Nutzerbestätigter PaperLab-Tipp am 10.11.2026: Over 1,5 Blocks @ 2,10 bei Cryptorino. Standard-Paper-Einsatz 100 €. Ergebnis ausstehend."
+    },
+    {
+      "id": 30,
+      "date": "2026-11-10",
+      "sport": "NBA",
+      "player": "Davion Mitchell",
+      "matchup": "MIA @ UTA",
+      "market": "Punkte + Assists",
+      "operator": "Over",
+      "line": 21.5,
+      "book": "Betsider",
+      "odds": 1.84,
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "tipoffCET": "2026-11-11T03:00",
+      "note": "Nutzerbestätigter PaperLab-Tipp am 10.11.2026: Over 21,5 Punkte + Assists @ 1,84 bei Betsider. Standard-Paper-Einsatz 100 €. Ergebnis ausstehend."
     }
   ],
-  "publicUpdatedAt": "2026-11-10T08:46:00.713Z"
+  "publicUpdatedAt": "2026-11-10T09:28:14.026Z"
 }
