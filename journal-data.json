@@ -695,7 +695,24 @@
       "actual": null,
       "tipoffCET": "2026-11-12T02:00",
       "note": "Vom Nutzer am 11.11.2026 als gespielt bestätigt: Matas Buzelis 5+ Rebounds (entspricht Over 4,5) bei Betsider @ 1,73. Standard-PaperLab-Einsatz von 100 € simuliert; tatsächlicher Echtgeld-Einsatz wurde nicht angegeben. Break-even 57,80 %. Besserer Preis als zuvor bei Cryptorino 1,62; vorherige Auswahl war wegen unklarem EV / Minuten- und Blowout-Risiko als Skip eingestuft. Historisch genannte L5 4/5, L10 8/10, L20 17/20 sind deskriptiv und keine belastbare Prognose. Trotz Nutzerbestätigung keine nachträgliche +EV-Freigabe; Ergebnis offen."
+    },
+    {
+      "id": 36,
+      "date": "2026-11-11",
+      "sport": "NBA",
+      "player": "Trey Murphy III",
+      "matchup": "BKN @ NOP",
+      "market": "Assists",
+      "operator": "Over",
+      "line": 2.5,
+      "book": "Bankonbet",
+      "odds": 1.63,
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "tipoffCET": "2026-11-12T02:00",
+      "note": "Vom Nutzer am 11.11.2026 als gespielt bestätigt: Over 2,5 Assists (mindestens 3) @ 1,63 bei Bankonbet, 100 € PaperLab-Einsatz. Break-even 61,35 %; möglicher Paper-Nettogewinn +63 €. Aus Vorabanalyse: L5 5/5, L10 9/10, L20 15/20 (auch Vorsaison), Vorsaison 48/66; 32,8 Min im Schnitt. Preis aus Bankonbet-CSV/Value-CSV. Knieproblem/Probable-Status und mögliche Minutenabweichung beachten. Trotz hoher historischer Trefferquote kein gesicherter positiver EV bei dem Marktvergleich; auf ausdrückliche Nutzerbestätigung als PaperLab-Tipp erfasst."
     }
   ],
-  "publicUpdatedAt": "2026-11-11T10:40:57.304Z"
+  "publicUpdatedAt": "2026-11-11T13:45:50.032Z"
 }
