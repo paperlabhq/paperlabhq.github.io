@@ -555,10 +555,13 @@
       "book": "Cryptorino",
       "odds": 1.98,
       "stake": 100,
-      "status": "open",
-      "actual": null,
+      "status": "loss",
+      "actual": 7,
       "tipoffCET": "2026-11-11T04:00",
-      "note": "Nutzerbestätigter PaperLab-Tipp am 10.11.2026: Over 8,5 Assists @ 1,98 bei Cryptorino. Standard-Paper-Einsatz 100 €. Ergebnis ausstehend."
+      "note": "VERLOREN: Franz Wagner lieferte 7 Assists bei Over 8,5 (mindestens 9 benötigt), obwohl er 33 Punkte, 7 Rebounds und 7 Assists in ca. 38 Minuten gegen Sacramento erzielte; Orlando gewann 107:100. Der erwartete Assist-Output hielt trotz hoher Minuten nicht; volatile Rollen-/Ballverteilungsannahmen und vorherige sehr hohe Assist-Spiele kritisch prüfen. Cryptorino @ 1,98, Paper-Stake 100 €: −100,00 €. Quellen: CBS Sports Franz Wagner 2026-27 Game Log (10.11.2026); CBS ORL @ SAC Boxscore.",
+      "pts": 33,
+      "reb": 7,
+      "ast": 7
     },
     {
       "id": 29,
@@ -572,10 +575,14 @@
       "book": "Cryptorino",
       "odds": 2.1,
       "stake": 100,
-      "status": "open",
-      "actual": null,
+      "status": "loss",
+      "actual": 1,
       "tipoffCET": "2026-11-11T01:30",
-      "note": "Nutzerbestätigter PaperLab-Tipp am 10.11.2026: Over 1,5 Blocks @ 2,10 bei Cryptorino. Standard-Paper-Einsatz 100 €. Ergebnis ausstehend."
+      "note": "VERLOREN: Myles Turner erzielte 1 Block in 26:47 Minuten gegen New York (Over 1,5 hätte mindestens 2 benötigt); dazu 3 Punkte, 3 Rebounds und 2 Assists. Milwaukee verlor deutlich 85:117, mit potenziell ungünstiger Spielzeit-/Rotation- und Blowout-Dynamik. Block-Props bleiben zugelassen, aber Minuten, gegnerische Ringversuche und Varianz künftig stärker gewichten. Cryptorino @ 2,10, Paper-Stake 100 €: −100,00 €. Quellen: FantasyData MIL @ NYK Boxscore (10.11.2026); StatMuse Myles Turner Game Log.",
+      "pts": 3,
+      "reb": 3,
+      "ast": 2,
+      "blk": 1
     },
     {
       "id": 30,
@@ -589,10 +596,15 @@
       "book": "Betsider",
       "odds": 1.84,
       "stake": 100,
-      "status": "open",
-      "actual": null,
+      "status": "win",
+      "actual": 27,
       "tipoffCET": "2026-11-11T03:00",
-      "note": "Nutzerbestätigter PaperLab-Tipp am 10.11.2026: Over 21,5 Punkte + Assists @ 1,84 bei Betsider. Standard-Paper-Einsatz 100 €. Ergebnis ausstehend."
+      "note": "GEWONNEN: Davion Mitchell erreichte 19 Punkte + 8 Assists = 27 P+A bei Over 21,5 gegen Utah. 37 Minuten, 5/13 FG, 3/7 Dreier, 6/8 Freiwürfe; Miami gewann 115:109. Trotz Quote 1,84 ist dies ein einzelner realisierter Treffer und kein Nachweis positiver Erwartung. Betsider @ 1,84, Paper-Stake 100 €: +84,00 €. Quellen: CBS MIA @ UTA Boxscore (10.11.2026); statz.ai Boxscore.",
+      "pts": 19,
+      "reb": 5,
+      "ast": 8,
+      "stl": 2,
+      "blk": 0
     },
     {
       "id": 31,
@@ -606,11 +618,16 @@
       "book": "Cryptorino",
       "odds": 1.98,
       "stake": 100,
-      "status": "open",
-      "actual": null,
+      "status": "win",
+      "actual": 25,
       "tipoffCET": "2026-11-11T05:00",
-      "note": "Vom Nutzer am 10.11.2026 als gespielt bestätigt: Over 19,5 Punkte @ 1,98 bei Cryptorino. Standard-PaperLab-Stake 100 €. Einsatz und Quote nicht verändern. Ergebnis offen. Risikohinweis: Oklahoma City ist ein anspruchsvolles defensives Matchup; letzte Partie nur 20 Minuten und 12 Punkte. Eine positive EV-Bewertung für diese konkrete Quote ist nicht nachgewiesen."
+      "note": "GEWONNEN: Damian Lillard erzielte 25 Punkte gegen Oklahoma City und traf Over 19,5. In 23 Minuten 8/15 FG, 4/10 Dreier und 5/5 Freiwürfe; Portland gewann deutlich 123:103. Das schwierige Matchup und potenzielle reduzierte Minuten waren reale Risiken; Erfolg allein belegt keinen +EV. Cryptorino @ 1,98, Paper-Stake 100 €: +98,00 €. Quellen: CBS OKC @ POR Boxscore (10.11.2026); Basket USA Boxscore.",
+      "pts": 25,
+      "reb": 3,
+      "ast": 3,
+      "stl": 1,
+      "blk": 0
     }
   ],
-  "publicUpdatedAt": "2026-11-10T09:35:47.677Z"
+  "publicUpdatedAt": "2026-11-11T09:25:47.020Z"
 }
