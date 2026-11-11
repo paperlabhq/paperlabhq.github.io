@@ -627,7 +627,24 @@
       "ast": 3,
       "stl": 1,
       "blk": 0
+    },
+    {
+      "id": 32,
+      "date": "2026-11-11",
+      "sport": "NBA",
+      "player": "De'Anthony Melton",
+      "matchup": "GSW @ HOU",
+      "market": "Rebounds",
+      "operator": "Over",
+      "line": 3.5,
+      "book": "Cryptorino",
+      "odds": 2.2,
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "tipoffCET": "2026-11-12T03:30",
+      "note": "Vom Nutzer am 11.11.2026 ausdrücklich als bereits gespielt bestätigt: Over 3,5 Rebounds (mindestens 4) @ 2,20 bei Cryptorino. Standard-PaperLab-Einsatz 100 € bei 2.000 € Anfangsbankroll; reale Anbieterquote wurde vom Nutzer gemeldet, nicht unabhängig im Buchmacher-Konto geprüft. Stand vor Spiel: L5 4/5, L10 8/10, L20 13/20 (L20 = 11 Spiele der Saison 2026/27 plus 9 Regular-Season-Spiele 2025/26); Ø L10 4,5 REB, Median 5, Ø L10 22,3 Minuten, bisherige Saison 8/11 bei 4,3 REB im Schnitt. Break-even 45,45 %. Gary Payton II (Knie) und Brandon Williams (Hamstring) fehlen; quantifizierbarer On/Off-Vorteil für Meltons Rebounds nicht belegt. Houston laut Positionsmatchup nicht besonders reboundfreundlich für Guards. Edge nicht als unabhängig robust +EV bestätigt; kleine Samples, volatile Minuten (17–28 jüngst) und Gegner berücksichtigen. Quellen zur Vorabprüfung: CBS Sports Melton Game Log 2026/27; CBS Melton 2025/26 Game Log; offizielle GSW-Update Brandon Williams 10.11.2026; NBA-/CBS-Injury Reports; BetSharp/Statz Prop-Seiten. Nur als Paper-Bet notiert; Ergebnis offen."
     }
   ],
-  "publicUpdatedAt": "2026-11-11T09:25:47.020Z"
+  "publicUpdatedAt": "2026-11-11T10:16:42.251Z"
 }
