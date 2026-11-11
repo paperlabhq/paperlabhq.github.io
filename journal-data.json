@@ -661,7 +661,41 @@
       "actual": null,
       "tipoffCET": "2026-11-12T02:00",
       "note": "Vom Nutzer am 11.11.2026 ausdrücklich zusätzlich als gespielt bestätigt: Zion Williamson 21+ Punkte (= Over 20,5) @ 1,88 bei Cryptorino. 100 € Standard-Paper-Stake für Journalzwecke angenommen; tatsächlicher Echtgeld-Einsatz nicht bestätigt. Exakte Umrechnung: 21+ Punkte sind NICHT Over 19,5, sondern Over 20,5. Vorab L5 3/5, L10 7/10 und L20 11/20 für Over 19,5 aus der ursprünglichen Kandidatenprüfung; diese Trefferquoten NICHT auf die höhere tatsächliche Linie 20,5 übertragen. Vorab Ø L10 ca. 21 PTS, also geringerer Sicherheitsabstand zur tatsächlichen Line. Break-even @ 1,88 = 53,19 %. In der vorherigen finalen Analyse bei diesem Preis und dieser Line als SKIP/kein belastbar bestätigtes +EV eingestuft. Auf ausdrücklichen Wunsch des Nutzers trotzdem als Paper-Wette eingetragen; kein neues Empfehlungsurteil oder Gewinnversprechen. Ergebnis offen."
+    },
+    {
+      "id": 34,
+      "date": "2026-11-11",
+      "sport": "NBA",
+      "player": "Luka Dončić",
+      "matchup": "LAL @ MIL",
+      "market": "Dreier",
+      "operator": "Over",
+      "line": 4.5,
+      "book": "Betsider",
+      "odds": 1.92,
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "tipoffCET": "2026-11-12T02:00",
+      "note": "Vom Nutzer am 11.11.2026 als gespielt bestätigt: Luka Dončić 5+ erfolgreiche Dreier (entspricht Over 4,5) bei Betsider @ 1,92. Standard-PaperLab-Einsatz von 100 € simuliert; tatsächlicher Echtgeld-Einsatz wurde nicht angegeben. Break-even 52,08 %. Vorab-Kandidat mit hoher jüngster 3PM-Produktion (8/10 zuletzt, 12/20 langfristiger); Quoten- und Ausführbarkeitsprüfung stammt aus der Nutzerbestätigung, nicht aus unabhängigem Zugriff auf Betsider. Volatile 3er-Trefferquote, mögliche B2B-/Rotationseinflüsse und Spielverlauf beachten. Keine unabhängig belastbare EV-Freigabe; Ergebnis offen."
+    },
+    {
+      "id": 35,
+      "date": "2026-11-11",
+      "sport": "NBA",
+      "player": "Matas Buzelis",
+      "matchup": "SAS @ CHI",
+      "market": "Rebounds",
+      "operator": "Over",
+      "line": 4.5,
+      "book": "Betsider",
+      "odds": 1.73,
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "tipoffCET": "2026-11-12T02:00",
+      "note": "Vom Nutzer am 11.11.2026 als gespielt bestätigt: Matas Buzelis 5+ Rebounds (entspricht Over 4,5) bei Betsider @ 1,73. Standard-PaperLab-Einsatz von 100 € simuliert; tatsächlicher Echtgeld-Einsatz wurde nicht angegeben. Break-even 57,80 %. Besserer Preis als zuvor bei Cryptorino 1,62; vorherige Auswahl war wegen unklarem EV / Minuten- und Blowout-Risiko als Skip eingestuft. Historisch genannte L5 4/5, L10 8/10, L20 17/20 sind deskriptiv und keine belastbare Prognose. Trotz Nutzerbestätigung keine nachträgliche +EV-Freigabe; Ergebnis offen."
     }
   ],
-  "publicUpdatedAt": "2026-11-11T10:22:12.802Z"
+  "publicUpdatedAt": "2026-11-11T10:40:57.304Z"
 }
