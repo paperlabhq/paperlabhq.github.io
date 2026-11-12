@@ -238,7 +238,8 @@ body {background:#050506}
 .ticket:hover {background:#1b1b20}
 .ticket-detail {background:#17171c;border-color:#34343c}
 .ticket-detail .smalltext {color:#b7b7c5}
-.ticket-status.void {background:#292b31;color:#aab4c2}
+.ticket-status.void {background:#162739;color:#a9d3ff}
+.ticket-stat .void-amount{color:#a9d3ff}
 .list-head {border-color:#2f2f37}
 .notice {background:#10271d;border-color:#285e46;color:#c2f8dc}
 .barbg {background:#26262c}
@@ -647,7 +648,7 @@ body {background:#050506}
 #kpis .metric{
  border:1px solid transparent;
  background:linear-gradient(155deg,#191b20,#111216 75%) padding-box,
-  linear-gradient(140deg,#40d8a96b,#292a33 34%,#292a33 66%,#a28aff73) border-box;
+  linear-gradient(135deg,#56e4b6bf,#395b59 38%,#493d66 65%,#ae91f8bd) border-box;
  box-shadow:inset 0 1px #ffffff09,0 10px 24px #0003;
 }
 #kpis .metric::before{content:none}
@@ -658,9 +659,9 @@ body {background:#050506}
  background:conic-gradient(#58e8bb var(--hit),#ffffff12 0)}
 .kpi-hit-ring::after{content:"";width:22px;height:22px;border-radius:50%;background:#15171c}
 #view-dashboard .ticket-player-photo{display:inline-grid;place-items:center;position:relative;flex:none;
- padding:2px;border-radius:50%;color:var(--pick-accent);
- background:conic-gradient(from 210deg,currentColor,#20252c 62%,currentColor)}
-#view-dashboard .ticket-player-photo .player-avatar{display:block;border:2px solid #14161a}
+ padding:2px;border:2px solid var(--pick-accent);border-radius:50%;background:#14161a;
+ box-shadow:0 0 8px color-mix(in srgb,var(--pick-accent) 29%,transparent)}
+#view-dashboard .ticket-player-photo .player-avatar{display:block;border:0}
 .ticket-player-team{position:absolute;right:-5px;bottom:-3px;width:22px;height:22px;
  border-radius:50%;background:#171b23;border:2px solid #272b33;object-fit:contain;padding:1px}
 .pick-result.win{--pick-accent:#59e5b6}.pick-result.loss{--pick-accent:#df8496}
@@ -682,7 +683,7 @@ body {background:#050506}
 #view-dashboard .ticket-book-chip .bookie-logo-pill.compact-badge img{height:14px!important;width:auto!important;max-width:28px!important}
 #view-dashboard .ticket-book-chip .bookie-logo-pill.compact-badge:has(.bookie-fallback:only-child),
 #view-dashboard .ticket-book-chip .bookie-fallback{display:none!important}
-.pick-meter{grid-column:1/-1;min-width:0;padding:0 2px 2px}
+.pick-meter{min-width:0;margin-top:10px;padding:0 2px 2px}
 .pick-meter-track{height:5px;display:block;position:relative;border-radius:9px;background:#ffffff12}
 .pick-meter-value{display:block;width:var(--actual);height:100%;border-radius:inherit;
  background:linear-gradient(90deg,#ffffff16,var(--pick-accent))}
@@ -705,7 +706,7 @@ body {background:#050506}
  box-shadow:none;color:#79ebc8}
 .nav button.active::before{content:"";position:absolute;top:20%;bottom:20%;left:0;width:3px;
  border-radius:4px;background:#4be7b5;box-shadow:0 0 10px #4be7b5b3}
-@media(max-width:730px){#view-dashboard .pick-meter{grid-row:3;margin-top:5px}.day-pick-pips{gap:3px}.day-pick-pip{width:7px;height:7px}}
+@media(max-width:730px){.day-pick-pips{gap:3px}.day-pick-pip{width:7px;height:7px}}
 @media(max-width:420px){.kpi-spark{flex-basis:35px;width:23%;min-width:15px}.kpi-hit-ring{width:23px;height:23px}.kpi-hit-ring::after{width:17px;height:17px}}
 @media(prefers-reduced-motion:reduce){.chart-end-pulse{animation:none;opacity:0}}
 
@@ -725,7 +726,7 @@ body {background:#050506}
 </aside>
 <main class="main">
  <header class="topbar"><div><div class="eyebrow"><span data-i18n="Spielerwetten">Player props</span></div><h1 class="journal-title"><span class="journal-title-text" data-i18n="NBA × EuroLeague Wettjournal">NBA × EuroLeague Journal</span><span class="journal-leagues" aria-hidden="true"><img src="./assets/league-nba.svg" alt="" width="576" height="339"> <span class="journal-league-divider">×</span> <img class="title-euro-logo" src="./assets/league-euroleague.svg" alt="" width="254" height="58"></span></h1><p><span data-i18n="Spielerwetten, Ergebnisse und Analysen">Player props, results and analysis</span></p></div>
- <div class="toolbar"><span class="tag green" style="padding:10px 12px"><span data-i18n="🔒 Öffentliche Leseansicht">🔒 Public · read-only</span></span><span class="tag blue" id="syncStatus" aria-live="polite">Loading data</span><!-- Flag graphics: Twemoji by Twitter and contributors, via https://github.com/jdecked/twemoji. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/ -->
+ <div class="toolbar"><span class="tag green" style="padding:10px 12px"><span data-i18n="🔒 Öffentliche Leseansicht">🔒 Public · read-only</span></span><span class="tag blue" id="syncStatus" data-site-updated-at="2026-11-12T23:25:21Z" aria-live="polite">Loading data</span><!-- Flag graphics: Twemoji by Twitter and contributors, via https://github.com/jdecked/twemoji. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/ -->
  <details class="language-picker" id="journalLanguage"><summary class="field" id="journalLanguageToggle"><span class="language-label" data-i18n="Sprache">Language</span><img id="journalLanguageFlag" src="./flags/gb.svg" alt="" width="21" height="21"><span id="journalLanguageName" lang="en">English</span><svg class="language-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 4 4 4 4-4"/></svg></summary><ul class="language-options"><li><button type="button" data-language="en" lang="en" aria-pressed="true"><img src="./flags/gb.svg" alt="" width="21" height="21"><span>English</span></button></li><li><button type="button" data-language="ru" lang="ru" aria-pressed="false"><img src="./flags/ru.svg" alt="" width="21" height="21"><span>Русский</span></button></li><li><button type="button" data-language="de" lang="de" aria-pressed="false"><img src="./flags/de.svg" alt="" width="21" height="21"><span>Deutsch</span></button></li><li><button type="button" data-language="es" lang="es" aria-pressed="false"><img src="./flags/es.svg" alt="" width="21" height="21"><span>Español</span></button></li></ul></details></div></header>
  <section id="view-dashboard" class="view">
   <details class="journal-guide surface"><summary><span data-i18n="So liest du das Journal">How to read the journal</span></summary><dl><div><dt><span data-i18n="Tipps und Einsätze">Picks and stakes</span></dt><dd><span data-i18n="Ein Tipp erfasst einen Markt und eine Quote. Der angezeigte Einsatz ist die Grundlage der Gewinn- und Verlustrechnung. Bei Void wird der Einsatz vollständig zurückgerechnet.">Each pick records a market and odds. The listed stake is used to calculate profit or loss. A void returns the full stake to the balance.</span></dd></div><div><dt>ROI</dt><dd><span data-i18n="Der ROI teilt den Nettogewinn durch die Einsätze gewonnener und verlorener Tipps.">ROI is net profit divided by stakes on wins and losses.</span></dd></div><div><dt><span data-i18n="Markt">Market</span></dt><dd><span data-i18n="P+R+A steht für Punkte, Rebounds und Assists zusammen.">P+R+A means points, rebounds and assists combined.</span></dd></div><div><dt><span data-i18n="Kalendermarkierungen">Calendar badges</span></dt><dd><span id="guideCalendar"></span></dd></div></dl></details>
@@ -1123,7 +1124,7 @@ function ticketPlayerPhoto(b){
 function ticketResultMeter(b){
  if((b.status!=='win'&&b.status!=='loss')||!Number.isFinite(b.actual)||!Number.isFinite(b.line))return '';
  const line=b.operator==='4+'?4:b.line;
- const scale=Math.max(b.actual,line)*1.12||1;
+ const scale=Math.max(line*1.6,b.actual*1.08,1);
  const format=value=>num(value,Number.isInteger(value)?0:1);
  const lineText=format(line)+(b.operator==='4+'?'+':'');
  const actualText=(b.actualMin?tr('mind.')+' ':'')+format(b.actual);
@@ -1140,7 +1141,8 @@ function ticketHtml(b,mobileList=false){let v=profit(b),gain=payout(b),isOpen=b.
  const status=`<span class="ticket-status ${b.status}">${statusLabel(b)}</span>`;
  const freeBadge=freePickBadge(b);
  const meter=mobileList?'':ticketResultMeter(b);
- return `<div class="ticket pick-result ${b.status}${freeBadge?' ticket-free':''}" data-ticket="${b.id}" tabindex="0" role="button" aria-label="${esc(tr("Details zu {0} öffnen", b.player))}"${mobileList?` aria-expanded="${openDetail===b.id}"`:''}><div class="ticket-main">${mobileList?`<div class="ticket-head-badges">${sportBadge(b.sport)}${bookBadge(b.book)}${freeBadge}${status}</div>`:''}<div class="playerline">${mobileList?avatarHtml(b,'player-avatar'):ticketPlayerPhoto(b)}<div style="min-width:0"><div class="ticket-name"><div><strong class="ellipsis">${esc(b.player)}</strong>${mobileList?'':sportBadge(b.sport)+freeBadge}<span class="market-inline">${esc(marketText(b))}</span></div></div><div class="ticket-sub${mobileList?'':' ticket-match-meta'}"><span>${mobileList?dateStr(b.date)+' · ':''}${matchupWithTime(b)}${!meter&&b.actual!==null&&b.actual!==undefined?' · '+tr('Ist')+': '+(b.actualMin?tr('mind.')+' ':'')+esc(num(b.actual,Number.isInteger(b.actual)?0:1)):''}</span>${!mobileList&&b.book?`<span class="ticket-book-chip">${bookBadge(b.book,true)}${esc(brandName(b.book))}</span>`:''}</div></div></div></div><div class="ticket-stat mono"><strong>${num(b.odds,2)}</strong><small>${tr("Quote")}</small></div><div class="ticket-stat mono"><strong>${euro(b.stake)}</strong><small>${tr("Einsatz")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'muted':'good'}">${isOpen?'—':euro(gain)}</strong><small>${tr("Auszahlung")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'amber':v<0?'bad':'good'}">${res}</strong><small>${tr("Profit")}</small></div>${mobileList?'':status+meter}</div>${openDetail===b.id?`<div class="ticket-detail"><div class="smalltext">${analysisText(b)}</div><div><h4>${tr("Wettdetails")}</h4><div class="smalltext">${tr("Markt")}: ${esc(marketText(b))}<br>${tr("Quote")}: ${num(b.odds,2)} · ${tr("Einsatz")}: ${euro(b.stake)}<br>${isOpen?tr('Mögliche Auszahlung')+': '+euro(round(b.stake*b.odds)):tr('Abgerechnet')+': '+statusLabel(b)}</div></div></div>`:''}`}
+ const isVoid=b.status==='void';
+ return `<div class="ticket pick-result ${b.status}${freeBadge?' ticket-free':''}" data-ticket="${b.id}" tabindex="0" role="button" aria-label="${esc(tr("Details zu {0} öffnen", b.player))}"${mobileList?` aria-expanded="${openDetail===b.id}"`:''}><div class="ticket-main">${mobileList?`<div class="ticket-head-badges">${sportBadge(b.sport)}${bookBadge(b.book)}${freeBadge}${status}</div>`:''}<div class="playerline">${mobileList?avatarHtml(b,'player-avatar'):ticketPlayerPhoto(b)}<div style="min-width:0"><div class="ticket-name"><div><strong class="ellipsis">${esc(b.player)}</strong>${mobileList?'':sportBadge(b.sport)+freeBadge}<span class="market-inline">${esc(marketText(b))}</span></div></div><div class="ticket-sub${mobileList?'':' ticket-match-meta'}"><span>${mobileList?dateStr(b.date)+' · ':''}${matchupWithTime(b)}${!meter&&b.actual!==null&&b.actual!==undefined?' · '+tr('Ist')+': '+(b.actualMin?tr('mind.')+' ':'')+esc(num(b.actual,Number.isInteger(b.actual)?0:1)):''}</span>${!mobileList&&b.book?`<span class="ticket-book-chip">${bookBadge(b.book,true)}${esc(brandName(b.book))}</span>`:''}</div>${meter}</div></div></div><div class="ticket-stat mono"><strong>${num(b.odds,2)}</strong><small>${tr("Quote")}</small></div><div class="ticket-stat mono"><strong>${euro(b.stake)}</strong><small>${tr("Einsatz")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'muted':isVoid?'void-amount':'good'}">${isOpen?'—':euro(gain)}</strong><small>${tr("Auszahlung")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'amber':isVoid?'void-amount':v<0?'bad':'good'}">${res}</strong><small>${tr("Profit")}</small></div>${mobileList?'':status}</div>${openDetail===b.id?`<div class="ticket-detail"><div class="smalltext">${analysisText(b)}</div><div><h4>${tr("Wettdetails")}</h4><div class="smalltext">${tr("Markt")}: ${esc(marketText(b))}<br>${tr("Quote")}: ${num(b.odds,2)} · ${tr("Einsatz")}: ${euro(b.stake)}<br>${isOpen?tr('Mögliche Auszahlung')+': '+euro(round(b.stake*b.odds)):tr('Abgerechnet')+': '+statusLabel(b)}</div></div></div>`:''}`}
 function vipLockedPicks(count) {
  const label=count===1?tr('1 VIP-Tipp auf Telegram freischalten'):tr('{0} VIP-Tipps auf Telegram freischalten',count);
  const ghost=`<div class="vip-ghost" aria-hidden="true">
@@ -1496,7 +1498,9 @@ function renderSyncStatus() {
   status.textContent = tr('⚠ Offline-Vorschau (eingebetteter Stand)');
   return;
  }
- const published = data.publicUpdatedAt && new Date(data.publicUpdatedAt).toLocaleString(LOCALES[language], {
+ const siteUpdated = Date.parse(status.dataset.siteUpdatedAt);
+ const journalUpdated = Date.parse(data.publicUpdatedAt);
+ const published = new Date(Math.max(siteUpdated,Number.isFinite(journalUpdated)?journalUpdated:siteUpdated)).toLocaleString(LOCALES[language], {
   timeZone:'Europe/Berlin', day:'numeric', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit', hour12:false
  });
  const day = journalDates().at(-1);
