@@ -480,9 +480,11 @@ body {background:#050506}
 @media(max-width:730px){.topbar>.toolbar{position:relative;width:100%}.language-picker{position:static}}
 .topbar .journal-title{display:flex;align-items:center;flex-wrap:wrap;column-gap:clamp(8px,1vw,14px);row-gap:4px}
 .journal-title-text{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
-.journal-leagues{display:inline-flex;align-items:center;gap:clamp(7px,1vw,12px)}
-.journal-leagues img{display:block;flex:none;width:auto;height:clamp(24px,2.4vw,30px)}
-.journal-leagues .title-euro-logo{height:clamp(21px,2.1vw,26px)}
+.journal-leagues{display:inline-flex;align-items:center;flex-wrap:wrap;gap:clamp(8px,1.1vw,14px)}
+.journal-league{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;
+ font-size:clamp(20px,2.2vw,28px);font-weight:800;line-height:1.1;letter-spacing:-.035em;color:#f0f0f5}
+.journal-league-mark{display:inline-grid;place-items:center;flex:none;width:clamp(24px,2.4vw,32px);aspect-ratio:1}
+.journal-league-mark svg{display:block;width:100%;height:100%;overflow:hidden}
 .journal-league-divider{color:var(--muted);font-size:.74em;font-weight:500}
 .journal-guide{margin-bottom:12px;padding:9px 12px}
 .journal-guide summary{cursor:pointer;font-size:12px;font-weight:700}
@@ -665,11 +667,23 @@ body {background:#050506}
  border-radius:50%;background:#171b23;border:2px solid #272b33;object-fit:contain;padding:1px}
 .pick-result.win{--pick-accent:#59e5b6}.pick-result.loss{--pick-accent:#df8496}
 .pick-result.void{--pick-accent:#87b7f0}.pick-result.open{--pick-accent:#edc47f}
-#view-dashboard .ticket .bookie-logo-pill.compact-badge{width:auto!important;min-width:31px!important;
- max-width:52px!important;height:28px!important;min-height:28px!important;max-height:28px!important;
- flex:0 0 auto!important;padding:3px 5px!important;background:#ffffff08!important;
- border:1px solid #ffffff16!important;border-radius:7px!important}
-#view-dashboard .ticket .bookie-logo-pill.compact-badge img{height:20px!important;width:auto!important;max-width:39px!important}
+#view-dashboard .ticket .playerline{align-items:flex-start}
+#view-dashboard .ticket-name>div{display:flex;align-items:center;gap:3px 7px;flex-wrap:wrap}
+#view-dashboard .ticket-name .market-inline{flex-basis:100%}
+#view-dashboard .ticket-name .sport-logo-pill.compact-badge{width:18px!important;min-width:18px!important;
+ max-width:18px!important;height:18px!important;min-height:18px!important;max-height:18px!important;
+ flex:0 0 18px!important;padding:0!important}
+#view-dashboard .ticket-name .sport-logo-pill.compact-badge img{width:auto!important;height:16px!important;
+ max-width:16px!important;max-height:16px!important}
+#view-dashboard .ticket-match-meta{display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px}
+#view-dashboard .ticket-book-chip{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;
+ padding:2px 6px;color:#dce0e8;background:#ffffff08;border:1px solid #ffffff16;border-radius:7px;font-size:10px;font-weight:700}
+#view-dashboard .ticket-book-chip .bookie-logo-pill.compact-badge{width:auto!important;min-width:14px!important;
+ max-width:29px!important;height:15px!important;min-height:15px!important;max-height:15px!important;
+ flex:0 0 auto!important;padding:0!important;background:transparent!important;border:0!important;border-radius:3px!important}
+#view-dashboard .ticket-book-chip .bookie-logo-pill.compact-badge img{height:14px!important;width:auto!important;max-width:28px!important}
+#view-dashboard .ticket-book-chip .bookie-logo-pill.compact-badge:has(.bookie-fallback:only-child),
+#view-dashboard .ticket-book-chip .bookie-fallback{display:none!important}
 .pick-meter{grid-column:1/-1;min-width:0;padding:0 2px 2px}
 .pick-meter-track{height:5px;display:block;position:relative;border-radius:9px;background:#ffffff12}
 .pick-meter-value{display:block;width:var(--actual);height:100%;border-radius:inherit;
@@ -712,7 +726,11 @@ body {background:#050506}
  <div class="sidebar-bottom"><span class="pill-online"><span class="pulse"></span> <span data-i18n="WETTJOURNAL">BETTING JOURNAL</span></span><div class="aside-text" style="font-size:11px;color:#8297b1;margin-top:9px"><span data-i18n="Ergebnisse nach Liga, Markt und Anbieter.">Results by league, market and bookmaker.</span></div></div>
 </aside>
 <main class="main">
- <header class="topbar"><div><div class="eyebrow"><span data-i18n="Spielerwetten">Player props</span></div><h1 class="journal-title"><span class="journal-title-text" data-i18n="NBA × EuroLeague Wettjournal">NBA × EuroLeague Journal</span><span class="journal-leagues" aria-hidden="true"><img src="./assets/league-nba.svg" alt="" width="576" height="339"> <span class="journal-league-divider">×</span> <img class="title-euro-logo" src="./assets/league-euroleague.svg" alt="" width="254" height="58"></span></h1><p><span data-i18n="Spielerwetten, Ergebnisse und Analysen">Player props, results and analysis</span></p></div>
+ <header class="topbar"><div><div class="eyebrow"><span data-i18n="Spielerwetten">Player props</span></div><h1 class="journal-title"><span class="journal-title-text" data-i18n="NBA × EuroLeague Wettjournal">NBA × EuroLeague Journal</span><span class="journal-leagues" aria-hidden="true">
+  <span class="journal-league"><span class="journal-league-mark"><svg viewBox="0 0 150 339.2" width="150" height="339.2" focusable="false"><image href="./assets/league-nba.svg" width="576" height="339.2"/></svg></span>NBA</span>
+  <span class="journal-league-divider">×</span>
+  <span class="journal-league"><span class="journal-league-mark"><svg viewBox="0 0 58 57.91" width="58" height="57.91" focusable="false"><image href="./assets/league-euroleague.svg" width="254" height="57.91"/></svg></span>EuroLeague</span>
+ </span></h1><p><span data-i18n="Spielerwetten, Ergebnisse und Analysen">Player props, results and analysis</span></p></div>
  <div class="toolbar"><span class="tag green" style="padding:10px 12px"><span data-i18n="🔒 Öffentliche Leseansicht">🔒 Public · read-only</span></span><span class="tag blue" id="syncStatus" aria-live="polite">Loading data</span><!-- Flag graphics: Twemoji by Twitter and contributors, via https://github.com/jdecked/twemoji. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/ -->
  <details class="language-picker" id="journalLanguage"><summary class="field" id="journalLanguageToggle"><span class="language-label" data-i18n="Sprache">Language</span><img id="journalLanguageFlag" src="./flags/gb.svg" alt="" width="21" height="21"><span id="journalLanguageName" lang="en">English</span><svg class="language-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 4 4 4 4-4"/></svg></summary><ul class="language-options"><li><button type="button" data-language="en" lang="en" aria-pressed="true"><img src="./flags/gb.svg" alt="" width="21" height="21"><span>English</span></button></li><li><button type="button" data-language="ru" lang="ru" aria-pressed="false"><img src="./flags/ru.svg" alt="" width="21" height="21"><span>Русский</span></button></li><li><button type="button" data-language="de" lang="de" aria-pressed="false"><img src="./flags/de.svg" alt="" width="21" height="21"><span>Deutsch</span></button></li><li><button type="button" data-language="es" lang="es" aria-pressed="false"><img src="./flags/es.svg" alt="" width="21" height="21"><span>Español</span></button></li></ul></details></div></header>
  <section id="view-dashboard" class="view">
@@ -1128,7 +1146,7 @@ function ticketHtml(b,mobileList=false){let v=profit(b),gain=payout(b),isOpen=b.
  const status=`<span class="ticket-status ${b.status}">${statusLabel(b)}</span>`;
  const freeBadge=freePickBadge(b);
  const meter=mobileList?'':ticketResultMeter(b);
- return `<div class="ticket pick-result ${b.status}${freeBadge?' ticket-free':''}" data-ticket="${b.id}" tabindex="0" role="button" aria-label="${esc(tr("Details zu {0} öffnen", b.player))}"${mobileList?` aria-expanded="${openDetail===b.id}"`:''}><div class="ticket-main"><div class="ticket-head-badges">${sportBadge(b.sport)}${bookBadge(b.book)}${freeBadge}${mobileList?status:''}</div><div class="playerline">${mobileList?avatarHtml(b,'player-avatar'):ticketPlayerPhoto(b)}<div style="min-width:0"><div class="ticket-name"><div><strong class="ellipsis">${esc(b.player)}</strong><span class="market-inline">${esc(marketText(b))}</span></div></div><div class="ticket-sub">${mobileList?dateStr(b.date)+' · ':''}${matchupWithTime(b)}${!meter&&b.actual!==null&&b.actual!==undefined?' · '+tr('Ist')+': '+(b.actualMin?tr('mind.')+' ':'')+esc(num(b.actual,Number.isInteger(b.actual)?0:1)):''}</div></div></div></div><div class="ticket-stat mono"><strong>${num(b.odds,2)}</strong><small>${tr("Quote")}</small></div><div class="ticket-stat mono"><strong>${euro(b.stake)}</strong><small>${tr("Einsatz")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'muted':'good'}">${isOpen?'—':euro(gain)}</strong><small>${tr("Auszahlung")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'amber':v<0?'bad':'good'}">${res}</strong><small>${tr("Profit")}</small></div>${mobileList?'':status+meter}</div>${openDetail===b.id?`<div class="ticket-detail"><div class="smalltext">${analysisText(b)}</div><div><h4>${tr("Wettdetails")}</h4><div class="smalltext">${tr("Markt")}: ${esc(marketText(b))}<br>${tr("Quote")}: ${num(b.odds,2)} · ${tr("Einsatz")}: ${euro(b.stake)}<br>${isOpen?tr('Mögliche Auszahlung')+': '+euro(round(b.stake*b.odds)):tr('Abgerechnet')+': '+statusLabel(b)}</div></div></div>`:''}`}
+ return `<div class="ticket pick-result ${b.status}${freeBadge?' ticket-free':''}" data-ticket="${b.id}" tabindex="0" role="button" aria-label="${esc(tr("Details zu {0} öffnen", b.player))}"${mobileList?` aria-expanded="${openDetail===b.id}"`:''}><div class="ticket-main">${mobileList?`<div class="ticket-head-badges">${sportBadge(b.sport)}${bookBadge(b.book)}${freeBadge}${status}</div>`:''}<div class="playerline">${mobileList?avatarHtml(b,'player-avatar'):ticketPlayerPhoto(b)}<div style="min-width:0"><div class="ticket-name"><div><strong class="ellipsis">${esc(b.player)}</strong>${mobileList?'':sportBadge(b.sport)+freeBadge}<span class="market-inline">${esc(marketText(b))}</span></div></div><div class="ticket-sub${mobileList?'':' ticket-match-meta'}"><span>${mobileList?dateStr(b.date)+' · ':''}${matchupWithTime(b)}${!meter&&b.actual!==null&&b.actual!==undefined?' · '+tr('Ist')+': '+(b.actualMin?tr('mind.')+' ':'')+esc(num(b.actual,Number.isInteger(b.actual)?0:1)):''}</span>${!mobileList&&b.book?`<span class="ticket-book-chip">${bookBadge(b.book,true)}${esc(brandName(b.book))}</span>`:''}</div></div></div></div><div class="ticket-stat mono"><strong>${num(b.odds,2)}</strong><small>${tr("Quote")}</small></div><div class="ticket-stat mono"><strong>${euro(b.stake)}</strong><small>${tr("Einsatz")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'muted':'good'}">${isOpen?'—':euro(gain)}</strong><small>${tr("Auszahlung")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'amber':v<0?'bad':'good'}">${res}</strong><small>${tr("Profit")}</small></div>${mobileList?'':status+meter}</div>${openDetail===b.id?`<div class="ticket-detail"><div class="smalltext">${analysisText(b)}</div><div><h4>${tr("Wettdetails")}</h4><div class="smalltext">${tr("Markt")}: ${esc(marketText(b))}<br>${tr("Quote")}: ${num(b.odds,2)} · ${tr("Einsatz")}: ${euro(b.stake)}<br>${isOpen?tr('Mögliche Auszahlung')+': '+euro(round(b.stake*b.odds)):tr('Abgerechnet')+': '+statusLabel(b)}</div></div></div>`:''}`}
 function vipLockedPicks(count) {
  const label=count===1?tr('1 VIP-Tipp auf Telegram freischalten'):tr('{0} VIP-Tipps auf Telegram freischalten',count);
  const ghost=`<div class="vip-ghost" aria-hidden="true">
