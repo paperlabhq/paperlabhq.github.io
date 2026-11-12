@@ -2,6 +2,9 @@
 // Key analysis translations by source text so edited entries never show a stale translation.
 const paperLabLocales = {
   ui: {
+    "Linie": ["Line","Линия","Línea"],
+    "{0} über dem Ziel": ["{0} above target","на {0} выше цели","{0} por encima del objetivo"],
+    "{0} gefehlt": ["{0} short","не хватило {0}","faltó {0}"],
     "PaperLab – Öffentliches Wettjournal für NBA und EuroLeague": [
       "PaperLab – NBA × EuroLeague Betting Journal",
       "PaperLab – журнал ставок на НБА и Евролигу",
