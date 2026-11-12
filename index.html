@@ -269,9 +269,45 @@ body {background:#050506}
 @keyframes cal-hourglass-stream{0%,3%,77%,100%{opacity:0} 7%,72%{opacity:.85}}
 @media(prefers-reduced-motion:reduce){.cal-hourglass *{animation:none}.cal-hourglass-stream{opacity:0}}
 
-.calday.clean-sheet{--day-border:#967541;box-shadow:inset 0 2px #ffcf79}
-.calday.high-profit{--day-border:#3d9e83;box-shadow:inset 0 2px #44e0b1}
-.calday.clean-sheet.high-profit{--day-border:#967541;box-shadow:inset 0 2px #ffcf79,inset 0 -2px #44e0b1}
+.calday:is(.clean-sheet,.high-profit){
+ position:relative;
+ box-shadow:0 0 10px var(--day-halo),inset 0 0 0 1px var(--day-halo);
+}
+.calday.clean-sheet{
+ --day-border:#a68044;
+ --day-shine:#ffe19b;
+ --day-halo:#ffbe4c3d;
+}
+.calday.high-profit{
+ --day-border:#429b82;
+ --day-shine:#9bffdc;
+ --day-halo:#44e0b13b;
+}
+.calday.clean-sheet.high-profit{
+ --day-border:#a68044;
+ --day-shine:#ffe19b;
+ --day-halo:#ffbe4c3d;
+ --day-second-shine:#9bffdc;
+ box-shadow:-2px 0 10px var(--day-halo),2px 0 10px #44e0b13b;
+}
+@property --calendar-shine-angle{syntax:"<angle>";initial-value:0turn;inherits:false}
+@supports (mask-composite:exclude){
+ .calday:is(.clean-sheet,.high-profit)::after{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius:inherit;
+  padding:2px;
+  pointer-events:none;
+  background:conic-gradient(from var(--calendar-shine-angle,0turn),transparent 5%,var(--day-halo) 12%,var(--day-shine) 21%,var(--day-halo) 29%,transparent 37%,transparent 56%,var(--day-second-shine,transparent) 70%,transparent 85%);
+  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  mask-composite:exclude;
+  animation:calendar-border-shine 7s linear infinite;
+ }
+ .calday.high-profit:not(.clean-sheet)::after{animation-delay:-1.75s}
+}
+@keyframes calendar-border-shine{to{--calendar-shine-angle:1turn}}
+@media(prefers-reduced-motion:reduce){.calday:is(.clean-sheet,.high-profit)::after{animation:none}}
 .calnum{font-size:11px;color:#b0b0bc}
 .calprofit{color:var(--day-accent);font-size:clamp(15px,1.5vw,20px);font-weight:750;line-height:1.22;overflow-wrap:anywhere}
 .calstats{font-size:11px;color:#c0c0cb;line-height:1.35}
