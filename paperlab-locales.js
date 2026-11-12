@@ -876,6 +876,21 @@ const paperLabLocales = {
       "Game days (incl. open)",
       "Игровые дни (вкл. открытые)",
       "Jornadas (incl. pendientes)"
+    ],
+    "Gratis-Tipp": [
+      "Free pick",
+      "Бесплатный прогноз",
+      "Pronóstico gratis"
+    ],
+    "Interesse?": [
+      "Interested?",
+      "Интересно?",
+      "¿Te interesa?"
+    ],
+    "VIP beitreten": [
+      "Join VIP",
+      "Вступить в VIP",
+      "Únete a VIP"
     ]
   },
   analyses: {
@@ -1239,5 +1254,10 @@ const paperLabLocales = {
       "Мёрфи пропустил матч с «Бруклином» из-за боли в колене. Ставку рассчитали возвратом. Чистый результат составил ноль.",
       "Murphy se perdió el partido ante Brooklyn por molestias en la rodilla. La apuesta se anuló. El resultado neto fue cero."
     ],
+    "McDaniels erreichte sechs Rebounds in neun seiner letzten zehn Spiele. Ohne Edwards traf er in sechs von sieben Partien und kam auf durchschnittlich sechs Rebounds in rund 35 Minuten. Acht der letzten zehn Spiele endeten exakt bei sechs Boards, sodass selbst ein kleiner Rückgang der Chancen entscheidend wäre.": [
+      "McDaniels reached six rebounds in nine of his last ten games. Without Edwards, he hit in six of seven and averaged six boards in around 35 minutes. Eight of his last ten ended on exactly six, so a small decline in chances could matter.",
+      "Макдэниелс набирал шесть подборов в девяти из последних десяти игр. Без Эдвардса он пробивал линию в шести из семи матчей и в среднем делал шесть подборов примерно за 35 минут. В восьми из последних десяти игр он заканчивал ровно с шестью, поэтому даже небольшое снижение числа шансов может сыграть роль.",
+      "McDaniels llegó a seis rebotes en nueve de sus últimos diez partidos. Sin Edwards alcanzó la cifra en seis de siete y promedió seis rebotes en unos 35 minutos. Acabó con exactamente seis en ocho de los últimos diez, así que una pequeña caída en las oportunidades podría pesar."
+    ]
   }
 };
