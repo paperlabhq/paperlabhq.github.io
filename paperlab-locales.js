@@ -861,6 +861,16 @@ const paperLabLocales = {
       "No picks in this month.",
       "В этом месяце нет ставок.",
       "No hay apuestas en este mes."
+    ],
+    "NBA × EuroLeague Wettjournal": [
+      "NBA × EuroLeague Journal",
+      "Журнал НБА × Евролига",
+      "Diario NBA × Euroliga"
+    ],
+    "PaperLab ist unabhängig von der NBA und der EuroLeague.": [
+      "PaperLab is independent of the NBA and EuroLeague.",
+      "PaperLab — независимый проект, не связанный с НБА и Евролигой.",
+      "PaperLab es independiente de la NBA y la Euroliga."
     ]
   },
   analyses: {
