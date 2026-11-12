@@ -836,6 +836,31 @@ const paperLabLocales = {
       "Original online before tip-off · {0}",
       "Оригинал опубликован до начала матча · {0}",
       "Original publicado antes del inicio · {0}"
+    ],
+    "Vormonat": [
+      "Previous month",
+      "Предыдущий месяц",
+      "Mes anterior"
+    ],
+    "Nächster Monat": [
+      "Next month",
+      "Следующий месяц",
+      "Mes siguiente"
+    ],
+    "Woche": [
+      "Week",
+      "Неделя",
+      "Semana"
+    ],
+    "Monatsbilanz": [
+      "Monthly net profit",
+      "Чистая прибыль за месяц",
+      "Beneficio neto mensual"
+    ],
+    "Keine Tipps in diesem Monat.": [
+      "No picks in this month.",
+      "В этом месяце нет ставок.",
+      "No hay apuestas en este mes."
     ]
   },
   analyses: {
