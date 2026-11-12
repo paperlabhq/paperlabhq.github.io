@@ -731,6 +731,111 @@ const paperLabLocales = {
       "Reviews",
       "Разборы",
       "Análisis"
+    ],
+    "Letzte Tipps": [
+      "Recent picks",
+      "Последние ставки",
+      "Últimos pronósticos"
+    ],
+    "Alle Wetten ansehen": [
+      "View all bets",
+      "Все ставки",
+      "Ver todas las apuestas"
+    ],
+    "Sortieren": [
+      "Sort",
+      "Сортировка",
+      "Ordenar"
+    ],
+    "Neueste zuerst": [
+      "Newest first",
+      "Сначала новые",
+      "Más recientes primero"
+    ],
+    "Älteste zuerst": [
+      "Oldest first",
+      "Сначала старые",
+      "Más antiguas primero"
+    ],
+    "Höchste Quote zuerst": [
+      "Highest odds first",
+      "Сначала высокие коэффициенты",
+      "Cuotas más altas primero"
+    ],
+    "Niedrigste Quote zuerst": [
+      "Lowest odds first",
+      "Сначала низкие коэффициенты",
+      "Cuotas más bajas primero"
+    ],
+    "Höchster Nettogewinn zuerst": [
+      "Highest net profit first",
+      "Сначала наибольшая прибыль",
+      "Mayor beneficio neto primero"
+    ],
+    "Gesamteinsatz": [
+      "Total stake",
+      "Общая сумма ставок",
+      "Importe total"
+    ],
+    "Abgerechneter Nettogewinn": [
+      "Settled net profit",
+      "Чистая прибыль по рассчитанным ставкам",
+      "Beneficio neto liquidado"
+    ],
+    "{0} abgerechnet, davon {1} Void · {2} offen": [
+      "Settled: {0} ({1} void) · Open: {2}",
+      "Рассчитано: {0} (возвратов: {1}) · Открыто: {2}",
+      "Liquidadas: {0} ({1} anuladas) · Pendientes: {2}"
+    ],
+    "Kleine Stichprobe": [
+      "Small sample",
+      "Малая выборка",
+      "Muestra pequeña"
+    ],
+    "Neueste Prognosen": [
+      "Latest previews",
+      "Последние прогнозы",
+      "Últimos pronósticos"
+    ],
+    "Wurfquote": [
+      "Shooting efficiency",
+      "Точность бросков",
+      "Acierto en el tiro"
+    ],
+    "Weniger Dreier-Versuche": [
+      "Fewer three-point attempts",
+      "Меньше трёхочковых попыток",
+      "Menos intentos de triple"
+    ],
+    "Geringe Punkteausbeute": [
+      "Low scoring output",
+      "Низкая результативность",
+      "Baja anotación"
+    ],
+    "Schwankende Blockzahlen": [
+      "Block volatility",
+      "Разброс по блок-шотам",
+      "Variación de tapones"
+    ],
+    "Mitspieler zurück": [
+      "Teammate returned",
+      "Возвращение партнёра",
+      "Regreso de un compañero"
+    ],
+    "Deutliche Niederlage": [
+      "Lopsided loss",
+      "Крупное поражение",
+      "Derrota abultada"
+    ],
+    "Rotation unklar": [
+      "Rotation impact unclear",
+      "Влияние ротации неясно",
+      "Efecto de la rotación incierto"
+    ],
+    "Original vor Anpfiff online · {0}": [
+      "Original online before tip-off · {0}",
+      "Оригинал опубликован до начала матча · {0}",
+      "Original publicado antes del inicio · {0}"
     ]
   },
   analyses: {
