@@ -901,6 +901,16 @@ const paperLabLocales = {
       "1 VIP pick",
       "1 VIP-прогноз",
       "1 pronóstico VIP"
+    ],
+    "{0} VIP-Tipps auf Telegram freischalten": [
+      "Unlock {0} VIP picks on Telegram",
+      "Открыть VIP-прогнозы в Telegram ({0})",
+      "Desbloquear {0} pronósticos VIP en Telegram"
+    ],
+    "1 VIP-Tipp auf Telegram freischalten": [
+      "Unlock 1 VIP pick on Telegram",
+      "Открыть 1 VIP-прогноз в Telegram",
+      "Desbloquear 1 pronóstico VIP en Telegram"
     ]
   },
   analyses: {
