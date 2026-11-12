@@ -632,7 +632,8 @@ const filters={search:'',status:'all',sport:'all',sort:'recent'};
 let collapsedDays={};
 try{let savedCollapsed=localStorage.getItem(COLLAPSE_KEY);if(savedCollapsed)collapsedDays=JSON.parse(savedCollapsed)||{};}catch(e){}
 function saveCollapsed(){try{localStorage.setItem(COLLAPSE_KEY,JSON.stringify(collapsedDays));}catch(e){}}
-function toggleDayCollapse(date){collapsedDays[date]=!collapsedDays[date];saveCollapsed();renderTickets();}
+function dayIsCollapsed(date, latest=journalDates().at(-1)){return collapsedDays[date] ?? (date!==latest);}
+function toggleDayCollapse(date){collapsedDays[date]=!dayIsCollapsed(date);saveCollapsed();renderTickets();}
 const el=id=>document.getElementById(id), esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 const EXISTING_TIPOFFS_CET={"2026-11-04|NBA|PHI @ DET":"2026-11-05T01:00","2026-11-04|NBA|MIA @ LAC":"2026-11-05T04:30","2026-11-04|NBA|UTA @ NOP":"2026-11-05T02:00","2026-11-04|NBA|MIN @ HOU":"2026-11-05T02:30","2026-11-04|NBA|LAL @ SAC":"2026-11-05T04:00","2026-11-04|NBA|MIL @ BOS":"2026-11-05T01:30","2026-11-05|EuroLeague|Paris @ Anadolu Efes":"2026-11-05T18:15","2026-11-05|NBA|ORL @ PHX":"2026-11-06T03:00","2026-11-05|NBA|MIA @ GSW":"2026-11-06T04:00","2026-11-06|NBA|MIN @ NOP":"2026-11-07T02:00","2026-11-06|NBA|PHI @ CLE":"2026-11-07T01:30","2026-11-06|NBA|SAS @ SAC":"2026-11-07T04:00","2026-11-06|EuroLeague|Partizan vs Maccabi":"2026-11-06T20:45","2026-11-06|NBA|POR @ LAL":"2026-11-07T04:00","2026-11-06|NBA|TOR @ MIL":"2026-11-07T02:00"};
@@ -851,11 +852,11 @@ function marketText(b) {
 function ticketHtml(b){let v=profit(b),gain=payout(b),isOpen=b.status==='open',res=isOpen?'—':(v>0?'+':'')+euro(v);return `<div class="ticket" data-ticket="${b.id}" tabindex="0" role="button" aria-label="${esc(tr("Details zu {0} öffnen", b.player))}"><div class="ticket-main"><div class="ticket-head-badges">${sportBadge(b.sport)}${bookBadge(b.book)}</div><div class="playerline">${avatarHtml(b,'player-avatar')}<div style="min-width:0"><div class="ticket-name"><div><strong class="ellipsis">${esc(b.player)}</strong><span class="market-inline">${esc(marketText(b))}</span></div></div><div class="ticket-sub">${matchupWithTime(b)}${b.actual!==null&&b.actual!==undefined?' · '+tr('Ist')+': '+(b.actualMin?tr('mind.')+' ':'')+esc(num(b.actual,Number.isInteger(b.actual)?0:1)):''}</div></div></div></div><div class="ticket-stat mono"><strong>${num(b.odds,2)}</strong><small>${tr("Quote")}</small></div><div class="ticket-stat mono"><strong>${euro(b.stake)}</strong><small>${tr("Einsatz")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'muted':'good'}">${isOpen?'—':euro(gain)}</strong><small>${tr("Auszahlung")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'amber':v<0?'bad':'good'}">${res}</strong><small>${tr("Profit")}</small></div><span class="ticket-status ${b.status}">${statusLabel(b)}</span></div>${openDetail===b.id?`<div class="ticket-detail"><div class="smalltext">${analysisText(b)}</div><div><h4>${tr("Wettdetails")}</h4><div class="smalltext">${tr("Markt")}: ${esc(marketText(b))}<br>${tr("Quote")}: ${num(b.odds,2)} · ${tr("Einsatz")}: ${euro(b.stake)}<br>${isOpen?tr('Mögliche Auszahlung')+': '+euro(round(b.stake*b.odds)):tr('Abgerechnet')+': '+statusLabel(b)}</div></div></div>`:''}`}
 function renderTickets() {
  const ordered=data.bets.slice().sort(compareBetsRecentFirst);
- const allDays=groupByDate(ordered);
- const recentDays=groupByDate(ordered.slice(0,8));
- const markup=Object.entries(recentDays).map(([date,picks])=>{
-  const day=totals(allDays[date]);
-  const collapsed=!!collapsedDays[date];
+ const recentDays=Object.entries(groupByDate(ordered)).slice(0,3);
+ const latest=recentDays[0]?.[0];
+ const markup=recentDays.map(([date,picks])=>{
+  const day=totals(picks);
+  const collapsed=dayIsCollapsed(date,latest);
   const result=day.settled
    ? `<span class="tag ${day.net<0?'red':'green'}" title="${esc(tr('Tagesprofit'))}">${signedEuro(day.net)}</span>`
    : '';
