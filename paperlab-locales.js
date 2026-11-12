@@ -891,6 +891,16 @@ const paperLabLocales = {
       "Join VIP",
       "Вступить в VIP",
       "Únete a VIP"
+    ],
+    "{0} VIP-Tipps": [
+      "{0} VIP picks",
+      "VIP-прогнозов: {0}",
+      "{0} pronósticos VIP"
+    ],
+    "1 VIP-Tipp": [
+      "1 VIP pick",
+      "1 VIP-прогноз",
+      "1 pronóstico VIP"
     ]
   },
   analyses: {
