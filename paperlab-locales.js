@@ -871,6 +871,11 @@ const paperLabLocales = {
       "PaperLab is independent of the NBA and EuroLeague.",
       "PaperLab — независимый проект, не связанный с НБА и Евролигой.",
       "PaperLab es independiente de la NBA y la Euroliga."
+    ],
+    "Spieltage (inkl. offen)": [
+      "Game days (incl. open)",
+      "Игровые дни (вкл. открытые)",
+      "Jornadas (incl. pendientes)"
     ]
   },
   analyses: {
