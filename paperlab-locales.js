@@ -667,10 +667,10 @@ const paperLabLocales = {
       "Доходность и доступный баланс",
       "ROI y saldo disponible"
     ],
-    "Der ROI teilt den Nettogewinn durch die Einsätze gewonnener und verlorener Tipps. „Frei“ ist die Bankroll abzüglich offener Einsätze.": [
-      "ROI is net profit divided by stakes on wins and losses. The available balance is the bankroll minus open stakes.",
-      "Доходность — это чистая прибыль, делённая на сумму выигранных и проигранных ставок. Доступный баланс — это банкролл за вычетом открытых ставок.",
-      "El ROI es el beneficio neto dividido por el importe de las apuestas ganadas y perdidas. El saldo disponible descuenta los importes pendientes."
+    "Der ROI teilt den Nettogewinn durch die Einsätze gewonnener und verlorener Tipps.": [
+      "ROI is net profit divided by stakes on wins and losses.",
+      "Доходность — это чистая прибыль, делённая на сумму выигранных и проигранных ставок.",
+      "El ROI es el beneficio neto dividido por el importe de las apuestas ganadas y perdidas."
     ],
     "P+R+A steht für Punkte, Rebounds und Assists zusammen.": [
       "P+R+A means points, rebounds and assists combined.",
@@ -1239,25 +1239,5 @@ const paperLabLocales = {
       "Мёрфи пропустил матч с «Бруклином» из-за боли в колене. Ставку рассчитали возвратом. Чистый результат составил ноль.",
       "Murphy se perdió el partido ante Brooklyn por molestias en la rodilla. La apuesta se anuló. El resultado neto fue cero."
     ],
-    "McDaniels erreichte sechs Rebounds in neun seiner letzten zehn Spiele. Ohne Edwards traf er in sechs von sieben Partien und kam auf durchschnittlich sechs Rebounds in rund 35 Minuten. Acht der letzten zehn Spiele endeten exakt bei sechs Boards, sodass selbst ein kleiner Rückgang der Chancen entscheidend wäre.": [
-      "McDaniels reached six rebounds in nine of his last ten games. Without Edwards, he hit in six of seven and averaged six boards in around 35 minutes. Eight of his last ten ended on exactly six, so a small decline in chances could matter.",
-      "Макдэниелс набирал шесть подборов в девяти из последних десяти игр. Без Эдвардса он пробивал линию в шести из семи матчей и в среднем делал шесть подборов примерно за 35 минут. В восьми из последних десяти игр он заканчивал ровно с шестью, поэтому даже небольшое снижение числа шансов может сыграть роль.",
-      "McDaniels llegó a seis rebotes en nueve de sus últimos diez partidos. Sin Edwards alcanzó la cifra en seis de siete y promedió seis rebotes en unos 35 minutos. Acabó con exactamente seis en ocho de los últimos diez, así que una pequeña caída en las oportunidades podría pesar."
-    ],
-    "Cunningham blieb in neun seiner letzten zehn Spiele unter 8,5 Assists, darunter sieben von acht ohne den erneut fehlenden Duren. Im letzten Duell mit Washington gab er sieben Vorlagen, spielte dabei aber nur 27 Minuten. Mehr Einsatzzeit und fünf Spiele mit genau acht Assists in der jüngsten Stichprobe machen die Linie knapp.": [
-      "Cunningham stayed under 8.5 assists in nine of his last ten, including seven of eight without Duren, who is out again. He had seven assists against Washington last time in only 27 minutes. More minutes and five recent games with exactly eight assists make this a tight line.",
-      "Каннингем оставался ниже 8,5 передачи в девяти из последних десяти игр, в том числе в семи из восьми без Дюрена, который снова пропускает матч. В прошлой игре с «Вашингтоном» он отдал семь передач всего за 27 минут. Возможные дополнительные минуты и пять недавних игр ровно с восемью передачами делают линию пограничной.",
-      "Cunningham se quedó por debajo de 8,5 asistencias en nueve de sus últimos diez partidos, incluidos siete de ocho sin Duren, que vuelve a ser baja. En el último duelo ante Washington repartió siete en solo 27 minutos. Más minutos y cinco partidos recientes con exactamente ocho asistencias hacen que la línea sea ajustada."
-    ],
-    "Anderson blieb in allen zehn bisherigen Spielen unter 10,5 Punkten und Assists. Ohne Schröder lag er in zwei Partien bei durchschnittlich 9,5 P+A in rund 21 Minuten. Gegen Cleveland kam er bei drei getroffenen Dreiern auf zehn P+A, während Coby White die meisten Vorlagen für Charlotte gab. Eine größere Ballhandler-Rolle würde das Under deutlich anfälliger machen.": [
-      "Anderson stayed under 10.5 P+A in all ten games. In two games without Schröder he averaged 9.5 in around 21 minutes. Against Cleveland he finished with ten P+A on three made threes while Coby White led Charlotte in assists. A bigger ball-handling role would make the under more vulnerable.",
-      "Андерсон оставался ниже 10,5 по сумме очков и передач во всех десяти матчах. В двух играх без Шрёдера он набирал в среднем 9,5 примерно за 21 минуту. Против «Кливленда» он набрал 10 по сумме, попав трижды из-за дуги, а лучшим по передачам у «Шарлотт» стал Коби Уайт. Большая роль с мячом повышает риск для ставки на меньше.",
-      "Anderson se quedó por debajo de 10,5 puntos más asistencias en los diez partidos. En dos encuentros sin Schröder promedió 9,5 en unos 21 minutos. Ante Cleveland sumó diez entre puntos y asistencias con tres triples, mientras que Coby White lideró a Charlotte en asistencias. Un mayor papel con el balón aumentaría el riesgo de la apuesta a la baja."
-    ],
-    "Maluach holte in acht seiner letzten zehn Spiele mindestens sechs Rebounds. Seit Ighodaro in die Startformation rückte, schaffte er die Schwelle in drei von vier Partien bei rund 20 Minuten im Schnitt. Mark Williams fehlte bereits in der gesamten Stichprobe, und eine kürzere Einsatzzeit gegen Charlotte wäre das Hauptrisiko.": [
-      "Maluach grabbed at least six rebounds in eight of his last ten games. Since Ighodaro moved into the starting lineup, Maluach has hit in three of four while averaging about 20 minutes. Mark Williams missed the entire sample, and a shorter stint against Charlotte is the main risk.",
-      "Малуач набирал не менее шести подборов в восьми из последних десяти матчей. После перехода Игодаро в старт он пробил линию в трёх из четырёх игр и в среднем проводил около 20 минут. Марк Уильямс пропустил всю выборку, а главный риск против «Шарлотт» — сокращение минут.",
-      "Maluach capturó al menos seis rebotes en ocho de sus últimos diez partidos. Desde que Ighodaro pasó al quinteto inicial, superó la línea en tres de cuatro con unos 20 minutos de media. Mark Williams se perdió todos los partidos de la muestra y el principal riesgo ante Charlotte es una reducción de minutos."
-    ]
   }
 };

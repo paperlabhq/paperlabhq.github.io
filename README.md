@@ -2,7 +2,7 @@
 
 **Öffentliche Webseite:** https://paperlabhq.github.io/
 
-Dieses Repository ist die **maßgebliche Datenquelle** für die öffentliche, schreibgeschützte Ansicht. Die GitHub-Pages-Seite lädt die Ergebnisse aus `journal-data.json`.
+Dieses Repository ist die **maßgebliche Datenquelle** für die öffentliche, schreibgeschützte Ansicht. Die GitHub-Pages-Seite lädt abgerechnete Tipps aus `journal-data.json`. Offene Tipps erscheinen öffentlich als Sanduhr und Anzahl pro Datum.
 
 ## Update-Workflow
 
@@ -10,7 +10,8 @@ Dieses Repository ist die **maßgebliche Datenquelle** für die öffentliche, sc
 2. Neue Tipps nur nach ausdrücklicher Bestätigung des Nutzers als gespielt eintragen. Spielergebnis und Start-/Einsatzwerte nicht erfinden.
 3. Nach Spielende die tatsächlichen Spielerstatistiken anhand eines verlässlichen Boxscores verifizieren; Treffer/Verlust oder DNP/Void korrekt eintragen und die Nachanalyse dokumentieren.
 4. Die bereits vorhandenen Datensätze, IDs, Quoten und Einsatzwerte unverändert lassen, soweit keine konkrete Korrektur beauftragt wurde.
-5. `journal-data.json` per GitHub-Commit aktualisieren, danach den neuen Stand und GitHub-Pages-Deployment prüfen. Die Versionsnummer bleibt bei reinen Wett- und Ergebnisupdates gleich.
+5. Offene Tipps privat führen. Öffentlich enthält `openByDate` pro Spieltag nur die Anzahl, zum Beispiel `{"2026-11-12": 4}`. Die Liste `bets` enthält ausschließlich Tipps mit Status `win`, `loss` oder `void`. Prognosen, Übersetzungen und neue Spielerbilder zu offenen Tipps bleiben bis zur Abrechnung ebenfalls privat.
+6. Beim Abrechnen die betreffenden Tipps in `bets` aufnehmen, den Tageszähler entsprechend senken und Einträge mit Anzahl null aus `openByDate` entfernen. `journal-data.json` und den eingebetteten JSON-Stand in `index.html` im selben Commit aktualisieren. Danach GitHub Pages prüfen. Die Versionsnummer bleibt bei reinen Wett- und Ergebnisupdates gleich.
 
 ## Verbindlicher Analyse-Standard
 
@@ -34,6 +35,6 @@ Der **vollständige, aktuelle Master-Prompt** für NBA-/EuroLeague-Player-Prop-A
 ## Dateien
 
 - `index.html` – öffentliches Dashboard
-- `journal-data.json` – maßgebliche Wett- und Ergebnisdaten
+- `journal-data.json` – abgerechnete Tipps und Anzahl der offenen Tipps je Spieltag
 
 Die alte Seite unter `cl0ckh0us3.github.io/paperlab/` dient nicht mehr als primäre Veröffentlichungsquelle. Dieses Repository ist die aktuelle Produktionsversion.
