@@ -808,7 +808,26 @@ function marketText(b) {
  return tr(b.operator)+' '+num(b.line,Number.isInteger(b.line)?0:1)+' '+marketLabel(b.market);
 }
 function ticketHtml(b){let v=profit(b),gain=payout(b),isOpen=b.status==='open',res=isOpen?'—':(v>0?'+':'')+euro(v);return `<div class="ticket" data-ticket="${b.id}" tabindex="0" role="button" aria-label="${esc(tr("Details zu {0} öffnen", b.player))}"><div class="ticket-main"><div class="ticket-head-badges">${sportBadge(b.sport)}${bookBadge(b.book)}</div><div class="playerline">${avatarHtml(b,'player-avatar')}<div style="min-width:0"><div class="ticket-name"><div><strong class="ellipsis">${esc(b.player)}</strong><span class="market-inline">${esc(marketText(b))}</span></div></div><div class="ticket-sub">${matchupWithTime(b)}${b.actual!==null&&b.actual!==undefined?' · '+tr('Ist')+': '+(b.actualMin?tr('mind.')+' ':'')+esc(num(b.actual,Number.isInteger(b.actual)?0:1)):''}</div></div></div></div><div class="ticket-stat mono"><strong>${num(b.odds,2)}</strong><small>${tr("Quote")}</small></div><div class="ticket-stat mono"><strong>${euro(b.stake)}</strong><small>${tr("Einsatz")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'muted':'good'}">${isOpen?'—':euro(gain)}</strong><small>${tr("Auszahlung")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'amber':v<0?'bad':'good'}">${res}</strong><small>${tr("Profit")}</small></div><span class="ticket-status ${b.status}">${statusLabel(b)}</span></div>${openDetail===b.id?`<div class="ticket-detail"><div class="smalltext">${analysisText(b)}</div><div><h4>${tr("Wettdetails")}</h4><div class="smalltext">${tr("Markt")}: ${esc(marketText(b))}<br>${tr("Quote")}: ${num(b.odds,2)} · ${tr("Einsatz")}: ${euro(b.stake)}<br>${isOpen?tr('Mögliche Auszahlung')+': '+euro(round(b.stake*b.odds)):tr('Abgerechnet')+': '+statusLabel(b)}</div></div></div>`:''}`}
-function renderTickets(){const bs=data.bets.slice().sort(compareBetsRecentFirst).slice(0,8);const groups=groupByDate(bs);const dates=Object.keys(groups);el('groupedBets').innerHTML=bs.length?dates.map(d=>{let group=groups[d],net=round(group.reduce((s,b)=>s+profit(b),0)),open=group.filter(b=>b.status==='open').length,isCollapsed=!!collapsedDays[d],isPartial=data.bets.some(b=>b.date===d&&!group.includes(b));return `<div class="day-block ${isCollapsed?'collapsed':''}"><div class="day-title" data-toggle-day="${d}" title="${tr("Ein-/ausklappen")}" tabindex="0" role="button" aria-expanded="${!isCollapsed}"><span class="day-head-left"><span class="day-caret">▾</span><span>${dateStr(d)}<span class="subtitle">${tr("{0} Tipps", group.length)}</span></span></span>${isPartial?'':`<span class="statrow"><span class="tag ${open?'amber':net>=0?'green':'red'}">${open?tr('{0} offen', open):(net>=0?'+':'')+euro(net)}</span></span>`}</div><div class="day-body">${group.map(ticketHtml).join('')}</div></div>`}).join(''):`<div class="empty">${tr("Noch keine Ergebnisse")}</div>`;}
+function renderTickets() {
+ const ordered=data.bets.slice().sort(compareBetsRecentFirst);
+ const allDays=groupByDate(ordered);
+ const recentDays=groupByDate(ordered.slice(0,8));
+ const markup=Object.entries(recentDays).map(([date,picks])=>{
+  const day=totals(allDays[date]);
+  const collapsed=!!collapsedDays[date];
+  const result=day.settled
+   ? `<span class="tag ${day.net<0?'red':'green'}" title="${esc(tr('Tagesprofit'))}">${signedEuro(day.net)}</span>`
+   : '';
+  const pending=day.open?`<span class="tag amber">${tr('{0} offen',day.open)}</span>`:'';
+  return `<div class="day-block ${collapsed?'collapsed':''}">
+   <div class="day-title" data-toggle-day="${date}" title="${tr('Ein-/ausklappen')}" tabindex="0" role="button" aria-expanded="${!collapsed}">
+    <span class="day-head-left"><span class="day-caret">▾</span><span>${dateStr(date)}<span class="subtitle">${tr('{0} Tipps',picks.length)}</span></span></span>
+    <span class="statrow">${result}${pending}</span>
+   </div><div class="day-body">${picks.map(ticketHtml).join('')}</div>
+  </div>`;
+ }).join('');
+ el('groupedBets').innerHTML=markup||`<div class="empty">${tr('Noch keine Ergebnisse')}</div>`;
+}
 function groupByDate(bets) {
  const groups=Object.create(null);
  for (const b of bets) (groups[b.date]??=[]).push(b);
