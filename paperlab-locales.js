@@ -646,6 +646,91 @@ const paperLabLocales = {
       "High profit",
       "Высокая прибыль",
       "Beneficio alto"
+    ],
+    "So liest du das Journal": [
+      "How to read the journal",
+      "Как читать журнал",
+      "Cómo leer el diario"
+    ],
+    "Tipps und Einsätze": [
+      "Picks and stakes",
+      "Ставки и суммы",
+      "Pronósticos e importes"
+    ],
+    "Ein Tipp erfasst einen Markt und eine Quote. Der angezeigte Einsatz ist die Grundlage der Gewinn- und Verlustrechnung. Bei Void wird der Einsatz vollständig zurückgerechnet.": [
+      "Each pick records a market and odds. The listed stake is used to calculate profit or loss. A void returns the full stake to the balance.",
+      "В каждой записи указаны рынок и коэффициент. Сумма ставки используется для расчёта прибыли или убытка. При возврате вся сумма возвращается в баланс.",
+      "Cada pronóstico registra un mercado y una cuota. El importe indicado sirve para calcular la ganancia o pérdida. Una apuesta anulada devuelve el importe completo al saldo."
+    ],
+    "ROI und verfügbares Guthaben": [
+      "ROI and available balance",
+      "Доходность и доступный баланс",
+      "ROI y saldo disponible"
+    ],
+    "Der ROI teilt den Nettogewinn durch die Einsätze gewonnener und verlorener Tipps. „Frei“ ist die Bankroll abzüglich offener Einsätze.": [
+      "ROI is net profit divided by stakes on wins and losses. The available balance is the bankroll minus open stakes.",
+      "Доходность — это чистая прибыль, делённая на сумму выигранных и проигранных ставок. Доступный баланс — это банкролл за вычетом открытых ставок.",
+      "El ROI es el beneficio neto dividido por el importe de las apuestas ganadas y perdidas. El saldo disponible descuenta los importes pendientes."
+    ],
+    "P+R+A steht für Punkte, Rebounds und Assists zusammen.": [
+      "P+R+A means points, rebounds and assists combined.",
+      "P+R+A — сумма очков, подборов и передач.",
+      "P+R+A es la suma de puntos, rebotes y asistencias."
+    ],
+    "Kalendermarkierungen": [
+      "Calendar badges",
+      "Отметки календаря",
+      "Distintivos del calendario"
+    ],
+    "Ein Clean Sheet bedeutet, dass alle gewerteten Tipps des Tages gewonnen sind. Ein starker Tag endet mit mindestens {0} Nettogewinn. Beide Markierungen erscheinen nach der Abrechnung aller Tipps.": [
+      "A clean sheet means every decided pick that day won. A high-profit day finishes at {0} net profit or more. Both badges appear once all picks are settled.",
+      "День без проигрышей означает, что все ставки с определённым исходом выиграли. День с высокой прибылью заканчивается чистой прибылью от {0}. Обе отметки появляются после расчёта всех ставок.",
+      "Un pleno significa que se ganaron todas las apuestas decididas del día. Un día de beneficio alto termina con un beneficio neto de al menos {0}. Ambos distintivos aparecen cuando se liquidan todas las apuestas."
+    ],
+    "{0} gewertete Tipps an {1} Spieltagen · Die Werte zeigen den bisherigen Verlauf.": [
+      "Sample: {0} decided picks across {1} game days · Figures reflect results to date.",
+      "Выборка: {0} ставок с исходом за {1} игровых дней · Показаны результаты на текущую дату.",
+      "Muestra: {0} apuestas decididas en {1} jornadas · Las cifras reflejan los resultados hasta hoy."
+    ],
+    "Tippe auf die Kurve oder fahre mit der Maus darüber.": [
+      "Tap the chart or hover over it for details.",
+      "Нажмите на график или наведите курсор для подробностей.",
+      "Toca el gráfico o pasa el cursor para ver los detalles."
+    ],
+    "Gestrichelte Linie = Gewinnschwelle": [
+      "Dashed line = break-even",
+      "Пунктир = точка безубыточности",
+      "Línea discontinua = punto de equilibrio"
+    ],
+    "Ergebnis ausstehend": [
+      "Awaiting result",
+      "Ожидается результат",
+      "Resultado pendiente"
+    ],
+    "18+ · Keine Wettberatung": [
+      "18+ · No betting advice",
+      "18+ · Без рекомендаций по ставкам",
+      "18+ · Sin asesoramiento sobre apuestas"
+    ],
+    "Hilfe bei Glücksspielproblemen (Deutschland)": [
+      "Gambling support (Germany)",
+      "Помощь при проблемах с азартными играми (Германия)",
+      "Ayuda con problemas de juego (Alemania)"
+    ],
+    "Tipps": [
+      "Bets",
+      "Ставки",
+      "Apuestas"
+    ],
+    "Statistik": [
+      "Stats",
+      "Стат.",
+      "Estad."
+    ],
+    "Analysen": [
+      "Reviews",
+      "Разборы",
+      "Análisis"
     ]
   },
   analyses: {
