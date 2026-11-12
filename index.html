@@ -262,8 +262,18 @@ body {background:#050506}
 .calday.latest.open{--day-border:#403a30}
 .calprofit-row{display:flex;align-items:center;gap:8px;min-height:24px;min-width:0}
 .cal-hourglass{width:22px;height:22px;flex:none;color:#ffcf79}
-.pending-count{display:inline-flex;align-items:center;gap:5px;vertical-align:middle}
-.pending-count .cal-hourglass{width:16px;height:16px}
+.pending-count{display:inline-flex;align-items:center;gap:6px;vertical-align:middle;padding:3px 8px;border:1px solid #57472d;border-radius:999px;color:#e8c98f;background:#221d16;font-size:11px;font-weight:650;white-space:nowrap}
+.pending-count .cal-hourglass{width:15px;height:15px;color:inherit}
+.day-pending{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border-color:#493c2b;background:linear-gradient(105deg,#211b14,#141417 52%)}
+.day-pending-date{display:flex;align-items:center;gap:9px;min-width:0;color:var(--text);font-weight:750}
+.day-pending-icon{display:grid;place-items:center;width:32px;height:32px;flex:none;border-radius:9px;border:1px solid #51412b;background:#2c2217}
+.day-pending-icon .cal-hourglass{width:19px;height:19px}
+.day-pending-total{color:#e8c98f;font-size:12px;font-weight:650;text-align:right}
+@media(max-width:600px){
+ .day-pending{padding:8px 10px}
+ .day-pending-icon{width:28px;height:28px}
+ .day-pending-total{font-size:11px}
+}
 #allBetsPending{padding:10px 16px 0}
 .pending-review{padding:10px 0}
 .cal-hourglass-frame{transform-box:view-box;transform-origin:center;animation:cal-hourglass-turn 4.2s ease-in-out infinite}
@@ -634,8 +644,8 @@ body {background:#050506}
    <div class="graph-content" id="chartHolder"><svg id="profitChart" class="chart-svg" viewBox="0 0 1100 290" role="img" aria-label="Interactive net profit chart" data-i18n-aria-label="Interaktiver Verlauf der Nettobilanz"><defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#46eabb" stop-opacity=".27"/><stop offset="100%" stop-color="#46eabb" stop-opacity=".005"/></linearGradient></defs><g id="chartMarks"></g><path id="fillPath" fill="url(#areaFill)"/><path id="linePath" stroke="#43e5ac" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><g id="hoverLayer" class="hide"><line id="vCross" class="hover-line"/><circle id="hoverDot" class="hover-dot" r="5.5"/></g><rect id="hitSurface" width="1100" height="290" fill="transparent"/></svg><div id="chartTip" class="tooltip hide" aria-live="polite"></div></div>
    <div class="chart-footer"><span class="chart-legend"><span class="chart-legend-dash" aria-hidden="true"></span><span data-i18n="Gestrichelte Linie = Gewinnschwelle">Dashed line = break-even</span></span><span id="chart-end-label"></span></div>
   </div>
-  <div class="notice"><span><b id="journalBannerTitle"><span data-i18n="Spieltag im Überblick">Game day at a glance</span></b> <span id="journalBannerResult"></span></span><span id="journalBannerOpen"></span></div>
-  <div class="surface list-box"><div class="list-head"><h2><span data-i18n="Letzte Tipps">Recent picks</span></h2><button type="button" id="openAllBets" class="field"><span data-i18n="Alle Wetten ansehen">View all bets</span></button></div><div id="groupedBets"></div></div>
+  <div class="notice"><span><b id="journalBannerTitle"><span data-i18n="Spieltag im Überblick">Game day at a glance</span></b> <span id="journalBannerResult"></span></span></div>
+  <div class="surface list-box"><div class="list-head"><h2><span data-i18n="Spieltage">Game days</span></h2><button type="button" id="openAllBets" class="field"><span data-i18n="Alle Wetten ansehen">View all bets</span></button></div><div id="groupedBets"></div></div>
  </section>
  <section id="view-bets" class="view hide"><div class="surface"><div class="list-head"><div><h2><span data-i18n="Alle Tipps">All picks</span></h2><small class="muted"><span data-i18n="Markt, Quote und Ergebnis je Tipp.">Market, odds and result for each pick.</span></small></div><span class="tag green"><span data-i18n="🔒 Nur lesen">🔒 Read-only</span></span></div><div id="allBetsPending" class="hide"></div><div class="all-bets-controls"><div class="tools"><input id="searchBets" type="search" class="field" placeholder="Player, market, bookmaker …" data-i18n-placeholder="Spieler, Markt, Bookie ..." aria-label="Search bets" data-i18n-aria-label="Wetten suchen"><select id="filterStatus" class="field" aria-label="Filter by status" data-i18n-aria-label="Nach Status filtern"><option value="all" data-i18n="Alle Ergebnisse">All results</option><option value="win" data-i18n="Gewonnen">Won</option><option value="loss" data-i18n="Verloren">Lost</option><option value="void" data-i18n="Void">Void</option></select><select id="filterSport" class="field" aria-label="Filter by league" data-i18n-aria-label="Nach Sport filtern"><option value="all" data-i18n="Alle Ligen">All leagues</option><option value="NBA">NBA</option><option value="EuroLeague">EuroLeague</option></select><select class="field" id="sortBets" aria-label="Sort" data-i18n-aria-label="Sortieren"><option value="recent" data-i18n="Neueste zuerst">Newest first</option><option value="oldest" data-i18n="Älteste zuerst">Oldest first</option><option value="odds-high" data-i18n="Höchste Quote zuerst">Highest odds first</option><option value="odds-low" data-i18n="Niedrigste Quote zuerst">Lowest odds first</option><option value="net-high" data-i18n="Höchster Nettogewinn zuerst">Highest net profit first</option></select></div><small id="results-count" class="muted" aria-live="polite"></small></div><div class="table-wrap all-bets-desktop"><table class="datatable"><thead><tr><th><span data-i18n="Datum">Date</span></th><th><span data-i18n="Spieler">Player</span></th><th><span data-i18n="Spiel">Game</span></th><th><span data-i18n="Markt">Market</span></th><th><span data-i18n="Bookie">Bookmaker</span></th><th><span data-i18n="Quote">Odds</span></th><th><span data-i18n="Einsatz">Stake</span></th><th><span data-i18n="Status">Status</span></th><th><span data-i18n="Netto">Net</span></th></tr></thead><tbody id="allBetsTable"></tbody></table></div><div id="allBetsCards" class="all-bets-mobile"></div><dl id="allBetsTotals" class="all-bet-totals"></dl></div></section>
  <section id="view-stats" class="view hide"><div class="section-top"><h2><span data-i18n="Performance &amp; Analysen">Performance &amp; analysis</span></h2><small><span data-i18n="Nur entschiedene Wetten fließen in die Gewinnrate ein">Win rate counts wins and losses only</span></small></div><div class="metrics" id="statKpis"></div><p id="statsSample" class="journal-sample"></p><div class="two-cols"><div class="surface boxcontent"><h2 style="font-size:14px;margin:0 0 14px"><span data-i18n="Ergebnisse nach Liga">Results by league</span></h2><div id="sportBars"></div></div><div class="surface boxcontent"><h2 style="font-size:14px;margin:0 0 14px"><span data-i18n="Ergebnisse nach Markt">Results by market</span></h2><div id="marketBars"></div></div></div><div class="surface boxcontent" style="margin-top:14px"><h2 style="font-size:14px;margin:0 0 14px"><span data-i18n="Tagesabrechnungen">Daily results</span></h2><div id="dailyLedger"></div></div><p class="footnote"><span data-i18n="Trefferquote und Rendite berücksichtigen entschiedene Tipps. Die Bilanz basiert auf den hinterlegten Quoten und Einsätzen.">Win rate and ROI count wins and losses. The balance uses the recorded odds and stakes.</span></p></section>
@@ -714,8 +724,13 @@ const filters={search:'',status:'all',sport:'all',sort:'recent'};
 let collapsedDays={};
 try{let savedCollapsed=localStorage.getItem(COLLAPSE_KEY);if(savedCollapsed)collapsedDays=JSON.parse(savedCollapsed)||{};}catch(e){}
 function saveCollapsed(){try{localStorage.setItem(COLLAPSE_KEY,JSON.stringify(collapsedDays));}catch(e){}}
-function dayIsCollapsed(date, latest=journalDates().at(-1)){return collapsedDays[date] ?? (date!==latest);}
-function toggleDayCollapse(date){collapsedDays[date]=!dayIsCollapsed(date);saveCollapsed();renderTickets();}
+function dayIsCollapsed(date, latest=sortedSettled().at(-1)?.date){return collapsedDays[date] ?? (date!==latest);}
+function toggleDayCollapse(date){
+ collapsedDays[date]=!dayIsCollapsed(date);
+ saveCollapsed();
+ renderTickets();
+ el('groupedBets').querySelector(`[data-toggle-day="${date}"]`)?.focus({preventScroll:true});
+}
 const el=id=>document.getElementById(id), esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 const EXISTING_TIPOFFS_CET={"2026-11-04|NBA|PHI @ DET":"2026-11-05T01:00","2026-11-04|NBA|MIA @ LAC":"2026-11-05T04:30","2026-11-04|NBA|UTA @ NOP":"2026-11-05T02:00","2026-11-04|NBA|MIN @ HOU":"2026-11-05T02:30","2026-11-04|NBA|LAL @ SAC":"2026-11-05T04:00","2026-11-04|NBA|MIL @ BOS":"2026-11-05T01:30","2026-11-05|EuroLeague|Paris @ Anadolu Efes":"2026-11-05T18:15","2026-11-05|NBA|ORL @ PHX":"2026-11-06T03:00","2026-11-05|NBA|MIA @ GSW":"2026-11-06T04:00","2026-11-06|NBA|MIN @ NOP":"2026-11-07T02:00","2026-11-06|NBA|PHI @ CLE":"2026-11-07T01:30","2026-11-06|NBA|SAS @ SAC":"2026-11-07T04:00","2026-11-06|EuroLeague|Partizan vs Maccabi":"2026-11-06T20:45","2026-11-06|NBA|POR @ LAL":"2026-11-07T04:00","2026-11-06|NBA|TOR @ MIL":"2026-11-07T02:00"};
@@ -931,7 +946,6 @@ function renderKpis(){let t=totals();el('kpis').innerHTML=metricCard(tr("Nettobi
  const latestSettledDay=sortedSettled().at(-1)?.date;
  el('journalBannerTitle').textContent=latestSettledDay?tr("Letzter Spieltag mit Ergebnissen")+' · '+dateStr(latestSettledDay):tr("Spieltag im Überblick");
  el('journalBannerResult').textContent=latestSettledDay?' · '+dateScore(latestSettledDay):' · '+tr("Noch keine Ergebnisse");
- el('journalBannerOpen').innerHTML=pendingCount(t.open);
  el('statKpis').innerHTML=metricCard(tr("Gesamt-Wetten"),t.bets,tr("{0} abgerechnet, davon {1} Void · {2} offen", t.settled, t.voids, t.open))+metricCard(tr("Nettoprofit"),(t.net>=0?'+':'')+euro(t.net),tr("Nach hinterlegten Quoten und Einsätzen"),'good')+metricCard(tr("Offen"),pendingCount(t.open),'')+metricCard(tr("Journal-Bankroll"),euro(t.bank),tr("Start")+" "+euro(data.bankrollStart));
 }
 function dateScore(date) {
@@ -964,22 +978,23 @@ function ticketHtml(b,mobileList=false){let v=profit(b),gain=payout(b),isOpen=b.
  return `<div class="ticket" data-ticket="${b.id}" tabindex="0" role="button" aria-label="${esc(tr("Details zu {0} öffnen", b.player))}"${mobileList?` aria-expanded="${openDetail===b.id}"`:''}><div class="ticket-main"><div class="ticket-head-badges">${sportBadge(b.sport)}${bookBadge(b.book)}${mobileList?status:''}</div><div class="playerline">${avatarHtml(b,'player-avatar')}<div style="min-width:0"><div class="ticket-name"><div><strong class="ellipsis">${esc(b.player)}</strong><span class="market-inline">${esc(marketText(b))}</span></div></div><div class="ticket-sub">${mobileList?dateStr(b.date)+' · ':''}${matchupWithTime(b)}${b.actual!==null&&b.actual!==undefined?' · '+tr('Ist')+': '+(b.actualMin?tr('mind.')+' ':'')+esc(num(b.actual,Number.isInteger(b.actual)?0:1)):''}</div></div></div></div><div class="ticket-stat mono"><strong>${num(b.odds,2)}</strong><small>${tr("Quote")}</small></div><div class="ticket-stat mono"><strong>${euro(b.stake)}</strong><small>${tr("Einsatz")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'muted':'good'}">${isOpen?'—':euro(gain)}</strong><small>${tr("Auszahlung")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'amber':v<0?'bad':'good'}">${res}</strong><small>${tr("Profit")}</small></div>${mobileList?'':status}</div>${openDetail===b.id?`<div class="ticket-detail"><div class="smalltext">${analysisText(b)}</div><div><h4>${tr("Wettdetails")}</h4><div class="smalltext">${tr("Markt")}: ${esc(marketText(b))}<br>${tr("Quote")}: ${num(b.odds,2)} · ${tr("Einsatz")}: ${euro(b.stake)}<br>${isOpen?tr('Mögliche Auszahlung')+': '+euro(round(b.stake*b.odds)):tr('Abgerechnet')+': '+statusLabel(b)}</div></div></div>`:''}`}
 function renderTickets() {
  const groups=groupByDate(data.bets.slice().sort(compareBetsRecentFirst));
- const recentDates=journalDates().reverse().slice(0,3);
- const latest=recentDates[0];
- const markup=recentDates.map(date=>{
+ const dates=journalDates().reverse();
+ const latest=dates.find(date=>groups[date]?.length);
+ const markup=dates.map(date=>{
   const picks=groups[date]||[];
   const day=totals(picks,openCountFor([date]));
+  if (!picks.length) return `<div class="day-block day-pending">
+   <span class="day-pending-date"><span class="day-pending-icon">${CALENDAR_HOURGLASS}</span><time datetime="${date}">${dateStr(date)}</time></span>
+   <span class="day-pending-total">${esc(tr('{0} offene Tipps',day.open))}</span>
+  </div>`;
   const collapsed=dayIsCollapsed(date,latest);
-  const result=day.settled
-   ? `<span class="tag ${day.net<0?'red':'green'}" title="${esc(tr('Tagesprofit'))}">${signedEuro(day.net)}</span>`
-   : '';
+  const result=`<span class="tag ${day.net<0?'red':'green'}" title="${esc(tr('Tagesprofit'))}">${signedEuro(day.net)}</span>`;
   const pending=day.open?pendingCount(day.open):'';
-  if (!picks.length) return `<div class="day-block"><div class="day-title"><span>${dateStr(date)}</span>${pending}</div></div>`;
   return `<div class="day-block ${collapsed?'collapsed':''}">
    <div class="day-title" data-toggle-day="${date}" title="${tr('Ein-/ausklappen')}" tabindex="0" role="button" aria-expanded="${!collapsed}">
-    <span class="day-head-left"><span class="day-caret">▾</span><span>${dateStr(date)}<span class="subtitle">${tr('{0} Tipps',day.bets)}</span></span></span>
+    <span class="day-head-left"><span class="day-caret">▾</span><span>${dateStr(date)}<span class="subtitle">${tr('{0} Tipps',day.settled)}</span></span></span>
     <span class="statrow">${result}${pending}</span>
-   </div><div class="day-body">${picks.map(b=>ticketHtml(b)).join('')}</div>
+   </div><div class="day-body">${collapsed?'':picks.map(b=>ticketHtml(b)).join('')}</div>
   </div>`;
  }).join('');
  el('groupedBets').innerHTML=markup||`<div class="empty">${tr('Noch keine Ergebnisse')}</div>`;
@@ -1051,7 +1066,7 @@ const CALENDAR_HOURGLASS = `<svg class="cal-hourglass" viewBox="0 0 24 24" aria-
  </g>
 </svg>`;
 function pendingCount(count) {
- return `<span class="tag amber pending-count">${CALENDAR_HOURGLASS}${esc(tr('{0} offene Tipps',count))}</span>`;
+ return `<span class="pending-count">${CALENDAR_HOURGLASS}${esc(tr('{0} offene Tipps',count))}</span>`;
 }
 function calendarDayCard(date, result, isLatest, isSelected) {
  const showHourglass = result.open > 0;
