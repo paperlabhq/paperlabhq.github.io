@@ -665,7 +665,7 @@ body {background:#050506}
   <div class="metrics" id="kpis"></div>
   <p id="journalSample" class="journal-sample"></p>
   <div class="graph surface"><div class="graphbar"><div><h2><span data-i18n="Profit-Verlauf">Profit history</span> <span class="muted" style="font-size:11px"><span data-i18n="· interaktiv">· interactive</span></span></h2><p><span data-i18n="Tippe auf die Kurve oder fahre mit der Maus darüber.">Tap the chart or hover over it for details.</span></p></div><div class="toolbar"><div class="segments" id="chartMetric"><button data-metric="profit" class="active"><span data-i18n="Profit">Profit</span></button><button data-metric="balance"><span data-i18n="Bankroll">Bankroll</span></button></div><div class="segments" id="chartGran"><button data-gran="bet" class="active"><span data-i18n="Pro Wette">Per bet</span></button><button data-gran="day"><span data-i18n="Pro Tag">Per day</span></button></div></div></div>
-   <div class="graph-content" id="chartHolder"><svg id="profitChart" class="chart-svg" viewBox="0 0 1100 290" role="img" aria-label="Interactive net profit chart" data-i18n-aria-label="Interaktiver Verlauf der Nettobilanz"><defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#46eabb" stop-opacity=".27"/><stop offset="100%" stop-color="#46eabb" stop-opacity=".005"/></linearGradient></defs><g id="chartMarks"></g><path id="fillPath" fill="url(#areaFill)"/><path id="linePath" stroke="#43e5ac" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><g id="hoverLayer" class="hide"><line id="vCross" class="hover-line"/><circle id="hoverDot" class="hover-dot" r="5.5"/></g><rect id="hitSurface" width="1100" height="290" fill="transparent"/></svg><div id="chartTip" class="tooltip hide" aria-live="polite"></div></div>
+   <div class="graph-content" id="chartHolder"><svg id="profitChart" class="chart-svg" viewBox="0 0 1100 290" role="img" aria-label="Interactive net profit chart" data-i18n-aria-label="Interaktiver Verlauf der Nettobilanz"><defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#46eabb" stop-opacity=".27"/><stop offset="100%" stop-color="#46eabb" stop-opacity=".005"/></linearGradient></defs><g id="chartMarks"></g><path id="fillPath" fill="url(#areaFill)"/><path id="linePath" pathLength="1" stroke="#43e5ac" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><g id="hoverLayer" class="hide"><line id="vCross" class="hover-line"/><circle id="hoverDot" class="hover-dot" r="5.5"/></g><rect id="hitSurface" width="1100" height="290" fill="transparent"/></svg><div id="chartTip" class="tooltip hide" aria-live="polite"></div></div>
    <div class="chart-footer"><span class="chart-legend"><span class="chart-legend-dash" aria-hidden="true"></span><span data-i18n="Gestrichelte Linie = Gewinnschwelle">Dashed line = break-even</span></span><span id="chart-end-label"></span></div>
   </div>
   <div class="notice"><span><b id="journalBannerTitle"><span data-i18n="Spieltag im Überblick">Game day at a glance</span></b> <span id="journalBannerResult"></span></span></div>
@@ -943,7 +943,10 @@ function chartData(){let settled=sortedSettled();let pts=[{label:tr('Start'),dat
 }
 function niceTicks(min,max){if(min===max){min-=100;max+=100}let span=max-min,raw=span/4,pow=Math.pow(10,Math.floor(Math.log10(raw||1))),scale=raw/pow,step=(scale<=1?1:scale<=2?2:scale<=2.5?2.5:scale<=5?5:10)*pow;let lo=Math.floor(min/step)*step,hi=Math.ceil(max/step)*step;if(hi===lo)hi=lo+step;let out=[];for(let v=lo;v<=hi+step/2;v+=step)out.push(round(v));return out}
 let chartSize = {width:1100,height:290,top:18,bottom:246};
-function drawChart(){const svg=el('profitChart'), marks=el('chartMarks'),fill=el('fillPath'),line=el('linePath');chartPoints=chartData();const metric=chartMetric==='profit'?'profit':'bankroll';let vals=chartPoints.map(p=>p[metric]);let mn=Math.min(...vals),mx=Math.max(...vals);let pad=Math.max(70,(mx-mn)*.16);let ticks=niceTicks(mn-pad,mx+pad);const width = el('chartHolder').clientWidth || chartSize.width;
+let chartLineAnimation;
+function drawChart(animateLine=false){
+ chartLineAnimation?.cancel();
+ const svg=el('profitChart'), marks=el('chartMarks'),fill=el('fillPath'),line=el('linePath');chartPoints=chartData();const metric=chartMetric==='profit'?'profit':'bankroll';let vals=chartPoints.map(p=>p[metric]);let mn=Math.min(...vals),mx=Math.max(...vals);let pad=Math.max(70,(mx-mn)*.16);let ticks=niceTicks(mn-pad,mx+pad);const width = el('chartHolder').clientWidth || chartSize.width;
  const height = width < 600 ? 225 : 290;
  const l = width < 600 ? 69 : 76, r = width - 26, t = 18, b = height - 34;
  const W=r-l,H=b-t,min=ticks[0],max=ticks[ticks.length-1];
@@ -961,6 +964,12 @@ function drawChart(){const svg=el('profitChart'), marks=el('chartMarks'),fill=el
  let arr=chartCoords;let path='M '+arr[0].x.toFixed(2)+' '+arr[0].y.toFixed(2);for(let i=0;i<arr.length-1;i++){let p0=arr[Math.max(0,i-1)],p1=arr[i],p2=arr[i+1],p3=arr[Math.min(arr.length-1,i+2)],dx=(p2.x-p1.x)/3;let dy1=(p2.y-p0.y)/6,dy2=(p3.y-p1.y)/6;path+=` C ${(p1.x+dx).toFixed(2)} ${(p1.y+dy1).toFixed(2)} ${(p2.x-dx).toFixed(2)} ${(p2.y-dy2).toFixed(2)} ${p2.x.toFixed(2)} ${p2.y.toFixed(2)}`}
  // area closes to baseline bottom edge rather than zero. Curve always displays cumulative profit at observed outcomes.
  let area=path+` L ${arr[arr.length-1].x.toFixed(2)} ${b} L ${arr[0].x.toFixed(2)} ${b} Z`;line.setAttribute('d',path);fill.setAttribute('d',area);el('chart-end-label').textContent=chartMetric==='profit'?tr('Nettobilanz')+' '+euro(chartPoints.at(-1).profit):tr('Aktuelle Bankroll')+' '+euro(chartPoints.at(-1).bankroll);
+ if(animateLine && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  chartLineAnimation=line.animate([
+   {strokeDasharray:'1 2',strokeDashoffset:'1'},
+   {strokeDasharray:'1 2',strokeDashoffset:'0'}
+  ],{duration:1000,easing:'ease-out'});
+ }
  hideTooltip();
 }
 function hideTooltip(){el('hoverLayer').classList.add('hide');el('chartTip').classList.add('hide')}
@@ -1282,8 +1291,8 @@ el('profitChart').addEventListener('click',showTooltip);
 el('profitChart').addEventListener('pointerleave',hideTooltip);
 window.addEventListener('resize',()=>{if(view==='dashboard')drawChart()});
 document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
-el('chartMetric').addEventListener('click',e=>{let b=e.target.closest('button[data-metric]');if(!b)return;chartMetric=b.dataset.metric;el('chartMetric').querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));drawChart()});
-el('chartGran').addEventListener('click',e=>{let b=e.target.closest('button[data-gran]');if(!b)return;chartGran=b.dataset.gran;el('chartGran').querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));drawChart()});
+el('chartMetric').addEventListener('click',e=>{let b=e.target.closest('button[data-metric]');if(!b||chartMetric===b.dataset.metric)return;chartMetric=b.dataset.metric;el('chartMetric').querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));drawChart(true)});
+el('chartGran').addEventListener('click',e=>{let b=e.target.closest('button[data-gran]');if(!b||chartGran===b.dataset.gran)return;chartGran=b.dataset.gran;el('chartGran').querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));drawChart(true)});
 el('analysisList').addEventListener('click',event=>{
  const summary=event.target.closest('.review-day > summary');
  if (summary) {
