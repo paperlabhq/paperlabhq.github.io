@@ -766,7 +766,41 @@
       "stake": 100,
       "status": "open",
       "actual": null
+    },
+    {
+      "id": 39,
+      "date": "2026-11-12",
+      "sport": "NBA",
+      "matchup": "CHA @ PHX",
+      "player": "Christian Anderson",
+      "market": "Punkte + Assists",
+      "operator": "Under",
+      "line": 10.5,
+      "book": "Rabona",
+      "odds": 1.9524,
+      "note": "Vom Nutzer am 12.11.2026 als zusätzlicher PaperLab-Tipp bestätigt. Quote 1,9524 aus dem Rabona-Export (12:04:27 MEZ). L5 5/5, L10 10/10, Ø L10 5,1 P+A. ⚠️ Mit Dennis Schröder 8/8 Under, Ø 4,0 P+A in 10,3 Minuten. Ohne Schröder 2/2, Ø 9,5 P+A in 20,5 Minuten. Knueppel fehlte bei allen zehn Treffern. Gegen Cleveland ohne Schröder, Knueppel und Brandon Miller kam Anderson bei 3/4 Dreiern auf 10 P+A in 16 Minuten. Der enge Abstand zur Linie und die kleine Stichprobe ohne Schröder begrenzen die Aussagekraft.",
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "tipoffCET": "2026-11-13T03:00"
+    },
+    {
+      "id": 40,
+      "date": "2026-11-12",
+      "sport": "NBA",
+      "matchup": "CHA @ PHX",
+      "player": "Khaman Maluach",
+      "market": "Rebounds",
+      "operator": "Over",
+      "line": 5.5,
+      "book": "Cryptorino",
+      "odds": 2.06,
+      "note": "Vom Nutzer am 12.11.2026 als zusätzlicher PaperLab-Tipp bestätigt. Quote 2,06 aus dem Cryptorino-Export (12:03:21 MEZ). L5 4/5, L10 8/10, Ø L10 6,4 REB. Mark Williams fehlte in allen zehn Spielen. ⚠️ Seit Oso Ighodaro in die Starting Five rückte: 3/4 Treffer bei 6, 10, 5 und 7 Rebounds in Ø 20,4 Minuten. Kürzere Einsatzzeit und das Rebound-Matchup gegen Charlotte sind die zentralen Risiken.",
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "tipoffCET": "2026-11-13T03:00"
     }
   ],
-  "publicUpdatedAt": "2026-11-12T11:26:51.486Z"
+  "publicUpdatedAt": "2026-11-12T11:39:24.240Z"
 }
