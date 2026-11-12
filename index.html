@@ -253,11 +253,11 @@ body {background:#050506}
 .calday[aria-pressed="true"]:not(.latest){outline:1px solid var(--day-accent);outline-offset:1px}
 .calday:focus-visible{outline:2px solid var(--day-accent);outline-offset:2px}
 .calday.positive{--day-accent:#73efc2;--day-border:#256149;--day-bg:#122c23}
+.calday.negative{--day-accent:#ff97a6;--day-border:#823c4a;--day-bg:#331a22}
 @supports (background:color-mix(in srgb,#000,#fff)){
  .calday.positive{--day-bg:color-mix(in srgb,#10231e,#194634 var(--day-heat,0%))}
  .calday.negative{--day-bg:color-mix(in srgb,#26191f,#39232c var(--day-heat,0%))}
 }
-.calday.negative{--day-accent:#ff97a6;--day-border:#823c4a;--day-bg:#331a22}
 .calday.open{--day-accent:#ffcf79;--day-border:#6c5638;--day-bg:#302719}
 .calday.latest.open{--day-border:#403a30}
 .calprofit-row{display:flex;align-items:center;gap:8px;min-height:24px;min-width:0}
