@@ -277,11 +277,6 @@ const paperLabLocales = {
       "Результаты по рынкам",
       "Resultados por mercado"
     ],
-    "Nach Buchmacher": [
-      "By bookmaker",
-      "По букмекерам",
-      "Por casa de apuestas"
-    ],
     "Tagesabrechnungen": [
       "Daily results",
       "Итоги по дням",
@@ -636,6 +631,21 @@ const paperLabLocales = {
       "⚠ Offline · saved snapshot",
       "⚠ Офлайн · сохранённая версия",
       "⚠ Sin conexión · versión guardada"
+    ],
+    "Tagesprofit": [
+      "Daily profit",
+      "Прибыль за день",
+      "Beneficio diario"
+    ],
+    "Clean Sheet": [
+      "Clean sheet",
+      "Без проигрышей",
+      "Pleno"
+    ],
+    "Starker Tag": [
+      "High profit",
+      "Высокая прибыль",
+      "Beneficio alto"
     ]
   },
   analyses: {
