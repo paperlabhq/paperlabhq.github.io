@@ -2,6 +2,8 @@
 // Key analysis translations by source text so edited entries never show a stale translation.
 const paperLabLocales = {
   ui: {
+    "Rückblick-Tipp": ["Retrospective pick", "Ретроспективный прогноз", "Pronóstico retrospectivo"],
+    "Nach dem Ergebnis ausgewählt": ["Selected after the result", "Выбран после результата", "Elegido después del resultado"],
 "Dein Analyst": ["Your analyst", "Ваш аналитик", "Tu analista"],
 "Seit über 10 Jahren im Sportwetten-Geschäft aktiv, spezialisiert auf Spielerwetten in NBA und EuroLeague. Jeder Tipp wird öffentlich dokumentiert, Gewinne wie Verluste.": [
   "Active in sports betting for over 10 years, specialised in NBA and EuroLeague player props. Every pick is logged publicly, wins and losses.",
