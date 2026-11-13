@@ -664,8 +664,6 @@ html:has(.calendar-sheet[open]){overflow:hidden}
 }
 .free-pick-badge{position:relative;overflow:hidden;display:inline-flex;align-items:center;padding:5px 9px;border-radius:999px;background:linear-gradient(135deg,#62f4c2,#39e5ab 58%,#24c095);color:#071a13;font-size:10px;font-weight:850;letter-spacing:.08em;line-height:1.15;text-transform:uppercase}
 .free-pick-badge::after{content:"";position:absolute;inset:0;width:40%;pointer-events:none;background:linear-gradient(100deg,transparent,#ffffffbb,transparent);transform:translateX(-150%) skewX(-20deg);animation:free-pick-reflection 3.5s ease-in-out infinite}
-.free-pick-badge.free-pick-archive{background:#25262c;color:#d2d3dd;border:1px solid #3b3b44}
-.free-pick-badge.free-pick-archive::after{display:none}
 @keyframes free-pick-reflection{0%,60%{transform:translateX(-150%) skewX(-20deg)}100%{transform:translateX(350%) skewX(-20deg)}}
 .ticket.ticket-free{margin:8px 8px 4px;border:1px solid #285441;border-radius:10px;background:linear-gradient(105deg,#132a21,#101c18 78%);box-shadow:0 0 0 1px #39e5ab22;animation:free-pick-glow 3.5s ease-in-out infinite}
 .ticket.ticket-free:hover{background:linear-gradient(105deg,#19392d,#13241d 78%)}
@@ -1343,11 +1341,10 @@ function marketText(b) {
  return tr(b.operator)+' '+num(b.line,Number.isInteger(b.line)?0:1)+' '+marketLabel(b.market);
 }
 function freePickBadge(b) {
- if (b.retroPick) {
-  return `<span class="free-pick-badge free-pick-archive">${tr('Gratis-Tipp')} · ${tr('Nach dem Ergebnis ausgewählt')}</span>`;
- }
- if (b.publicPick!=='free') return '';
- return `<span class="free-pick-badge">${tr('Gratis-Tipp')}</span>`;
+ if (b.publicPick!=='free'&&!b.retroPick) return '';
+ const label=tr('Gratis-Tipp');
+ const provenance=b.retroPick?tr('Nach dem Ergebnis ausgewählt'):'';
+ return `<span class="free-pick-badge"${provenance?` title="${esc(provenance)}"`:''}>${esc(label)}</span>`;
 }
 // Older picks omit the player’s team. Use known team codes only if they are part of the recorded matchup.
 Object.assign(PLAYER_IMAGES,{
@@ -1388,7 +1385,7 @@ function ticketHtml(b,mobileList=false){let v=profit(b),gain=payout(b),isOpen=b.
  const freeBadge=freePickBadge(b);
  const meter=mobileList?'':ticketResultMeter(b);
  const isVoid=b.status==='void';
- return `<div class="ticket pick-result ${b.status}${b.publicPick==='free'&&!b.retroPick?' ticket-free':''}" data-ticket="${b.id}" tabindex="0" role="button" aria-label="${esc(tr("Details zu {0} öffnen", b.player))}"${mobileList?` aria-expanded="${openDetail===b.id}"`:''}><div class="ticket-main">${mobileList?`<div class="ticket-head-badges">${sportBadge(b.sport)}${bookBadge(b.book)}${freeBadge}${status}</div>`:''}<div class="playerline">${mobileList?avatarHtml(b,'player-avatar'):ticketPlayerPhoto(b)}<div style="min-width:0"><div class="ticket-name"><div><strong class="ellipsis">${esc(b.player)}</strong>${mobileList?'':sportBadge(b.sport)+freeBadge}<span class="market-inline">${esc(marketText(b))}</span></div></div><div class="ticket-sub${mobileList?'':' ticket-match-meta'}"><span>${mobileList?dateStr(b.date)+' · ':''}${matchupWithTime(b)}${!meter&&b.actual!==null&&b.actual!==undefined?' · '+tr('Ist')+': '+(b.actualMin?tr('mind.')+' ':'')+esc(num(b.actual,Number.isInteger(b.actual)?0:1)):''}</span>${!mobileList&&b.book?`<span class="ticket-book-chip">${bookBadge(b.book,true)}${esc(brandName(b.book))}</span>`:''}</div>${meter}</div></div></div><div class="ticket-stat mono"><strong>${num(b.odds,2)}</strong><small>${tr("Quote")}</small></div><div class="ticket-stat mono"><strong>${euro(b.stake)}</strong><small>${tr("Einsatz")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'muted':isVoid?'void-amount':'good'}">${isOpen?'—':euro(gain)}</strong><small>${tr("Auszahlung")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'amber':isVoid?'void-amount':v<0?'bad':'good'}">${res}</strong><small>${tr("Profit")}</small></div>${mobileList?'':status}</div>${openDetail===b.id?`<div class="ticket-detail"><div class="smalltext">${analysisText(b)}</div><div><h4>${tr("Wettdetails")}</h4><div class="smalltext">${tr("Markt")}: ${esc(marketText(b))}<br>${tr("Quote")}: ${num(b.odds,2)} · ${tr("Einsatz")}: ${euro(b.stake)}<br>${isOpen?tr('Mögliche Auszahlung')+': '+euro(round(b.stake*b.odds)):tr('Abgerechnet')+': '+statusLabel(b)}</div></div></div>`:''}`}
+ return `<div class="ticket pick-result ${b.status}${freeBadge?' ticket-free':''}" data-ticket="${b.id}" tabindex="0" role="button" aria-label="${esc(tr("Details zu {0} öffnen", b.player))}"${mobileList?` aria-expanded="${openDetail===b.id}"`:''}><div class="ticket-main">${mobileList?`<div class="ticket-head-badges">${sportBadge(b.sport)}${bookBadge(b.book)}${freeBadge}${status}</div>`:''}<div class="playerline">${mobileList?avatarHtml(b,'player-avatar'):ticketPlayerPhoto(b)}<div style="min-width:0"><div class="ticket-name"><div><strong class="ellipsis">${esc(b.player)}</strong>${mobileList?'':sportBadge(b.sport)+freeBadge}<span class="market-inline">${esc(marketText(b))}</span></div></div><div class="ticket-sub${mobileList?'':' ticket-match-meta'}"><span>${mobileList?dateStr(b.date)+' · ':''}${matchupWithTime(b)}${!meter&&b.actual!==null&&b.actual!==undefined?' · '+tr('Ist')+': '+(b.actualMin?tr('mind.')+' ':'')+esc(num(b.actual,Number.isInteger(b.actual)?0:1)):''}</span>${!mobileList&&b.book?`<span class="ticket-book-chip">${bookBadge(b.book,true)}${esc(brandName(b.book))}</span>`:''}</div>${meter}</div></div></div><div class="ticket-stat mono"><strong>${num(b.odds,2)}</strong><small>${tr("Quote")}</small></div><div class="ticket-stat mono"><strong>${euro(b.stake)}</strong><small>${tr("Einsatz")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'muted':isVoid?'void-amount':'good'}">${isOpen?'—':euro(gain)}</strong><small>${tr("Auszahlung")}</small></div><div class="ticket-stat mono"><strong class="${isOpen?'amber':isVoid?'void-amount':v<0?'bad':'good'}">${res}</strong><small>${tr("Profit")}</small></div>${mobileList?'':status}</div>${openDetail===b.id?`<div class="ticket-detail"><div class="smalltext">${analysisText(b)}</div><div><h4>${tr("Wettdetails")}</h4><div class="smalltext">${tr("Markt")}: ${esc(marketText(b))}<br>${tr("Quote")}: ${num(b.odds,2)} · ${tr("Einsatz")}: ${euro(b.stake)}<br>${isOpen?tr('Mögliche Auszahlung')+': '+euro(round(b.stake*b.odds)):tr('Abgerechnet')+': '+statusLabel(b)}</div></div></div>`:''}`}
 function vipLockedPicks(count) {
  const label=count===1?tr('1 VIP-Tipp auf Telegram freischalten'):tr('{0} VIP-Tipps auf Telegram freischalten',count);
  const ghost=`<div class="vip-ghost" aria-hidden="true">
