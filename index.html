@@ -984,7 +984,7 @@ html:has(.calendar-sheet[open]){overflow:hidden}
  <footer class="footer"><span><span data-i18n="PaperLab · Öffentliches Wettjournal">PaperLab · Public betting journal</span></span><span><span data-i18n="Bilanz nach hinterlegten Quoten und Einsätzen">Balance based on recorded odds and stakes</span></span><span data-i18n="PaperLab ist unabhängig von der NBA und der EuroLeague.">PaperLab is independent of the NBA and EuroLeague.</span><span class="pn-public-note" data-i18n="Öffentliche Leseansicht">Public · read-only</span><span class="journal-responsible"><span data-i18n="18+ · Keine Wettberatung">18+ · No betting advice</span> <a href="https://www.check-dein-spiel.de/hilfe-fuer-spieler/telefon-beratung"><span data-i18n="Hilfe bei Glücksspielproblemen (Deutschland)">Gambling support (Germany)</span></a></span></footer>
 </main></div>
 <div id="toast" class="toast hide" role="status"></div>
-<script src="./paperlab-locales.js?v=18"></script>
+<script src="./paperlab-locales.js?v=19"></script>
 <script>
 (()=>{'use strict';
 const LOCALES = {en:'en-GB', ru:'ru-RU', de:'de-DE', es:'es-ES'};
@@ -1344,7 +1344,7 @@ function marketText(b) {
 }
 function freePickBadge(b) {
  if (b.retroPick) {
-  return `<span class="free-pick-badge free-pick-archive" title="${esc(tr('Nach dem Ergebnis ausgewählt'))}">${tr('Rückblick-Tipp')}</span>`;
+  return `<span class="free-pick-badge free-pick-archive">${tr('Gratis-Tipp')} · ${tr('Nach dem Ergebnis ausgewählt')}</span>`;
  }
  if (b.publicPick!=='free') return '';
  return `<span class="free-pick-badge">${tr('Gratis-Tipp')}</span>`;
