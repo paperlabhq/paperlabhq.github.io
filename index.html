@@ -866,6 +866,7 @@ const TEAM_LOGOS={
   TOR:'https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png',SAS:'https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png',
   PAR:'https://www.google.com/s2/favicons?domain=parisbasketball.com&sz=64',
   EFE:'https://www.google.com/s2/favicons?domain=anadoluefessk.org&sz=64',
+  VIR:'./assets/virtus-bologna.png',
   PARZ:'https://www.google.com/s2/favicons?domain=kkpartizan.rs&sz=64',
   MAC:'https://www.google.com/s2/favicons?domain=maccabi.co.il&sz=64'
 };
@@ -888,7 +889,7 @@ Object.assign(TEAM_LOGOS,{
 });
 
 const TEAM_ALIASES={
-  'Paris':'PAR','Anadolu Efes':'EFE','Partizan':'PARZ','Maccabi':'MAC'
+  'Paris':'PAR','Anadolu Efes':'EFE','Partizan':'PARZ','Maccabi':'MAC','Virtus Bologna':'VIR'
 };
 function teamCodeLabel(raw){let t=String(raw||'').trim();return TEAM_ALIASES[t]||t}
 function teamLogoFor(label){return TEAM_LOGOS[label]||TEAM_LOGOS[TEAM_ALIASES[label]]||''}
@@ -1111,6 +1112,7 @@ function freePickBadge(b) {
 }
 // Older picks omit the player’s team. Use known team codes only if they are part of the recorded matchup.
 Object.assign(PLAYER_IMAGES,{
+ 'Aliou Diarra':'./assets/aliou-diarra.jpg',
  'Cade Cunningham':'https://cdn.nba.com/headshots/nba/latest/1040x760/1630595.png',
  'Christian Anderson':'https://cdn.nba.com/headshots/nba/latest/1040x760/1643515.png',
  'Khaman Maluach':'https://cdn.nba.com/headshots/nba/latest/1040x760/1642863.png'
