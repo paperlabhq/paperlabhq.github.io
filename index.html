@@ -753,6 +753,143 @@ html:has(.calendar-sheet[open]){overflow:hidden}
 @media(max-width:420px){.kpi-spark{flex-basis:35px;width:23%;min-width:15px}.kpi-hit-ring{width:23px;height:23px}.kpi-hit-ring::after{width:17px;height:17px}}
 @media(prefers-reduced-motion:reduce){.chart-end-pulse{animation:none;opacity:0}}
 
+/* ===== Professor NBA hero + recent form (uses the page's own CSS variables) ===== */
+.pn-hero{position:relative;overflow:hidden;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;
+  padding:22px 24px;margin-bottom:14px;border:1px solid var(--border);border-radius:14px;
+  background:radial-gradient(110% 150% at 0% 0%,rgba(57,229,171,.13),transparent 55%),
+             radial-gradient(80% 120% at 100% 100%,rgba(255,207,121,.08),transparent 60%),
+             linear-gradient(180deg,var(--panel2),var(--panel));
+  box-shadow:var(--shadow);animation:pn-in .5s ease both}
+.pn-avatar{position:relative;width:92px;height:92px;border-radius:50%;padding:3px;
+  background:conic-gradient(from 210deg,var(--green),var(--amber),var(--green2),var(--green));flex:none}
+.pn-avatar-inner{position:relative;width:100%;height:100%;border-radius:50%;overflow:hidden;background:var(--panel3);
+  display:grid;place-items:center;border:3px solid var(--bg)}
+.pn-avatar-inner b{font:700 28px/1 "Space Grotesk",Inter,sans-serif;color:var(--green);letter-spacing:.02em}
+.pn-avatar-inner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pn-body{min-width:0}
+.pn-eyebrow{font:700 11px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--green)}
+.pn-name{margin:6px 0 6px;font:700 28px/1.1 "Space Grotesk",Inter,sans-serif;color:var(--text);letter-spacing:-.01em}
+.pn-lead{margin:0 0 12px;max-width:62ch;color:var(--muted);font-size:14px;line-height:1.5}
+.pn-lead strong{color:var(--text);font-weight:600}
+.pn-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.pn-chips li{display:inline-flex;align-items:center;gap:7px;padding:6px 11px;border:1px solid var(--border);
+  border-radius:999px;background:rgba(255,255,255,.03);color:var(--text);font-size:12px;font-weight:600}
+.pn-chips li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
+.pn-chips li.pn-note::before{background:var(--amber);box-shadow:0 0 8px var(--amber)}
+.pn-cta{display:flex;flex-direction:column;gap:10px;min-width:210px}
+.pn-btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:44px;padding:0 18px;border-radius:11px;font:700 14px/1 Inter,sans-serif;text-decoration:none;
+  transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease}
+.pn-btn:hover{transform:translateY(-1px)}
+.pn-btn:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.pn-btn-free{color:var(--green);border:1px solid rgba(57,229,171,.45);background:rgba(57,229,171,.08)}
+.pn-btn-free:hover{border-color:var(--green);box-shadow:0 0 0 3px rgba(57,229,171,.12)}
+.pn-btn-vip{color:#1a1204;border:0;background:linear-gradient(135deg,#ffe3a3,#ffcf79 45%,#f3a93c)}
+.pn-btn-vip:hover{box-shadow:0 8px 22px rgba(255,207,121,.28)}
+.pn-btn-vip::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 35%,rgba(255,255,255,.55) 50%,transparent 65%);
+  transform:translateX(-120%);animation:pn-shine 6s ease-in-out 1.5s infinite}
+
+/* recent form strip */
+.pn-form{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;padding:14px 18px;margin:0 0 14px;
+  border:1px solid var(--border);border-radius:12px;background:linear-gradient(180deg,var(--panel2),var(--panel));animation:pn-in .5s .08s ease both}
+.pn-form[hidden]{display:none}
+.pn-form-main{display:flex;flex-direction:column;gap:9px}
+.pn-form-head{display:flex;align-items:baseline;gap:10px}
+.pn-form-title{font:700 11px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.pn-form-sum{font:700 15px/1 "Space Grotesk",Inter,sans-serif;color:var(--text)}
+.pn-dots{display:flex;gap:7px}
+.pn-dot{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;font:700 13px/1 Inter,sans-serif;
+  animation:pn-pop .35s ease both;animation-delay:calc(var(--i)*45ms + .2s)}
+.pn-dot.win{background:rgba(57,229,171,.16);border:1px solid rgba(57,229,171,.55);color:var(--green)}
+.pn-dot.loss{background:rgba(255,102,123,.12);border:1px solid rgba(255,102,123,.5);color:var(--red)}
+.pn-dot.latest{box-shadow:0 0 0 3px rgba(255,255,255,.08)}
+.pn-form-stats{display:flex;gap:26px;margin-left:auto}
+.pn-stat{display:flex;flex-direction:column;gap:5px}
+.pn-stat span{font:600 11px/1 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pn-stat b{font:700 18px/1 "Space Grotesk",Inter,sans-serif;color:var(--text)}
+.pn-stat b.pos{color:var(--green)}
+
+/* results ticker */
+.pn-ticker{display:flex;align-items:center;gap:14px;height:44px;margin:0 0 14px;padding-left:16px;overflow:hidden;
+  border:1px solid var(--border);border-radius:12px;background:var(--panel);animation:pn-in .5s .04s ease both}
+.pn-ticker[hidden]{display:none}
+.pn-ticker-label{flex:none;display:flex;align-items:center;gap:8px;font:700 11px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.pn-ticker-label::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);color:var(--green);box-shadow:0 0 0 0 currentColor;animation:pn-pulse 2s infinite}
+.pn-ticker-view{flex:1;min-width:0;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 22px,#000 calc(100% - 22px),transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 22px,#000 calc(100% - 22px),transparent)}
+.pn-ticker-track{display:flex;width:max-content;animation:pn-scroll var(--pn-dur,40s) linear infinite}
+.pn-ticker-view:hover .pn-ticker-track,.pn-ticker-view:focus-within .pn-ticker-track{animation-play-state:paused}
+.pn-ticker-set{display:flex;gap:10px;padding-right:10px}
+.pn-tick{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;padding:5px 12px;border:1px solid var(--border);
+  border-radius:999px;background:rgba(255,255,255,.025);font-size:12.5px;font-weight:600;color:var(--text)}
+.pn-tick i{font-style:normal;font-weight:800}
+.pn-tick b{font:700 12.5px/1 "Space Grotesk",Inter,sans-serif}
+.pn-tick.win i,.pn-tick.win b{color:var(--green)}
+.pn-tick.loss i,.pn-tick.loss b{color:var(--red)}
+
+/* free-pick countdown chip (sits next to the existing .free-pick-badge) */
+.pn-cd{display:inline-flex;align-items:center;gap:6px;margin-left:8px;padding:3px 9px;border-radius:999px;white-space:nowrap;vertical-align:middle;
+  font:700 11px/1.2 Inter,sans-serif;color:var(--amber);border:1px solid rgba(255,207,121,.45);background:rgba(255,207,121,.1)}
+.pn-cd::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 0 0 currentColor;animation:pn-pulse 2s infinite}
+.pn-cd.live{color:var(--red);border-color:rgba(255,102,123,.5);background:rgba(255,102,123,.1)}
+.pn-cd.done{color:var(--muted);border-color:var(--border);background:rgba(255,255,255,.03)}
+.pn-cd.done::before{animation:none}
+
+/* fix: "+" of the Net profit tile wrapped onto its own line on phones (sparkline squeezed the number) */
+.metricvalue > span:first-child{white-space:nowrap}
+.kpi-with-visual .metricvalue{flex-wrap:wrap;row-gap:4px;align-items:center}
+.kpi-spark{flex:0 0 auto;max-width:100%}
+@media (max-width:480px){.kpi-with-visual .metricvalue .kpi-spark{width:64px;height:20px}}
+
+@keyframes pn-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes pn-pop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+@keyframes pn-pulse{70%{box-shadow:0 0 0 7px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@keyframes pn-scroll{to{transform:translateX(-50%)}}
+@keyframes pn-shine{0%,70%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+
+@media (max-width:820px){
+  /* compact: avatar + name on one row, text and buttons full width */
+  .pn-hero{grid-template-columns:auto 1fr;gap:10px 14px;padding:16px}
+  .pn-body{display:contents}
+  .pn-avatar{grid-row:1/3;width:64px;height:64px}
+  .pn-avatar-inner b{font-size:21px}
+  .pn-eyebrow{align-self:end}
+  .pn-name{align-self:start;margin:0;font-size:24px}
+  .pn-lead{grid-column:1/-1;margin:2px 0 0;font-size:13.5px}
+  .pn-chips{grid-column:1/-1;gap:6px}
+  .pn-chips li{padding:5px 9px;font-size:11.5px}
+  .pn-cta{grid-column:1/-1;flex-direction:row;min-width:0;gap:8px}
+  .pn-cta .pn-btn{flex:1;padding:0 10px;font-size:13px}
+  .pn-form-stats{margin-left:0;width:100%;justify-content:space-between;gap:12px}
+}
+@media (max-width:480px){
+  .pn-chips li:nth-child(n+3):not(.pn-note){display:none}   /* keep: 10+ years, NBA x EuroLeague, paper-journal note */
+  .pn-dots{gap:5px}
+  .pn-dot{width:24px;height:24px}
+}
+@media (prefers-reduced-motion:reduce){
+  .pn-hero,.pn-form,.pn-dot{animation:none}
+  .pn-btn-vip::after{animation:none;display:none}
+  .pn-ticker-track{animation:none}
+  .pn-ticker-view{overflow-x:auto}
+  .pn-ticker-set[aria-hidden]{display:none}
+  .pn-ticker-label::before,.pn-cd::before{animation:none}
+  .pn-btn{transition:none}
+}
+
+.pn-public-note{color:var(--muted)}
+.pn-dots{flex-wrap:wrap}
+.pn-form-main{min-width:0;max-width:100%}
+@media(max-width:820px){
+ .topbar>.toolbar{display:flex;align-items:center;justify-content:flex-start;flex-wrap:wrap;gap:8px}
+ .topbar>.toolbar>#syncStatus{flex:0 0 auto}
+ .topbar .language-picker{position:relative}
+}
+@media(prefers-reduced-motion:reduce){
+ .pn-ticker{animation:none}
+ .pn-btn:hover{transform:none}
+}
 </style></head><body>
 <script id="seed-data" type="application/json">{"appVersion":2,"bankrollStart":2000,"bets":[{"id":1,"date":"2026-11-04","sport":"NBA","player":"Tyrese Maxey","matchup":"PHI @ DET","market":"Punkte","operator":"Over","line":23.5,"book":"Bankonbet","odds":1.95,"stake":100,"status":"loss","actual":19,"pts":19,"reb":1,"ast":7,"note":"Maxey blieb mit 19 Punkten unter der Linie. Er nahm 16 Feldwürfe, traf davon aber nur fünf. Die Zahl der Abschlüsse war ordentlich, die Wurfausbeute reichte für 24 Punkte nicht.","tipoffCET":"2026-11-05T01:00","prognosis":"Maxeys Rolle als primärer Scorer bietet gegen Detroit einen direkten Weg zu 24 Punkten. Entscheidend ist, dass er genügend eigene Würfe und Freiwürfe bekommt. Mit Joel Embiid und LeBron James verteilt sich die offensive Verantwortung auf mehrere Spieler."},{"id":2,"date":"2026-11-04","sport":"NBA","player":"Davion Mitchell","matchup":"MIA @ LAC","market":"Punkte + Assists","operator":"Over","line":19.5,"book":"22bet","odds":1.91,"stake":100,"status":"win","actual":21,"pts":11,"reb":2,"ast":10,"note":"Mitchell erzielte 11 Punkte und 10 Assists und kam damit auf 21 P+A. Die Verlängerung verschaffte ihm zusätzliche Spielzeit. Die Vorlagen lieferten fast die Hälfte der kombinierten Produktion.","tipoffCET":"2026-11-05T04:30","prognosis":"Mitchell kann die Linie über eigene Punkte und Vorlagen erreichen. Entscheidend ist, wie viel Ballbesitz er gegen die Clippers als Spielmacher übernimmt. Wenn er wenig selbst abschließt, braucht er entsprechend mehr verwertete Zuspiele."},{"id":3,"date":"2026-11-04","sport":"NBA","player":"Derik Queen","matchup":"UTA @ NOP","market":"Punkte + Rebounds + Assists","operator":"Over","line":19.5,"book":"Cryptotino","odds":1.98,"stake":100,"status":"win","actual":35,"pts":20,"reb":9,"ast":6,"note":"Queen erzielte 20 Punkte, 9 Rebounds und 6 Assists. Mit 35 P+R+A übertraf er die Schwelle deutlich. Die Verlängerung gehört zur Einordnung des Gesamtwerts, weil sie zusätzliche Spielzeit brachte.","tipoffCET":"2026-11-05T02:00","prognosis":"Queen hat bei 20 benötigten P+R+A mehrere Wege zur Linie. Seine Rebounds und Vorlagen können die Punkteproduktion ergänzen. Eine kürzere Center-Rotation würde die Chancen in allen drei Kategorien gleichzeitig begrenzen."},{"id":4,"date":"2026-11-04","sport":"NBA","player":"Jaden McDaniels","matchup":"MIN @ HOU","market":"Rebounds","operator":"Over","line":5.5,"book":"Cryptotino","odds":2.17,"stake":100,"status":"win","actual":8,"pts":14,"reb":8,"ast":4,"note":"McDaniels holte acht Rebounds und überschritt die Linie um zweieinhalb. Seine Spielzeit lag über der Voraberwartung. Die zusätzlichen Minuten gaben ihm mehr Gelegenheiten am Brett.","tipoffCET":"2026-11-05T02:30","prognosis":"McDaniels braucht sechs Rebounds gegen Houston. Seine Rolle auf dem Flügel gibt ihm bei regulärer Spielzeit Gelegenheit, am defensiven Brett mitzuarbeiten. Weniger Minuten oder eine geringe Zahl erreichbarer Abpraller würden das Over erschweren."},{"id":5,"date":"2026-11-04","sport":"NBA","player":"Ziaire Williams","matchup":"LAL @ SAC","market":"Punkte","operator":"Over","line":8.5,"book":"Cryptotino","odds":1.94,"stake":100,"status":"win","actual":10,"pts":10,"reb":4,"ast":1,"note":"Williams erzielte zehn Punkte und traf die Linie mit einem Punkt Puffer zur Mindestmarke. Dazu kamen vier Rebounds und ein Assist. Der knappe Abstand lässt das Risiko einer geringen Zahl eigener Würfe bestehen.","tipoffCET":"2026-11-05T04:00","prognosis":"Für Williams reichen neun Punkte. Bei regelmäßigem Wurfvolumen ist die Schwelle für einen Flügelspieler erreichbar. Bei wenigen Abschlüssen hängt das Ergebnis stärker von einzelnen Treffern ab."},{"id":6,"date":"2026-11-04","sport":"NBA","player":"Kyle Kuzma","matchup":"MIL @ BOS","market":"Assists","operator":"Over","line":2.5,"book":"22bet","odds":2.3,"stake":100,"status":"win","actual":4,"pts":6,"reb":5,"ast":4,"note":"Kuzma verteilte vier Assists in 27 Minuten und übertraf die erforderlichen drei. Dazu erzielte er sechs Punkte und holte fünf Rebounds. Für den Assist-Tipp reichte seine Beteiligung als Passgeber auch bei begrenzter Punkteproduktion.","tipoffCET":"2026-11-05T01:30","prognosis":"Kuzma braucht drei Assists aus seiner Rolle als zusätzlicher Passgeber. Zuspiele aus dem Halbfeld können die Linie erreichen, wenn seine Mitspieler die Würfe verwerten. Wie oft er Angriffe selbst einleitet, bleibt der entscheidende Faktor."},{"id":7,"date":"2026-11-05","sport":"EuroLeague","player":"Allan Dokossi","matchup":"Paris @ Anadolu Efes","market":"Rebounds","operator":"Over","line":4.5,"book":"Cryptotino","odds":1.91,"stake":100,"status":"win","actual":9,"pts":null,"reb":9,"ast":null,"note":"Dokossi holte neun Rebounds und lag deutlich über der Schwelle. Die Boards kamen trotz geringer Einsatzzeit zustande. Für vergleichbare Tipps bleibt wichtig, ob er seine Rebound-Produktion bei kurzen Einsätzen wiederholen kann.","tipoffCET":"2026-11-05T18:15","prognosis":"Dokossi braucht fünf Rebounds gegen Anadolu Efes. Seine Arbeit in Korbnähe bietet Chancen an beiden Brettern. Die unsichere Einsatzzeit ist bei dieser Linie das zentrale Risiko."},{"id":8,"date":"2026-11-05","sport":"NBA","player":"Devin Booker","matchup":"ORL @ PHX","market":"Assists","operator":"Over","line":4.5,"book":"Cryptotino","odds":1.83,"stake":100,"status":"win","actual":8,"pts":null,"reb":null,"ast":8,"note":"Booker kam gegen Orlando auf acht Assists und traf die Linie mit drei Vorlagen Abstand zur Mindestmarke. Damit reichte seine Produktion als Passgeber an diesem Abend klar aus. Die vorherigen Schwankungen bleiben für die Bewertung der nächsten Linie relevant.","tipoffCET":"2026-11-06T03:00","prognosis":"Booker kann fünf Assists erreichen, wenn er gegen Orlando regelmäßig Angriffe einleitet. Seine eigene Abschlussgefahr eröffnet Passfenster zu freien Mitspielern. Das Over hängt davon ab, ob diese ihre Würfe verwerten."},{"id":9,"date":"2026-11-05","sport":"NBA","player":"Giannis Antetokounmpo","matchup":"MIA @ GSW","market":"Rebounds","operator":"Over","line":11.5,"book":"Cryptotino","odds":1.8,"stake":100,"status":"win","actual":14,"pts":null,"reb":14,"ast":null,"note":"Antetokounmpo holte 14 Rebounds und lag zwei über der Mindestmarke. Das zuvor betrachtete Belastungsrisiko verhinderte den Treffer in diesem Spiel nicht. Bei einer ähnlich hohen Linie bleibt die erwartete Einsatzzeit besonders wichtig.","tipoffCET":"2026-11-06T04:00","prognosis":"Antetokounmpo braucht zwölf Rebounds gegen Golden State. Seine Rolle am defensiven Brett trägt den Hauptteil der Erwartung, mit möglichen zusätzlichen Offensivrebounds. Eine reduzierte Spielzeit würde das Over bei dieser hohen Schwelle empfindlich treffen."},{"id":10,"date":"2026-11-06","sport":"NBA","player":"Jaden McDaniels","matchup":"MIN @ NOP","market":"Rebounds","operator":"Over","line":5.5,"book":"Cryptorino","odds":1.9,"stake":100,"status":"win","actual":6,"note":"McDaniels holte sechs Rebounds in knapp 40 Minuten. Die drei offensiven und drei defensiven Boards reichten genau für die Mindestmarke. Der knappe Treffer trotz langer Einsatzzeit zeigt, wie wichtig jede zusätzliche Rebound-Chance war.","tipoffCET":"2026-11-07T02:00","pts":23,"reb":6,"ast":5,"prognosis":"McDaniels braucht gegen New Orleans sechs Rebounds. Seine jüngste Saisonstichprobe stützt die Linie, und reguläre Starterminuten geben ihm dafür mehrere Chancen. Ein großer Teil des Arguments hängt an der Einsatzzeit."},{"id":11,"date":"2026-11-06","sport":"NBA","player":"Jaylen Brown","matchup":"PHI @ CLE","market":"Assists","operator":"Over","line":3.5,"book":"Cryptorino","odds":1.92,"stake":100,"status":"win","actual":5,"note":"Brown verteilte in rund 34 Minuten fünf Assists. Er erreichte die Linie trotz Philadelphias deutlicher 95:119-Niederlage. Der Spielverlauf ließ ihm an diesem Abend genug Zeit für seine Rolle als zusätzlicher Passgeber.","tipoffCET":"2026-11-07T01:30","pts":20,"reb":5,"ast":5,"prognosis":"Brown braucht vier Assists gegen Cleveland. Als zusätzlicher Ballhandler kann er die Linie über Pässe nach eigenen Drives oder aus dem Halbfeld erreichen. Eine einseitige Partie könnte seine Spielzeit und damit die Zahl dieser Chancen reduzieren."},{"id":12,"date":"2026-11-06","sport":"NBA","player":"Zach LaVine","matchup":"SAS @ SAC","market":"Punkte","operator":"Over","line":19.5,"book":"Cryptorino","odds":1.87,"stake":100,"status":"loss","actual":14,"note":"LaVine blieb bei 14 Punkten. Er traf vier von zwölf Feldwürfen und nur einen von sechs Dreiern. Trotz rund 35 Minuten fehlten ihm damit sowohl die nötige Wurfausbeute als auch zusätzliche Abschlüsse.","tipoffCET":"2026-11-07T04:00","pts":14,"reb":4,"ast":3,"prognosis":"LaVine braucht 20 Punkte gegen San Antonio. Seine Rolle als Scorer bietet genügend Möglichkeiten, wenn er sein übliches Wurfvolumen erreicht. Ein schwacher Abend von außen würde die Linie spürbar erschweren."},{"id":13,"date":"2026-11-06","sport":"EuroLeague","player":"Kevarrius Hayes","matchup":"Partizan vs Maccabi","market":"Punkte","operator":"Under","line":11.5,"book":"Cryptorino","odds":1.8,"stake":100,"status":"void","actual":null,"note":"Hayes kam gegen Maccabi nicht zum Einsatz. Der Tipp wurde als Void gewertet. Dadurch ergibt sich ein Nettoergebnis von null.","tipoffCET":"2026-11-06T20:45","prognosis":"Hayes bleibt unter der Linie, wenn er höchstens elf Punkte erzielt. Seine begrenzte offensive Rolle stützt das Under. Zusätzliche Minuten oder ungewöhnlich viele Abschlüsse in Korbnähe wären die wichtigsten Risiken."},{"id":14,"date":"2026-11-06","sport":"NBA","player":"Ziaire Williams","matchup":"POR @ LAL","market":"Punkte","operator":"Over","line":7.5,"book":"Cryptorino","odds":1.87,"stake":100,"status":"win","actual":8,"note":"Williams erzielte in rund 19 Minuten genau acht Punkte. Er traf drei von fünf Feldwürfen, darunter zwei von vier Dreiern. Der zweite Dreier war wichtig, weil das Ergebnis exakt auf der Mindestmarke lag.","tipoffCET":"2026-11-07T04:00","pts":8,"reb":3,"ast":1,"prognosis":"Williams braucht acht Punkte gegen Portland. Die Schwelle ist mit einer regulären Rolle und einigen Würfen von außen erreichbar. Seine schwankenden Minuten können die Zahl der Abschlüsse schnell begrenzen."},{"id":15,"date":"2026-11-06","sport":"NBA","player":"Tyler Herro","matchup":"TOR @ MIL","market":"Dreier","operator":"4+","line":4,"book":"Cryptorino","odds":2.36,"stake":65,"status":"loss","actual":1,"note":"Herro traf einen von fünf Dreiern und verfehlte die Linie. Seine rund 35 Minuten reichten für 23 Punkte und zehn Assists, aber nur fünf Abschlüsse von außen. Das geringere Dreier-Volumen war der auffälligste Unterschied zur vorherigen Serie.","tipoffCET":"2026-11-07T02:00","pts":23,"reb":5,"ast":10,"threesMade":1,"threesAttempted":5,"prognosis":"Für Herro sind vier verwandelte Dreier nötig. Seine jüngste Serie stützt die Linie vor allem dann, wenn er erneut ein hohes Volumen von außen bekommt. Bei wenigen Versuchen wäre eine außergewöhnlich hohe Trefferquote nötig."},{"id":16,"date":"2026-11-07","sport":"NBA","player":"Obi Toppin","matchup":"DEN @ IND","market":"Punkte","operator":"Over","line":11.5,"book":"Cryptorino","odds":1.9,"stake":100,"status":"loss","actual":10,"tipoffCET":"2026-11-07T23:00","note":"Toppin erzielte zehn Punkte in gut 22 Minuten. Er nahm elf Feldwürfe, traf aber nur zwei seiner acht Dreier. Ohne Haliburton war die Vergleichsstichprobe vor dem Spiel klein, und die Wurfausbeute reichte diesmal nicht.","pts":10,"reb":7,"ast":2,"prognosis":"Toppin braucht zwölf Punkte gegen Denver. Er kann die Linie über Dreier und Abschlüsse am Ring erreichen, wenn seine Minuten und Wurfversuche ausreichen. Ohne Haliburton ist die Stichprobe mit vergleichbarer Besetzung klein."},{"id":17,"date":"2026-11-07","sport":"NBA","player":"Michael Porter Jr.","matchup":"BKN @ ATL","market":"Dreier","operator":"Over","line":2.5,"book":"Cryptorino","odds":1.85,"stake":100,"status":"win","actual":3,"tipoffCET":"2026-11-08T01:30","note":"Porter traf drei von elf Dreiern in rund 36 Minuten. Das Volumen reichte trotz einer Dreierquote von 27,3 Prozent genau für die Mindestmarke. Der Treffer hing an der Zahl der Versuche.","pts":25,"reb":9,"ast":1,"prognosis":"Porter braucht drei erfolgreiche Dreier gegen Atlanta. Ein hohes Volumen von außen gibt ihm auch bei durchschnittlicher Quote einen Weg zur Linie. Sinkt die Zahl der Versuche, wird das Over deutlich anfälliger für einen schwächeren Wurftag."},{"id":18,"date":"2026-11-07","sport":"NBA","player":"Miles Bridges","matchup":"HOU @ PHX","market":"Punkte + Rebounds + Assists","operator":"Over","line":25.5,"book":"Cryptorino","odds":1.9,"stake":100,"status":"win","actual":30,"tipoffCET":"2026-11-08T03:00","note":"Bridges kam auf 30 P+R+A aus 13 Punkten, zehn Rebounds und sieben Assists. Rebounds und Vorlagen lieferten zusammen 17 und waren ausschlaggebend. Dadurch reichte seine Gesamtproduktion trotz nur 13 Punkten klar aus.","pts":13,"reb":10,"ast":7,"prognosis":"Bridges braucht 26 kombinierte Punkte, Rebounds und Assists. Für das Over ist seine Produktion am Brett und als Passgeber neben den eigenen Abschlüssen wichtig. Bleiben zwei der drei Kategorien deutlich zurück, wird die Schwelle schwer erreichbar."},{"id":19,"date":"2026-11-07","sport":"NBA","player":"Stephen Curry","matchup":"ORL @ GSW","market":"Punkte","operator":"Over","line":26.5,"book":"Cryptorino","odds":1.9,"stake":100,"status":"win","actual":41,"tipoffCET":"2026-11-08T02:30","note":"Curry erzielte 41 Punkte und übertraf die Linie klar. 19 Punkte fielen im Schlussviertel und in der Verlängerung. Die zusätzliche Spielzeit gehört zur Einordnung des hohen Endwerts.","pts":41,"reb":6,"ast":6,"prognosis":"Curry braucht 27 Punkte gegen Orlando. Sein Volumen von außen und zusätzliche Punkte von der Freiwurflinie bieten mehrere Wege dorthin. Eine schwache Wurfquote oder kürzere Spielzeit würde die Trefferchance senken."},{"id":20,"date":"2026-11-08","sport":"NBA","player":"Davion Mitchell","matchup":"MIA @ SAC","market":"Punkte + Assists","operator":"Over","line":20.5,"book":"22bet","odds":1.8,"stake":100,"status":"win","actual":23,"pts":null,"reb":null,"ast":null,"tipoffCET":"2026-11-09T03:00","note":"Mitchell hatte vor Spielende bereits mindestens 23 P+A aus 15 Punkten und acht Assists. Damit war die Mindestmarke von 21 erreicht. Die 23 sind ein dokumentierter Mindestwert aus dem Spielverlauf, der endgültige Einzelwert ist hier offen.","actualMin":true,"checkedPts":15,"checkedAst":8,"prognosis":"Mitchell braucht 21 P+A gegen Sacramento. Die Linie bleibt erreichbar, wenn er eigene Abschlüsse mit seiner Rolle als Passgeber verbindet. Ausschlaggebend sind seine Ballbesitze und die Verwertung seiner Vorlagen."},{"id":21,"date":"2026-11-08","sport":"NBA","player":"Matas Buzelis","matchup":"PHI @ CHI","market":"Rebounds","operator":"Over","line":4.5,"book":"Cryptorino","odds":1.83,"stake":100,"status":"win","actual":5,"pts":19,"reb":5,"ast":2,"tipoffCET":"2026-11-08T21:30","note":"Buzelis holte fünf Rebounds und traf genau die Mindestmarke. Dazu kamen 19 Punkte und zwei Assists. Ein weiterer Rebound als Puffer fehlte.","prognosis":"Buzelis braucht gegen Philadelphia fünf Rebounds. Bei regulären Minuten kann er die Schwelle über defensive Abpraller erreichen. Die Verteilung der Rebounds zwischen ihm und den Centern ist das wichtigste Risiko."},{"id":22,"date":"2026-11-08","sport":"NBA","player":"Tyrese Maxey","matchup":"PHI @ CHI","market":"Punkte","operator":"Over","line":25.5,"book":"Cryptorino","odds":1.94,"stake":100,"status":"win","actual":27,"pts":27,"reb":4,"ast":7,"tipoffCET":"2026-11-08T21:30","note":"Maxey erzielte 27 Punkte bei neun Treffern aus 16 Feldwürfen. Drei seiner sieben Dreier fielen, und er lag einen Punkt über der Mindestmarke. Der Treffer kam mit Embiid, Brown und LeBron in der Besetzung zustande.","prognosis":"Maxey braucht 26 Punkte in Chicago. Sein Wurfvolumen und seine Rolle als Scorer eröffnen einen Weg zur Linie. Mit Embiid, Brown und LeBron teilt er sich die Abschlusslast, wodurch ein durchschnittlicher Wurftag knapp werden kann."},{"id":23,"date":"2026-11-09","sport":"NBA","player":"Austin Reaves","matchup":"LAL @ ATL","market":"Punkte","operator":"Over","line":21.5,"book":"22bet","odds":1.85,"stake":100,"status":"void","actual":null,"tipoffCET":"2026-11-10T01:00","note":"Reaves setzte gegen Atlanta krankheitsbedingt aus. Der Tipp wurde als Void gewertet. Dadurch ergibt sich ein Nettoergebnis von null.","prognosis":"Reaves braucht 22 Punkte gegen Atlanta. Die Linie hängt an seinen Abschlüssen und Freiwürfen in der regulären Guard-Rotation. Wegen der gemeldeten Krankheit ist sein Einsatzstatus vor dem Spiel besonders wichtig."},{"id":24,"date":"2026-11-09","sport":"NBA","player":"Dylan Harper","matchup":"SAS @ PHX","market":"Punkte + Assists","operator":"Over","line":20.5,"book":"Betsider","odds":1.86,"stake":100,"status":"win","actual":21,"tipoffCET":"2026-11-10T03:00","note":"Harper erzielte 17 Punkte und vier Assists in rund 26 Minuten. Seine 21 P+A reichten genau für die Mindestmarke beim 122:96 gegen Phoenix. Den größten Beitrag lieferten seine eigenen Abschlüsse.","pts":17,"reb":5,"ast":4,"prognosis":"Harper braucht 21 Punkte und Assists zusammen. Über eigene Abschlüsse und Vorlagen kann er beide Bestandteile der Linie beitragen. Die Aufteilung der Ballbesitze in San Antonios Guard-Rotation bestimmt den Spielraum."},{"id":25,"date":"2026-11-09","sport":"NBA","player":"Miles Bridges","matchup":"SAS @ PHX","market":"Punkte + Assists","operator":"Over","line":18.5,"book":"Betsider","odds":1.9,"stake":100,"status":"loss","actual":7,"tipoffCET":"2026-11-10T03:00","note":"Bridges blieb bei sieben Punkten und ohne Assist. In rund 25 Minuten traf er drei von neun Feldwürfen und keinen seiner vier Dreier. Beim 96:122 gegen San Antonio blieben ihm beide Wege zur Linie weitgehend verschlossen.","pts":7,"reb":5,"ast":0,"prognosis":"Bridges braucht 19 kombinierte Punkte und Assists. Neben Booker und Green hängt der Tipp davon ab, dass er auch selbst genug Abschlüsse oder Passgelegenheiten bekommt. Eine einseitige Partie kann dieses Volumen zusätzlich drücken."},{"id":26,"date":"2026-11-09","sport":"NBA","player":"Stephon Castle","matchup":"SAS @ PHX","market":"Punkte + Rebounds","operator":"Over","line":19.5,"book":"22bet","odds":1.8,"stake":100,"status":"loss","actual":12,"tipoffCET":"2026-11-10T03:00","note":"Castle kam auf vier Punkte und acht Rebounds. Mit zwölf P+R blieb er klar unter der Linie, obwohl er rund 30 Minuten spielte. Die Rebounds konnten den geringen Punktebeitrag bei nur zwei Feldtreffern nicht ausgleichen.","pts":4,"reb":8,"ast":7,"prognosis":"Castle braucht 20 Punkte und Rebounds zusammen. Seine jüngste Produktion bei regulärer Einsatzzeit stützt die Linie. Bleibt die Zahl der Abschlüsse niedrig, müsste er einen größeren Teil über die Rebounds auffangen."},{"id":27,"date":"2026-11-09","sport":"NBA","player":"Daniel Gafford","matchup":"IND @ DAL","market":"Blocks","operator":"Over","line":1.5,"book":"Cryptorino","odds":2.25,"stake":80,"status":"loss","actual":0,"tipoffCET":"2026-11-10T02:00","note":"Gafford blieb gegen Indiana in knapp 20 Minuten ohne Block. Damit fehlten beide erforderlichen Blocks. Der Vergleich mit drei Blocks in ähnlich langer Spielzeit gegen Brooklyn zeigt die Schwankung dieses Marktes.","pts":8,"reb":2,"ast":3,"blk":0,"prognosis":"Gafford braucht gegen Indiana zwei Blocks. Die Zahl der gegnerischen Ringangriffe in seinen Einsatzphasen bestimmt, wie viele Chancen er bekommt. Bei einer kurzen Center-Rotation reichen wenige verpasste Gelegenheiten für den Fehlschlag."},{"id":28,"date":"2026-11-10","sport":"NBA","player":"Franz Wagner","matchup":"ORL @ SAC","market":"Assists","operator":"Over","line":8.5,"book":"Cryptorino","odds":1.98,"stake":100,"status":"loss","actual":7,"tipoffCET":"2026-11-11T04:00","note":"Wagner verteilte sieben Assists in rund 38 Minuten und blieb unter der Linie. Er erzielte zugleich 33 Punkte, während der zurückgekehrte Bane vier Assists beisteuerte. Die hohe Spielzeit reichte diesmal für weniger Vorlagen als im Vergleichsspiel ohne Bane.","pts":33,"reb":7,"ast":7,"prognosis":"Wagner braucht neun Assists gegen Sacramento. Banchero und Suggs fehlen weiterhin, während Bane nach dem verpassten Spiel gegen Golden State zurückkehrt. Der jüngste Wert von elf Assists ohne Bane ist daher nur bedingt übertragbar."},{"id":29,"date":"2026-11-10","sport":"NBA","player":"Myles Turner","matchup":"MIL @ NYK","market":"Blocks","operator":"Over","line":1.5,"book":"Cryptorino","odds":2.1,"stake":100,"status":"loss","actual":1,"tipoffCET":"2026-11-11T01:30","note":"Turner kam beim 85:117 gegen New York auf einen Block in knapp 27 Minuten. Es fehlte eine geblockte Aktion zur Mindestmarke. Die deutliche Niederlage ist relevanter Spielkontext, ihre Wirkung auf die Zahl seiner Blockchancen bleibt offen.","pts":3,"reb":3,"ast":2,"blk":1,"prognosis":"Turner braucht mindestens zwei Blocks gegen New York. Die Linie hängt von seinen Minuten am Ring und der Zahl der gegnerischen Abschlüsse in seiner Nähe ab. Herros Ausfall verändert die Besetzung, für einen direkten Effekt auf Turners Blocks fehlt ein belastbarer Vergleich."},{"id":30,"date":"2026-11-10","sport":"NBA","player":"Davion Mitchell","matchup":"MIA @ UTA","market":"Punkte + Assists","operator":"Over","line":21.5,"book":"Betsider","odds":1.84,"stake":100,"status":"win","actual":27,"tipoffCET":"2026-11-11T03:00","note":"Mitchell lieferte 19 Punkte und acht Assists in rund 37 Minuten. Mit 27 P+A überschritt er die Mindestmarke um fünf. Seine drei Dreier und die acht Vorlagen trugen beide zum Treffer bei.","pts":19,"reb":5,"ast":8,"stl":2,"blk":0,"prognosis":"Mitchell braucht 22 P+A gegen Utah. Das Over hat einen Weg über seine Ballhandler-Rolle und einen zweiten über eigene Abschlüsse. Die Linie wird anfälliger, wenn einer der beiden Beiträge ausbleibt."},{"id":31,"date":"2026-11-10","sport":"NBA","player":"Damian Lillard","matchup":"OKC @ POR","market":"Punkte","operator":"Over","line":19.5,"book":"Cryptorino","odds":1.98,"stake":100,"status":"win","actual":25,"tipoffCET":"2026-11-11T05:00","note":"Lillard erzielte 25 Punkte in rund 23 Minuten. Vier verwandelte Dreier bei zehn Versuchen und fünf Freiwurftreffer ermöglichten den Treffer trotz kurzer Einsatzzeit. Portland gewann deutlich mit 123:103.","pts":25,"reb":3,"ast":3,"stl":1,"blk":0,"prognosis":"Lillard braucht 20 Punkte gegen Oklahoma City. Das kann er über Dreier und Freiwürfe erreichen, wenn er genug Würfe bekommt. Ein einseitiger Spielverlauf könnte seine Spielzeit verkürzen und den Puffer verringern."},{"id":32,"date":"2026-11-11","sport":"NBA","player":"De'Anthony Melton","matchup":"GSW @ HOU","market":"Rebounds","operator":"Over","line":3.5,"book":"Cryptorino","odds":2.2,"stake":100,"status":"win","actual":4,"tipoffCET":"2026-11-12T03:30","note":"Melton holte beim 108:115 gegen Houston vier Defensivrebounds in rund 25 Minuten. Damit traf er die Mindestmarke exakt. Seine Spielzeit lag im zuletzt beobachteten Bereich und ließ keinen Puffer beim Ergebnis.","pts":11,"reb":4,"ast":4,"threesMade":3,"threesAttempted":7,"prognosis":"Melton braucht vier Rebounds gegen Houston und erreichte die Schwelle in acht seiner letzten zehn Spiele. Über die letzten 20 Spiele lag er bei 13 Treffern. Schwankende Minuten und ein für Guard-Rebounds eher schwieriges Matchup begrenzen die Aussagekraft der jüngsten Serie."},{"id":33,"date":"2026-11-11","sport":"NBA","player":"Zion Williamson","matchup":"BKN @ NOP","market":"Punkte","operator":"Over","line":20.5,"book":"Cryptorino","odds":1.88,"stake":100,"status":"win","actual":29,"tipoffCET":"2026-11-12T02:00","note":"Williamson erzielte 29 Punkte in rund 30 Minuten und übertraf die Linie deutlich. Er traf zwölf von 14 Freiwürfen. Diese Produktion hielt auch bei der klaren 111:145-Niederlage gegen Brooklyn.","pts":29,"reb":4,"ast":2,"threesMade":1,"threesAttempted":1,"prognosis":"Williamson braucht 21 Punkte gegen Brooklyn. Der jüngste Schnitt von rund 21 Punkten lässt bei dieser Linie wenig Spielraum. Regelmäßige Abschlüsse am Ring und Freiwürfe sind wichtig, um die Schwelle auch bei wechselnder Spielzeit zu erreichen."},{"id":34,"date":"2026-11-11","sport":"NBA","player":"Luka Dončić","matchup":"LAL @ MIL","market":"Dreier","operator":"Over","line":4.5,"book":"Betsider","odds":1.92,"stake":100,"status":"win","actual":5,"tipoffCET":"2026-11-12T02:00","note":"Dončić traf beim 123:112 der Lakers fünf von zwölf Dreiern. Seine rund 32 Minuten reichten für genügend Versuche, und der fünfte Treffer brachte ihn genau auf die Mindestmarke. Ein Dreier weniger hätte den Tipp gekostet.","pts":32,"reb":5,"ast":5,"threesMade":5,"threesAttempted":12,"prognosis":"Dončić braucht fünf Dreier gegen Milwaukee und erreichte die Marke in acht seiner letzten zehn Spiele. Der Tipp setzt erneut hohes Wurfvolumen von außen voraus. Selbst bei vielen Versuchen bleibt die Streuung der Trefferquote ein wesentliches Risiko."},{"id":35,"date":"2026-11-11","sport":"NBA","player":"Matas Buzelis","matchup":"SAS @ CHI","market":"Rebounds","operator":"Over","line":4.5,"book":"Betsider","odds":1.73,"stake":100,"status":"loss","actual":3,"tipoffCET":"2026-11-12T02:00","note":"Buzelis holte drei Defensivrebounds in rund 31 Minuten. Zwei weitere Rebounds hätten für die Mindestmarke gereicht. Claxton holte sechs Boards, die kleine Stichprobe lässt den Einfluss der neuen Rotation aber offen.","pts":13,"reb":3,"ast":2,"threesMade":3,"threesAttempted":7,"prognosis":"Buzelis braucht fünf Rebounds gegen San Antonio. Die frühere Trefferquote enthält überwiegend Spiele vor Claxtons Einstieg in die Center-Rotation. Mit Claxton gab es vor diesem Spiel erst einen Vergleich, deshalb bleibt die Rebound-Verteilung unsicher."},{"id":36,"date":"2026-11-11","sport":"NBA","player":"Trey Murphy III","matchup":"BKN @ NOP","market":"Assists","operator":"Over","line":2.5,"book":"Bankonbet","odds":1.63,"stake":100,"status":"void","actual":null,"tipoffCET":"2026-11-12T02:00","note":"Murphy setzte gegen Brooklyn mit Kniebeschwerden aus. Der Tipp wurde als Void gewertet. Dadurch ergibt sich ein Nettoergebnis von null.","prognosis":"Murphy braucht drei Assists gegen Brooklyn und erreichte die Marke in neun seiner letzten zehn Einsätze. Seine übliche Spielzeit stützt den Weg zur Linie über zusätzliche Ballbesitze. Die Kniebeschwerden lassen seinen Einsatzstatus und seine Minuten offen."},{"id":37,"date":"2026-11-12","sport":"NBA","player":"Jaden McDaniels","matchup":"DAL @ MIN","market":"Rebounds","operator":"Over","line":5.5,"odds":2.17,"tipoffCET":"2026-11-13T02:00","note":"McDaniels holte in 25:16 Minuten neun Rebounds, davon vier offensiv und fünf defensiv. Beim 133:94 gegen Dallas übertraf er die für den Tipp nötigen sechs Rebounds um drei.","book":"Cryptorino","stake":100,"status":"win","actual":9,"prognosis":"McDaniels erreichte sechs Rebounds in neun seiner letzten zehn Spiele. Ohne Edwards traf er in sechs von sieben Partien und kam auf durchschnittlich sechs Rebounds in rund 35 Minuten. Acht der letzten zehn Spiele endeten exakt bei sechs Boards, sodass selbst ein kleiner Rückgang der Chancen entscheidend wäre.","pts":16,"reb":9,"ast":3,"threesMade":0,"threesAttempted":3},{"id":38,"date":"2026-11-12","sport":"NBA","player":"Cade Cunningham","matchup":"DET @ WAS","market":"Assists","operator":"Under","line":8.5,"odds":1.99,"tipoffCET":"2026-11-13T01:00","note":"Cunningham gab beim 144:140 gegen Washington in 47:59 Minuten elf Assists. Zehn davon kamen schon in der regulären Spielzeit, sodass das Under vor der doppelten Verlängerung verloren war.","book":"Cryptorino","stake":100,"status":"loss","actual":11,"prognosis":"Cunningham blieb in neun seiner letzten zehn Spiele unter 8,5 Assists, darunter sieben von acht ohne den erneut fehlenden Duren. Im letzten Duell mit Washington gab er sieben Vorlagen, spielte dabei aber nur 27 Minuten. Mehr Einsatzzeit und fünf Spiele mit genau acht Assists in der jüngsten Stichprobe machen die Linie knapp.","pts":52,"reb":5,"ast":11,"threesMade":3,"threesAttempted":5},{"id":39,"date":"2026-11-12","sport":"NBA","matchup":"CHA @ PHX","player":"Christian Anderson","market":"Punkte + Assists","operator":"Under","line":10.5,"book":"Rabona","odds":1.9524,"note":"Anderson kam in 18:14 Minuten auf 13 Punkte und zwei Assists. Drei verwandelte Dreier trugen neun Punkte bei, und seine Punkte allein reichten bereits aus, um das Under 10,5 zu verlieren.","stake":100,"status":"loss","actual":15,"tipoffCET":"2026-11-13T03:00","prognosis":"Anderson blieb in allen zehn bisherigen Spielen unter 10,5 Punkten und Assists. Ohne Schröder lag er in zwei Partien bei durchschnittlich 9,5 P+A in rund 21 Minuten. Gegen Cleveland kam er bei drei getroffenen Dreiern auf zehn P+A, während Coby White die meisten Vorlagen für Charlotte gab. Eine größere Ballhandler-Rolle würde das Under deutlich anfälliger machen.","pts":13,"reb":0,"ast":2,"threesMade":3,"threesAttempted":6},{"id":40,"date":"2026-11-12","sport":"NBA","matchup":"CHA @ PHX","player":"Khaman Maluach","market":"Rebounds","operator":"Over","line":5.5,"book":"Cryptorino","odds":2.06,"note":"Maluach kam von der Bank und holte in 16:25 Minuten zwei Rebounds, je einen offensiv und defensiv. Ighodaro startete und spielte 31:32 Minuten. Maluach fehlten vier Rebounds zum Treffer.","stake":100,"status":"loss","actual":2,"tipoffCET":"2026-11-13T03:00","prognosis":"Maluach holte in acht seiner letzten zehn Spiele mindestens sechs Rebounds. Seit Ighodaro in die Startformation rückte, schaffte er die Schwelle in drei von vier Partien bei rund 20 Minuten im Schnitt. Mark Williams fehlte bereits in der gesamten Stichprobe, und eine kürzere Einsatzzeit gegen Charlotte wäre das Hauptrisiko.","pts":4,"reb":2,"ast":1,"threesMade":0,"threesAttempted":0},{"id":41,"sport":"EuroLeague","player":"Aliou Diarra","teamCode":"VIR","matchup":"VIR @ EFE","market":"Assists","operator":"Under","line":2,"book":"Proworld","odds":1.79,"tipoffCET":"2026-11-13T18:30","publicPick":"free","prognosis":"Diarra blieb in neun seiner letzten zehn EuroLeague-Spiele unter zwei Assists und lag im Schnitt bei 0,6. In seinen beiden bisherigen Duellen mit Efes gab er einen beziehungsweise keinen Assist. ⚠️ Hackett, Casarin und Baldasso fehlen bei Virtus, daher unterscheidet sich die heutige Besetzung von seinem letzten Spiel mit drei Assists. Der Tipp setzt voraus, dass Proworld bei genau zwei Assists den Einsatz erstattet.","date":"2026-11-13","stake":100,"status":"open","actual":null,"note":""}],"publicUpdatedAt":"2026-11-13T12:13:27Z","journalStart":"2026-11-04","openByDate":{"2026-11-13":6},"openDetailsByDate":{"2026-11-13":{"count":6,"stake":600,"potential":557.24,"tipoffs":["2026-11-13T18:30","2026-11-13T20:30","2026-11-14T02:00","2026-11-14T02:30","2026-11-14T04:30"],"conditional":1}}}</script>
 <div class="layout">
@@ -769,12 +906,52 @@ html:has(.calendar-sheet[open]){overflow:hidden}
 </aside>
 <main class="main">
  <header class="topbar"><div><div class="eyebrow"><span data-i18n="Spielerwetten">Player props</span></div><h1 class="journal-title"><span class="journal-title-text" data-i18n="NBA × EuroLeague Wettjournal">NBA × EuroLeague Journal</span><span class="journal-leagues" aria-hidden="true"><img src="./assets/league-nba.svg" alt="" width="576" height="339"> <span class="journal-league-divider">×</span> <img class="title-euro-logo" src="./assets/league-euroleague.svg" alt="" width="254" height="58"></span></h1><p><span data-i18n="Spielerwetten, Ergebnisse und Analysen">Player props, results and analysis</span></p></div>
- <div class="toolbar"><span class="tag green" style="padding:10px 12px"><span data-i18n="🔒 Öffentliche Leseansicht">🔒 Public · read-only</span></span><span class="tag blue" id="syncStatus" data-site-updated-at="2026-11-12T23:25:21Z" aria-live="polite">Loading data</span><!-- Flag graphics: Twemoji by Twitter and contributors, via https://github.com/jdecked/twemoji. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/ -->
+ <div class="toolbar"><span class="tag blue" id="syncStatus" data-site-updated-at="2026-11-12T23:25:21Z" aria-live="polite">Loading data</span><!-- Flag graphics: Twemoji by Twitter and contributors, via https://github.com/jdecked/twemoji. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/ -->
  <details class="language-picker" id="journalLanguage"><summary class="field" id="journalLanguageToggle"><span class="language-label" data-i18n="Sprache">Language</span><img id="journalLanguageFlag" src="./flags/gb.svg" alt="" width="21" height="21"><span id="journalLanguageName" lang="en">English</span><svg class="language-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 4 4 4 4-4"/></svg></summary><ul class="language-options"><li><button type="button" data-language="en" lang="en" aria-pressed="true"><img src="./flags/gb.svg" alt="" width="21" height="21"><span>English</span></button></li><li><button type="button" data-language="ru" lang="ru" aria-pressed="false"><img src="./flags/ru.svg" alt="" width="21" height="21"><span>Русский</span></button></li><li><button type="button" data-language="de" lang="de" aria-pressed="false"><img src="./flags/de.svg" alt="" width="21" height="21"><span>Deutsch</span></button></li><li><button type="button" data-language="es" lang="es" aria-pressed="false"><img src="./flags/es.svg" alt="" width="21" height="21"><span>Español</span></button></li></ul></details></div></header>
  <section id="view-dashboard" class="view">
-  <details class="journal-guide surface"><summary><span data-i18n="So liest du das Journal">How to read the journal</span></summary><dl><div><dt><span data-i18n="Tipps und Einsätze">Picks and stakes</span></dt><dd><span data-i18n="Ein Tipp erfasst einen Markt und eine Quote. Der angezeigte Einsatz ist die Grundlage der Gewinn- und Verlustrechnung. Bei Void wird der Einsatz vollständig zurückgerechnet.">Each pick records a market and odds. The listed stake is used to calculate profit or loss. A void returns the full stake to the balance.</span></dd></div><div><dt>ROI</dt><dd><span data-i18n="Der ROI teilt den Nettogewinn durch die Einsätze gewonnener und verlorener Tipps.">ROI is net profit divided by stakes on wins and losses.</span></dd></div><div><dt><span data-i18n="Markt">Market</span></dt><dd><span data-i18n="P+R+A steht für Punkte, Rebounds und Assists zusammen.">P+R+A means points, rebounds and assists combined.</span></dd></div><div><dt><span data-i18n="Kalendermarkierungen">Calendar badges</span></dt><dd><span id="guideCalendar"></span></dd></div></dl></details>
+  <section class="pn-hero" aria-labelledby="pn-name">
+  <div class="pn-avatar" aria-hidden="true">
+    <div class="pn-avatar-inner"><b>PN</b><img src="./assets/professor-nba.jpg" alt="" width="92" height="92" onerror="this.remove()"></div>
+  </div>
+  <div class="pn-body">
+    <div class="pn-eyebrow" data-i18n="Dein Analyst">Your analyst</div>
+    <h2 class="pn-name" id="pn-name">Professor NBA</h2>
+    <p class="pn-lead" data-i18n="Seit über 10 Jahren im Sportwetten-Geschäft aktiv, spezialisiert auf Spielerwetten in NBA und EuroLeague. Jeder Tipp wird öffentlich dokumentiert, Gewinne wie Verluste.">Active in sports betting for over 10 years, specialised in NBA and EuroLeague player props. Every pick is logged publicly, wins and losses.</p>
+    <ul class="pn-chips">
+      <li data-i18n="10+ Jahre Erfahrung">10+ years of experience</li>
+      <li data-i18n="NBA × EuroLeague">NBA × EuroLeague</li>
+      <li data-i18n="Spielerwetten">Player props</li>
+      <li data-i18n="Jeder Tipp dokumentiert">Every pick logged</li>
+      <li class="pn-note" data-i18n="Papierjournal mit simulierten Einsätzen">Paper journal, simulated stakes</li>
+    </ul>
+  </div>
+  <div class="pn-cta">
+    <a class="pn-btn pn-btn-free" href="https://t.me/ProfessorNBA" target="_blank" rel="noopener noreferrer" data-i18n="Kostenlosen Kanal beitreten">Join free channel</a>
+    <a class="pn-btn pn-btn-vip" href="https://t.me/ProfessorNBA01" target="_blank" rel="noopener noreferrer" data-i18n="VIP-Zugang anfragen">Get VIP access</a>
+  </div>
+</section>
+
+<section class="pn-ticker" id="pnTicker" aria-label="Latest results" data-i18n-aria-label="Letzte Ergebnisse" hidden>
+  <span class="pn-ticker-label" data-i18n="Letzte Ergebnisse">Latest results</span>
+  <div class="pn-ticker-view"><div class="pn-ticker-track" id="pnTickerTrack"></div></div>
+</section>
   <div class="metrics" id="kpis"></div>
   <p id="journalSample" class="journal-sample"></p>
+  <section class="pn-form" id="pnForm" aria-label="Last 10 picks" data-i18n-aria-label="Letzte 10 Tipps" hidden>
+  <div class="pn-form-main">
+    <div class="pn-form-head">
+      <span class="pn-form-title" data-i18n="Letzte 10 Tipps">Last 10 picks</span>
+      <span class="pn-form-sum" id="pnFormSum"></span>
+    </div>
+    <div class="pn-dots" id="pnDots" role="list"></div>
+  </div>
+  <div class="pn-form-stats">
+    <div class="pn-stat"><span data-i18n="Grüne Tage">Green days</span><b id="pnGreen"></b></div>
+    <div class="pn-stat"><span data-i18n="Bester Tag">Best day</span><b class="pos" id="pnBest"></b></div>
+    <div class="pn-stat"><span data-i18n="Längste Serie">Longest streak</span><b id="pnStreak"></b></div>
+  </div>
+</section>
+  <details class="journal-guide surface"><summary><span data-i18n="So liest du das Journal">How to read the journal</span></summary><dl><div><dt><span data-i18n="Tipps und Einsätze">Picks and stakes</span></dt><dd><span data-i18n="Ein Tipp erfasst einen Markt und eine Quote. Der angezeigte Einsatz ist die Grundlage der Gewinn- und Verlustrechnung. Bei Void wird der Einsatz vollständig zurückgerechnet.">Each pick records a market and odds. The listed stake is used to calculate profit or loss. A void returns the full stake to the balance.</span></dd></div><div><dt>ROI</dt><dd><span data-i18n="Der ROI teilt den Nettogewinn durch die Einsätze gewonnener und verlorener Tipps.">ROI is net profit divided by stakes on wins and losses.</span></dd></div><div><dt><span data-i18n="Markt">Market</span></dt><dd><span data-i18n="P+R+A steht für Punkte, Rebounds und Assists zusammen.">P+R+A means points, rebounds and assists combined.</span></dd></div><div><dt><span data-i18n="Kalendermarkierungen">Calendar badges</span></dt><dd><span id="guideCalendar"></span></dd></div></dl></details>
   <div class="graph surface"><div class="graphbar"><div><h2><span data-i18n="Profit-Verlauf">Profit history</span> <span class="muted" style="font-size:11px"><span data-i18n="· interaktiv">· interactive</span></span></h2><p><span data-i18n="Tippe auf die Kurve oder fahre mit der Maus darüber.">Tap the chart or hover over it for details.</span></p></div><div class="toolbar"><div class="segments" id="chartMetric"><button data-metric="profit" class="active"><span data-i18n="Profit">Profit</span></button><button data-metric="balance"><span data-i18n="Bankroll">Bankroll</span></button></div><div class="segments" id="chartGran"><button data-gran="bet" class="active"><span data-i18n="Pro Wette">Per bet</span></button><button data-gran="day"><span data-i18n="Pro Tag">Per day</span></button></div></div></div>
    <div class="graph-content" id="chartHolder"><svg id="profitChart" class="chart-svg" viewBox="0 0 1100 290" role="img" aria-label="Interactive net profit chart" data-i18n-aria-label="Interaktiver Verlauf der Nettobilanz"><defs><linearGradient id="chartStroke"><stop stop-color="#23b98f"/><stop offset=".58" stop-color="#43e5ac"/><stop offset="1" stop-color="#9dffdf"/></linearGradient><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#46eabb" stop-opacity=".17"/><stop offset="100%" stop-color="#46eabb" stop-opacity=".005"/></linearGradient></defs><g id="chartMarks"></g><path id="fillPath" fill="url(#areaFill)"/><path id="linePath" pathLength="1" stroke="url(#chartStroke)" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><g id="chartEnd" class="hide" aria-hidden="true"><circle class="chart-end-pulse" r="4"/><circle class="chart-end-dot" r="4"/><rect class="chart-end-tag" height="22" rx="6"/><text class="chart-end-value" text-anchor="end" dominant-baseline="middle"></text></g><g id="hoverLayer" class="hide"><line id="vCross" class="hover-line"/><circle id="hoverDot" class="hover-dot" r="5.5"/></g><rect id="hitSurface" width="1100" height="290" fill="transparent"/></svg><div id="chartTip" class="tooltip hide" aria-live="polite"></div></div>
    <div class="chart-footer"><span class="chart-legend"><span class="chart-legend-dash" aria-hidden="true"></span><span data-i18n="Gestrichelte Linie = Gewinnschwelle">Dashed line = break-even</span></span><span id="chart-end-label" class="chart-end-summary"></span></div>
@@ -802,10 +979,10 @@ html:has(.calendar-sheet[open]){overflow:hidden}
  </dialog>
  </div></section>
  <section id="view-analysis" class="view hide"><div class="section-top"><div><h2><span data-i18n="Nachanalysen &amp; Prognosen">Post-game reviews &amp; previews</span></h2><small><span data-i18n="Bei älteren Einträgen wurden fehlende Prognosen aus dem dokumentierten Spielkontext rekonstruiert.">Some older previews were reconstructed from the recorded pregame context.</span></small></div><div class="statrow"><span class="tag green" id="analysisSettledCount">0</span><span id="analysisOpenCount"></span></div></div><div class="surface boxcontent"><div id="analysisList"></div></div></section>
- <footer class="footer"><span><span data-i18n="PaperLab · Öffentliches Wettjournal">PaperLab · Public betting journal</span></span><span><span data-i18n="Bilanz nach hinterlegten Quoten und Einsätzen">Balance based on recorded odds and stakes</span></span><span data-i18n="PaperLab ist unabhängig von der NBA und der EuroLeague.">PaperLab is independent of the NBA and EuroLeague.</span><span class="journal-responsible"><span data-i18n="18+ · Keine Wettberatung">18+ · No betting advice</span> <a href="https://www.check-dein-spiel.de/hilfe-fuer-spieler/telefon-beratung"><span data-i18n="Hilfe bei Glücksspielproblemen (Deutschland)">Gambling support (Germany)</span></a></span></footer>
+ <footer class="footer"><span><span data-i18n="PaperLab · Öffentliches Wettjournal">PaperLab · Public betting journal</span></span><span><span data-i18n="Bilanz nach hinterlegten Quoten und Einsätzen">Balance based on recorded odds and stakes</span></span><span data-i18n="PaperLab ist unabhängig von der NBA und der EuroLeague.">PaperLab is independent of the NBA and EuroLeague.</span><span class="pn-public-note" data-i18n="Öffentliche Leseansicht">Public · read-only</span><span class="journal-responsible"><span data-i18n="18+ · Keine Wettberatung">18+ · No betting advice</span> <a href="https://www.check-dein-spiel.de/hilfe-fuer-spieler/telefon-beratung"><span data-i18n="Hilfe bei Glücksspielproblemen (Deutschland)">Gambling support (Germany)</span></a></span></footer>
 </main></div>
 <div id="toast" class="toast hide" role="status"></div>
-<script src="./paperlab-locales.js?v=15"></script>
+<script src="./paperlab-locales.js?v=16"></script>
 <script>
 (()=>{'use strict';
 const LOCALES = {en:'en-GB', ru:'ru-RU', de:'de-DE', es:'es-ES'};
@@ -1656,6 +1833,166 @@ calendarHandle.addEventListener('pointerup',event=>{
  calendarSwipe=null;
 });
 calendarHandle.addEventListener('pointercancel',()=>{calendarSwipe=null});
+/* PaperLab: Professor NBA add-ons (recent form, results ticker, free-pick countdown, KPI count-up).
+   Usage: after journal-data.json is loaded AND the dashboard has rendered, call  pnInit(data)  once.
+   After a language switch call  pnRenderForm(data.bets)  and  pnRenderTicker(data.bets)  again. */
+
+/* ---------- shared helpers ---------- */
+const PN_TXT = {
+  en: { tip: 'Tip-off in {0}', live: 'Live now', wait: 'Awaiting result' },
+  de: { tip: 'Tip-off in {0}', live: 'Läuft gerade', wait: 'Ergebnis ausstehend' },
+  ru: { tip: 'Начало через {0}', live: 'Идёт сейчас', wait: 'Ожидается результат' },
+  es: { tip: 'Empieza en {0}', live: 'En juego', wait: 'Resultado pendiente' }
+};
+const pnLang = () => { const l = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase(); return PN_TXT[l] ? l : 'en'; };
+const pnTxt = (k, ...a) => PN_TXT[pnLang()][k].replace(/\{(\d)\}/g, (_, i) => a[i]);
+const pnMoney = (locale) => new Intl.NumberFormat(locale || document.documentElement.lang || 'en',
+  { style: 'currency', currency: 'EUR', maximumFractionDigits: 0, signDisplay: 'exceptZero' });
+const pnNet = profit;
+const pnWhen = b => tipoffCETOf(b) || b.date || '';
+// decided picks (win/loss) in chronological order by tip-off; array order is not guaranteed to be chronological
+const pnDecided = bets => bets.filter(b => b.status === 'win' || b.status === 'loss')
+  .sort((a, b) => (pnWhen(a) < pnWhen(b) ? -1 : pnWhen(a) > pnWhen(b) ? 1 : (a.id || 0) - (b.id || 0)));
+
+/* ---------- 1) recent form strip ---------- */
+function pnRenderForm(bets, locale) {
+  const root = document.getElementById('pnForm');
+  if (!root || !Array.isArray(bets)) return;
+  const money = pnMoney(locale);
+  const decided = pnDecided(bets);
+  if (!decided.length) { root.hidden = true; return; }
+
+  const last = decided.slice(-10);                       // newest on the right
+  const dots = document.getElementById('pnDots');
+  dots.innerHTML = '';
+  last.forEach((b, i) => {
+    const d = document.createElement('span');
+    d.className = 'pn-dot ' + b.status + (i === last.length - 1 ? ' latest' : '');
+    d.style.setProperty('--i', i);
+    d.setAttribute('role', 'listitem');
+    d.textContent = b.status === 'win' ? '✓' : '×';     // shape + colour, not colour alone
+    const label = `${b.player}, ${marketText(b)}: ${money.format(pnNet(b))}`.replace(/\s+/g, ' ');
+    d.title = label;
+    d.setAttribute('aria-label', tr(b.status === 'win' ? 'Gewonnen' : 'Verloren') + ': ' + label);
+    dots.appendChild(d);
+  });
+  document.getElementById('pnFormSum').textContent = `${last.filter(b => b.status === 'win').length}/${last.length}`;
+
+  const days = {};                                       // per game day, only days without open picks
+  bets.forEach(b => { (days[b.date] ||= { net: 0, open: false }); days[b.date].net += pnNet(b); if (b.status === 'open') days[b.date].open = true; });
+  const settled = Object.entries(days).filter(([date, day]) => !day.open && !openCountFor([date])).map(([, day]) => day);
+  document.getElementById('pnGreen').textContent = `${settled.filter(d => d.net > 0).length}/${settled.length}`;
+  document.getElementById('pnBest').textContent = settled.length ? money.format(Math.max(...settled.map(d => d.net))) : '–';
+
+  let run = 0, best = 0;                                 // longest winning streak (voids skipped)
+  decided.forEach(b => { run = b.status === 'win' ? run + 1 : 0; best = Math.max(best, run); });
+  document.getElementById('pnStreak').textContent = best;
+  root.hidden = false;
+}
+
+/* ---------- 2) results ticker ---------- */
+function pnRenderTicker(bets, locale) {
+  const root = document.getElementById('pnTicker');
+  if (!root || !Array.isArray(bets)) return;
+  const money = pnMoney(locale);
+  const items = pnDecided(bets).slice(-12).reverse();    // newest first
+  if (!items.length) { root.hidden = true; return; }
+  const makeSet = hidden => {
+    const set = document.createElement('div');
+    set.className = 'pn-ticker-set';
+    if (hidden) set.setAttribute('aria-hidden', 'true');
+    items.forEach(b => {
+      const t = document.createElement('span');
+      t.className = 'pn-tick ' + b.status;
+      const i = document.createElement('i'); i.textContent = b.status === 'win' ? '✓' : '×';
+      const n = document.createElement('span'); n.textContent = b.player;
+      const v = document.createElement('b'); v.textContent = money.format(pnNet(b));
+      t.append(i, n, v);
+      set.appendChild(t);
+    });
+    return set;
+  };
+  const track = document.getElementById('pnTickerTrack');
+  track.innerHTML = '';
+  track.append(makeSet(false), makeSet(true));           // second copy = seamless loop
+  track.style.setProperty('--pn-dur', Math.max(24, items.length * 3.2) + 's');
+  root.hidden = false;
+}
+
+/* ---------- 3) free-pick countdown (chip next to the existing "Free pick" badge) ---------- */
+// tipoffCET is Europe/Berlin wall-clock time (CET in winter, CEST in summer) -> epoch ms
+function pnBerlinMs(s) {
+  const [d, t] = s.split('T'); const [y, m, da] = d.split('-').map(Number); const [h, mi] = t.split(':').map(Number);
+  const guess = Date.UTC(y, m - 1, da, h, mi);
+  const fmt = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Berlin', hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  const off = ts => { const p = fmt.formatToParts(new Date(ts)).reduce((a, x) => (a[x.type] = x.value, a), {}); return Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute, p.second) - ts; };
+  let ts = guess - off(guess); ts = guess - off(ts);
+  return ts;
+}
+function pnDur(ms) {
+  const m = Math.max(0, Math.round(ms / 60000)), d = Math.floor(m / 1440), h = Math.floor(m % 1440 / 60), mi = m % 60;
+  return d ? `${d}d ${h}h` : h ? `${h}h ${mi}m` : `${mi}m`;
+}
+function pnCountdownTick(bets) {
+  bets.filter(b => b.publicPick === 'free' && b.status === 'open' && b.tipoffCET).forEach(b => {
+    const ms = pnBerlinMs(b.tipoffCET) - Date.now();
+    document.querySelectorAll('.free-pick-badge').forEach(badge => {
+      const name = badge.closest('.ticket-name')?.querySelector('strong')?.textContent.trim();
+      if (name !== b.player) return;
+      let chip = badge.parentElement.querySelector('.pn-cd');
+      if (!chip) { chip = document.createElement('span'); badge.insertAdjacentElement('afterend', chip); }
+      let cls = '', txt;
+      if (ms > 0) txt = pnTxt('tip', pnDur(ms));
+      else if (ms > -3 * 3600e3) { cls = ' live'; txt = pnTxt('live'); }        // assumed game length ~3 h
+      else { cls = ' done'; txt = pnTxt('wait'); }
+      chip.className = 'pn-cd' + cls;
+      if (chip.textContent !== txt) chip.textContent = txt;
+    });
+  });
+}
+function pnWatchCountdown() {
+  let t; const run = () => pnCountdownTick(data.bets);
+  run(); setInterval(run, 30000);
+  const root = document.getElementById('view-dashboard');   // the dashboard may re-render its cards: re-attach the chip
+  if (root) new MutationObserver(() => { clearTimeout(t); t = setTimeout(run, 60); }).observe(root, { childList: true, subtree: true });
+}
+
+/* ---------- 4) KPI count-up (keeps the exact original text as the final value) ---------- */
+function pnCountUp(scope) {
+  if (!scope || matchMedia('(prefers-reduced-motion: reduce)').matches) return 0;
+  let n = 0;
+  scope.querySelectorAll('.metricvalue').forEach(mv => {
+    // value lives in a <span> (tiles with sparkline/ring) or directly as text (plain tiles)
+    const el = mv.querySelector(':scope > span') || (mv.children.length ? null : mv);
+    if (!el) return;
+    const txt = el.textContent, m = txt.match(/\d[\d.,   ]*\d|\d/);
+    if (!m) return;
+    const core = m[0], dm = core.match(/([.,])(\d{1,2})$/);
+    const dec = dm ? dm[2].length : 0, decSep = dm ? dm[1] : '.', thSep = decSep === '.' ? ',' : '.';
+    const target = parseFloat(core.replace(/[   ]/g, '').split(thSep).join('').replace(decSep, '.'));
+    if (!isFinite(target)) return;
+    const pre = txt.slice(0, m.index), post = txt.slice(m.index + core.length);
+    const show = v => { const [i, f] = v.toFixed(dec).split('.'); return pre + i.replace(/\B(?=(\d{3})+(?!\d))/g, thSep) + (f ? decSep + f : '') + post; };
+    el.setAttribute('aria-label', txt);
+    const t0 = performance.now(), dur = 900;
+    const step = now => {
+      const p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      if (p < 1) { el.textContent = show(target * e); requestAnimationFrame(step); } else { el.textContent = txt; }
+    };
+    requestAnimationFrame(step); n++;
+  });
+  return n;
+}
+
+/* ---------- entry point ---------- */
+function pnInit(data) {
+  const bets = (data && data.bets) || [];
+  pnRenderForm(bets, LOCALES[language]);
+  pnRenderTicker(bets, LOCALES[language]);
+  pnWatchCountdown();
+  if (!window.__pnCounted && pnCountUp(document.getElementById('kpis')) > 0) window.__pnCounted = true;  // only on first load
+}
+
 const languagePicker = el('journalLanguage');
 const languageToggle = el('journalLanguageToggle');
 const languageOptions = languagePicker.querySelectorAll('[data-language]');
@@ -1669,6 +2006,9 @@ for (const option of languageOptions) {
   try { localStorage.setItem(LANGUAGE_KEY, language); } catch {}
   applyLanguage();
   renderAll();
+  pnRenderForm(data.bets, LOCALES[language]);
+  pnRenderTicker(data.bets, LOCALES[language]);
+  pnCountdownTick(data.bets);
   renderSyncStatus();
   closeLanguagePicker();
  });
@@ -1687,12 +2027,12 @@ renderSyncStatus();
 
 function renderSyncStatus() {
  const status = el('syncStatus');
- status.classList.toggle('amber', syncState === 'offline');
+ status.classList.toggle('amber', syncState === 'offline' && location.protocol !== 'file:');
  if (syncState === 'loading') {
   status.textContent = tr('Daten werden geladen');
   return;
  }
- if (syncState === 'offline') {
+ if (syncState === 'offline' && location.protocol !== 'file:') {
   status.textContent = tr('⚠ Offline-Vorschau (eingebetteter Stand)');
   return;
  }
@@ -1705,7 +2045,8 @@ function renderSyncStatus() {
  status.textContent = '✓ '+(published ? tr('Aktualisiert')+': '+published : tr('Letzter Wetttag')+': '+(day ? dateStr(day) : '—'));
 }
 
-let lastPublishedJSON='';
+let lastPublishedJSON=JSON.stringify(data);
+let pnReady=false;
 async function refreshPublicData(){
  try {
   const response=await fetch('./journal-data.json?t='+Date.now(), {cache:'no-store'});
@@ -1718,6 +2059,10 @@ async function refreshPublicData(){
    lastPublishedJSON=encoded; data=journal;
    if(!journalDates().includes(calendarDate))calendarDate=null;
    renderAll();
+   if (pnReady) {
+    pnRenderForm(data.bets, LOCALES[language]);
+    pnRenderTicker(data.bets, LOCALES[language]);
+   }
   }
   syncState = 'live';
  } catch (err) {
@@ -1725,9 +2070,20 @@ async function refreshPublicData(){
  }
  renderSyncStatus();
 }
-refreshPublicData();
-setInterval(refreshPublicData,60000);
-document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshPublicData()});
+function pnStart() {
+ if (pnReady) return;
+ pnReady=true;
+ pnInit(data);
+}
+if (location.protocol === 'file:') {
+ syncState='offline';
+ renderSyncStatus();
+ pnStart();
+} else {
+ refreshPublicData().finally(pnStart);
+ setInterval(refreshPublicData,60000);
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshPublicData()});
+}
 
 })();
 </script></body></html>

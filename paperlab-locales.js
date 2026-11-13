@@ -2,6 +2,21 @@
 // Key analysis translations by source text so edited entries never show a stale translation.
 const paperLabLocales = {
   ui: {
+"Dein Analyst": ["Your analyst", "Ваш аналитик", "Tu analista"],
+"Seit über 10 Jahren im Sportwetten-Geschäft aktiv, spezialisiert auf Spielerwetten in NBA und EuroLeague. Jeder Tipp wird öffentlich dokumentiert, Gewinne wie Verluste.": [
+  "Active in sports betting for over 10 years, specialised in NBA and EuroLeague player props. Every pick is logged publicly, wins and losses.",
+  "Более 10 лет в спортивных ставках, специализация — ставки на игроков NBA и Евролиги. Каждый прогноз публикуется открыто: и выигрышные, и проигрышные.",
+  "Más de 10 años en las apuestas deportivas, especializado en apuestas a jugadores de la NBA y la Euroliga. Cada pick se registra públicamente, ganados y perdidos."
+],
+"10+ Jahre Erfahrung": ["10+ years of experience", "Более 10 лет опыта", "Más de 10 años de experiencia"],
+"NBA × EuroLeague": ["NBA × EuroLeague", "NBA × Евролига", "NBA × Euroliga"],
+"Jeder Tipp dokumentiert": ["Every pick logged", "Каждый прогноз задокументирован", "Cada pick registrado"],
+"Papierjournal mit simulierten Einsätzen": ["Paper journal, simulated stakes", "Бумажный журнал, виртуальные ставки", "Diario en papel, apuestas simuladas"],
+"Kostenlosen Kanal beitreten": ["Join free channel", "Вступить в бесплатный канал", "Unirse al canal gratuito"],
+"VIP-Zugang anfragen": ["Get VIP access", "Получить VIP-доступ", "Pedir acceso VIP"],
+"Letzte Ergebnisse": ["Latest results", "Последние результаты", "Últimos resultados"],
+"Letzte 10 Tipps": ["Last 10 picks", "Последние 10 прогнозов", "Últimos 10 picks"],
+"Öffentliche Leseansicht": ["Public · read-only", "Публичный просмотр", "Vista pública"],
     "Netto Monat": ["Monthly net", "Итог за месяц", "Balance del mes"],
     "Grüne Tage": ["Green days", "Плюсовые дни", "Días en positivo"],
     "Bester Tag": ["Best day", "Лучший день", "Mejor día"],
