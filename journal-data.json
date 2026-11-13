@@ -859,9 +859,31 @@
       "ast": 1,
       "threesMade": 0,
       "threesAttempted": 0
+    },
+    {
+      "id": 41,
+      "sport": "EuroLeague",
+      "player": "Aliou Diarra",
+      "teamCode": "VIR",
+      "matchup": "VIR @ EFE",
+      "market": "Assists",
+      "operator": "Under",
+      "line": 2,
+      "book": "Proworld",
+      "odds": 1.79,
+      "tipoffCET": "2026-11-13T18:30",
+      "publicPick": "free",
+      "prognosis": "Diarra blieb in neun seiner letzten zehn EuroLeague-Spiele unter zwei Assists und lag im Schnitt bei 0,6. In seinen beiden bisherigen Duellen mit Efes gab er einen beziehungsweise keinen Assist. ⚠️ Hackett, Casarin und Baldasso fehlen bei Virtus, daher unterscheidet sich die heutige Besetzung von seinem letzten Spiel mit drei Assists. Der Tipp setzt voraus, dass Proworld bei genau zwei Assists den Einsatz erstattet.",
+      "date": "2026-11-13",
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "note": ""
     }
   ],
-  "publicUpdatedAt": "2026-11-13T06:27:26Z",
+  "publicUpdatedAt": "2026-11-13T12:13:27Z",
   "journalStart": "2026-11-04",
-  "openByDate": {}
+  "openByDate": {
+    "2026-11-13": 6
+  }
 }
