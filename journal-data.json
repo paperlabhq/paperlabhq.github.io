@@ -1014,9 +1014,29 @@
       "ast": 10,
       "threesMade": 0,
       "threesAttempted": 3
+    },
+    {
+      "id": 47,
+      "sport": "NBA",
+      "player": "Rudy Gobert",
+      "teamCode": "MIN",
+      "matchup": "CHI @ MIN",
+      "market": "Punkte",
+      "operator": "Under",
+      "line": 10.5,
+      "book": "Proworld",
+      "odds": 1.88,
+      "tipoffCET": "2026-11-15T02:00",
+      "prognosis": "Gobert blieb in neun der letzten zehn Spiele unter 10,5 Punkten. Ohne Edwards traf das Under in sieben von sieben Spielen und in allen vier Partien mit mindestens 28 Minuten. In den beiden Duellen mit Chicago in der Vorsaison erzielte er neun und zehn Punkte. Eine Einsatzzeit ab etwa 34 Minuten oder mehr Abschlüsse am Ring als zuletzt machen das Under anfälliger.",
+      "date": "2026-11-14",
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "note": "",
+      "publicPick": "free"
     }
   ],
-  "publicUpdatedAt": "2026-11-14T11:46:03Z",
+  "publicUpdatedAt": "2026-11-14T11:52:13Z",
   "journalStart": "2026-11-04",
   "openByDate": {
     "2026-11-14": 3
@@ -1025,7 +1045,7 @@
     "2026-11-14": {
       "count": 3,
       "stake": 300,
-      "potential": 263.0,
+      "potential": 263,
       "tipoffs": [
         "2026-11-15T02:00"
       ],
