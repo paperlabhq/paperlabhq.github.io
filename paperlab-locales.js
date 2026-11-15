@@ -2,6 +2,7 @@
 // Key analysis translations by source text so edited entries never show a stale translation.
 const paperLabLocales = {
   ui: {
+    "Siege": ["Wins", "Победы", "Aciertos"],
     "Gratis-Tipps": ["Free Picks", "Бесплатные прогнозы", "Pronósticos gratis"],
 "Dein Analyst": ["Your analyst", "Ваш аналитик", "Tu analista"],
 "Seit über 10 Jahren im Sportwetten-Geschäft aktiv, spezialisiert auf Spielerwetten in NBA und EuroLeague. Jeder Tipp wird öffentlich dokumentiert, Gewinne wie Verluste.": [
