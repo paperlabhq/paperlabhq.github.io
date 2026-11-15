@@ -1030,26 +1030,67 @@
       "prognosis": "Gobert blieb in neun der letzten zehn Spiele unter 10,5 Punkten. Ohne Edwards traf das Under in sieben von sieben Spielen und in allen vier Partien mit mindestens 28 Minuten. In den beiden Duellen mit Chicago in der Vorsaison erzielte er neun und zehn Punkte. Eine Einsatzzeit ab etwa 34 Minuten oder mehr Abschlüsse am Ring als zuletzt machen das Under anfälliger.",
       "date": "2026-11-14",
       "stake": 100,
-      "status": "open",
-      "actual": null,
-      "note": "",
-      "publicPick": "free"
+      "status": "win",
+      "actual": 1,
+      "note": "Gobert blieb gegen Chicago in 26:53 Minuten bei einem Punkt. Er vergab alle sieben Feldwurfversuche und traf einen von zwei Freiwürfen. Das Under 10,5 gewann klar.",
+      "publicPick": "free",
+      "pts": 1,
+      "reb": 10,
+      "ast": 4,
+      "threesMade": 0,
+      "threesAttempted": 0
+    },
+    {
+      "id": 48,
+      "sport": "NBA",
+      "player": "Kevin Huerter",
+      "teamCode": "DET",
+      "matchup": "DET @ MIA",
+      "market": "Rebounds",
+      "operator": "Under",
+      "line": 3.5,
+      "book": "Bankonbet",
+      "odds": 1.85,
+      "tipoffCET": "2026-11-15T02:00",
+      "prognosis": "Huerter blieb in acht seiner letzten zehn Spiele unter 3,5 Rebounds. Ohne Jalen Duren und Isaiah Joe traf das Under in sieben von acht Spielen bei durchschnittlich 1,8 Rebounds in 23,9 Minuten. Im ersten Saisonduell mit Miami holte er sechs Rebounds in 20:02 Minuten, damals spielten Duren und Joe beide. Dieses direkte Duell und die Möglichkeit einer längeren Einsatzzeit sind die größten Risiken.",
+      "date": "2026-11-14",
+      "stake": 100,
+      "status": "loss",
+      "actual": 4,
+      "note": "Huerter holte gegen Miami vier Defensivrebounds in 37:50 Minuten und verlor das Under um einen Rebound. Duren und Joe fehlten wie erwartet, doch Huerter spielte fast 14 Minuten länger als im Schnitt der bisherigen Spiele ohne beide. Die längere Einsatzzeit war das entscheidende Risiko in der Vorschau.",
+      "pts": 20,
+      "reb": 4,
+      "ast": 7,
+      "threesMade": 2,
+      "threesAttempted": 6
+    },
+    {
+      "id": 49,
+      "sport": "NBA",
+      "player": "Cedric Coward",
+      "teamCode": "MEM",
+      "matchup": "BKN @ MEM",
+      "market": "Rebounds",
+      "operator": "Over",
+      "line": 6.5,
+      "book": "Bankonbet",
+      "odds": 1.9,
+      "tipoffCET": "2026-11-15T02:00",
+      "prognosis": "Coward holte in zehn seiner elf Saisonspiele mindestens sieben Rebounds. Mit Zach Edey traf er in acht von neun Spielen und ohne ihn in zwei von zwei, wobei die zweite Stichprobe klein ist. Das Spiel gegen Brooklyn ist das zweite an zwei Tagen in Folge. Sein offener Handgelenkstatus und ein mögliches Minutenlimit sind die größten Risiken.",
+      "date": "2026-11-14",
+      "stake": 100,
+      "status": "win",
+      "actual": 12,
+      "note": "Coward startete gegen Brooklyn und holte in 32:49 Minuten zwölf Rebounds, davon drei offensiv. Zach Edey kam nicht zum Einsatz. Coward übertraf die für das Over nötigen sieben Rebounds um fünf.",
+      "pts": 23,
+      "reb": 12,
+      "ast": 4,
+      "threesMade": 4,
+      "threesAttempted": 6
     }
   ],
-  "publicUpdatedAt": "2026-11-14T11:52:13Z",
+  "publicUpdatedAt": "2026-11-15T03:54:53Z",
   "journalStart": "2026-11-04",
-  "openByDate": {
-    "2026-11-14": 3
-  },
-  "openDetailsByDate": {
-    "2026-11-14": {
-      "count": 3,
-      "stake": 300,
-      "potential": 263,
-      "tipoffs": [
-        "2026-11-15T02:00"
-      ],
-      "conditional": 0
-    }
-  }
+  "openByDate": {},
+  "openDetailsByDate": {}
 }
