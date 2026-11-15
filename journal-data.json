@@ -1087,9 +1087,29 @@
       "ast": 4,
       "threesMade": 4,
       "threesAttempted": 6
+    },
+    {
+      "id": 50,
+      "sport": "NBA",
+      "player": "Stephon Castle",
+      "teamCode": "SAS",
+      "matchup": "SAS @ UTA",
+      "market": "Rebounds",
+      "operator": "Over",
+      "line": 4.5,
+      "book": "Rabona",
+      "odds": 1.9524,
+      "tipoffCET": "2026-11-15T23:00",
+      "prognosis": "Castle holte in acht seiner letzten zehn Spiele mindestens fünf Rebounds. In beiden Saisonduellen gegen Utah traf er die Line mit fünf beziehungsweise sechs Rebounds. Wembanyama, Fox und Harper waren in allen 13 Saisonspielen der Stichprobe dabei. Das größte Risiko ist eine kürzere Einsatzzeit bei einem deutlichen Spurs-Sieg.",
+      "date": "2026-11-15",
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "note": "",
+      "publicPick": "free"
     }
   ],
-  "publicUpdatedAt": "2026-11-15T12:58:42Z",
+  "publicUpdatedAt": "2026-11-15T13:13:01Z",
   "journalStart": "2026-11-04",
   "openByDate": {
     "2026-11-15": 3
