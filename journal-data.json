@@ -1103,28 +1103,67 @@
       "prognosis": "Castle holte in acht seiner letzten zehn Spiele mindestens fünf Rebounds. In beiden Saisonduellen gegen Utah traf er die Line mit fünf beziehungsweise sechs Rebounds. Wembanyama, Fox und Harper waren in allen 13 Saisonspielen der Stichprobe dabei. Das größte Risiko ist eine kürzere Einsatzzeit bei einem deutlichen Spurs-Sieg.",
       "date": "2026-11-15",
       "stake": 100,
-      "status": "open",
-      "actual": null,
-      "note": "",
-      "publicPick": "free"
+      "status": "loss",
+      "actual": 4,
+      "note": "Castle holte gegen Utah in 34:52 Minuten vier Defensivrebounds und verpasste die Line um einen. Er bekam reguläre Starterminuten und sammelte seinen vierten Rebound 4:41 vor Schluss. De’Aaron Fox fehlte, anders als in allen 13 Spielen der Vorschau-Stichprobe. Der Besetzungswechsel schränkt den Vergleich ein, sein Einfluss auf Castles Rebounds bleibt offen.",
+      "publicPick": "free",
+      "pts": 20,
+      "reb": 4,
+      "ast": 9,
+      "threesMade": 0,
+      "threesAttempted": 2
+    },
+    {
+      "id": 51,
+      "sport": "NBA",
+      "player": "Derrick Jones Jr.",
+      "teamCode": "LAC",
+      "matchup": "CHA @ LAC",
+      "market": "Dreier",
+      "operator": "Over",
+      "line": 1.5,
+      "book": "Cryptorino",
+      "odds": 2.2,
+      "tipoffCET": "2026-11-15T22:30",
+      "prognosis": "Jones traf in sieben seiner letzten zehn Spiele mindestens zwei Dreier und nahm dabei im Schnitt 4,3 Versuche. Garland, Dunn und Lopez waren in allen zehn Spielen dabei, Ingram in keinem und er bleibt weiter draußen. Charlotte ließ bisher 14,3 gegnerische Dreier pro Spiel zu. Das Risiko ist, dass Jones seine aktuelle Trefferquote von 48,8 Prozent nicht hält oder weniger Würfe bekommt.",
+      "date": "2026-11-15",
+      "stake": 100,
+      "status": "win",
+      "actual": 3,
+      "note": "Jones traf gegen Charlotte in 25:36 Minuten alle drei Dreier. Den zweiten verwandelte er 1:56 vor der Halbzeit, womit das Over bereits erreicht war. Seine drei Versuche lagen unter dem Schnitt von 4,3 aus der Vorschau, die hohe Trefferquote machte den Unterschied.",
+      "pts": 13,
+      "reb": 4,
+      "ast": 1,
+      "threesMade": 3,
+      "threesAttempted": 3
+    },
+    {
+      "id": 52,
+      "sport": "NBA",
+      "player": "Paul George",
+      "teamCode": "BOS",
+      "matchup": "DAL @ BOS",
+      "market": "Rebounds",
+      "operator": "Over",
+      "line": 4.5,
+      "book": "Goldenbet",
+      "odds": 1.87,
+      "tipoffCET": "2026-11-16T00:00",
+      "prognosis": "George holte in acht seiner letzten zehn Spiele mindestens fünf Rebounds, darunter in acht von neun mit Tatum. White und Queta spielten in allen zehn Partien und werden erneut erwartet. Rund 28 Minuten stützen das Over, während weniger Spielzeit bei einem deutlichen Boston-Sieg die Chancen senkt.",
+      "date": "2026-11-15",
+      "stake": 100,
+      "status": "win",
+      "actual": 7,
+      "note": "George holte gegen Dallas in 24:51 Minuten 7 Rebounds. Den fünften sicherte er sich schon nach 4:19 Spielzeit, alle fünf bis dahin waren Defensivrebounds. Bis zur Halbzeit stand er bei sieben Rebounds, sodass der deutliche Bostoner Vorsprung und die kürzere Einsatzzeit den Tipp nicht mehr gefährdeten.",
+      "pts": 7,
+      "reb": 7,
+      "ast": 6,
+      "threesMade": 1,
+      "threesAttempted": 4
     }
   ],
-  "publicUpdatedAt": "2026-11-15T13:13:01Z",
+  "publicUpdatedAt": "2026-11-16T01:08:41Z",
   "journalStart": "2026-11-04",
-  "openByDate": {
-    "2026-11-15": 3
-  },
-  "openDetailsByDate": {
-    "2026-11-15": {
-      "count": 3,
-      "stake": 300,
-      "potential": 302.24,
-      "tipoffs": [
-        "2026-11-15T22:30",
-        "2026-11-15T23:00",
-        "2026-11-16T00:00"
-      ],
-      "conditional": 0
-    }
-  }
+  "openByDate": {},
+  "openDetailsByDate": {}
 }
