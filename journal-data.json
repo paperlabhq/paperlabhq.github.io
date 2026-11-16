@@ -1182,16 +1182,16 @@
       "publicPick": "free"
     }
   ],
-  "publicUpdatedAt": "2026-11-16T08:12:58Z",
+  "publicUpdatedAt": "2026-11-16T08:50:12Z",
   "journalStart": "2026-11-04",
   "openByDate": {
-    "2026-11-16": 3
+    "2026-11-16": 4
   },
   "openDetailsByDate": {
     "2026-11-16": {
-      "count": 3,
-      "stake": 300,
-      "potential": 288,
+      "count": 4,
+      "stake": 400,
+      "potential": 378,
       "tipoffs": [
         "2026-11-17T01:30",
         "2026-11-17T02:00"
