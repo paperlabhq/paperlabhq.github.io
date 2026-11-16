@@ -1160,10 +1160,43 @@
       "ast": 6,
       "threesMade": 1,
       "threesAttempted": 4
+    },
+    {
+      "id": 54,
+      "sport": "NBA",
+      "player": "Davion Mitchell",
+      "teamCode": "MIA",
+      "matchup": "HOU @ MIA",
+      "market": "Punkte + Assists",
+      "operator": "Over",
+      "line": 21.5,
+      "book": "Proworld",
+      "odds": 2.0,
+      "tipoffCET": "2026-11-17T01:30",
+      "prognosis": "Mitchell erreichte in acht seiner letzten zehn Spiele mindestens 22 Punkte und Assists, bei einem Schnitt von 26,0 und einem Median von 25. Giannis, Bam und Wiggins spielten in allen 13 Saisonpartien mit, in denen Mitchell elfmal die Line traf. ⚠️ Pelle Larsson ist fraglich. Mitchell traf in neun von elf Spielen mit ihm und in zwei von zwei ohne ihn. Houston lässt wenige gegnerische Assists zu, was die Kombi anfälliger macht.",
+      "date": "2026-11-16",
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "note": "",
+      "publicPick": "free"
     }
   ],
-  "publicUpdatedAt": "2026-11-16T01:08:41Z",
+  "publicUpdatedAt": "2026-11-16T08:12:58Z",
   "journalStart": "2026-11-04",
-  "openByDate": {},
-  "openDetailsByDate": {}
+  "openByDate": {
+    "2026-11-16": 3
+  },
+  "openDetailsByDate": {
+    "2026-11-16": {
+      "count": 3,
+      "stake": 300,
+      "potential": 288,
+      "tipoffs": [
+        "2026-11-17T01:30",
+        "2026-11-17T02:00"
+      ],
+      "conditional": 0
+    }
+  }
 }
