@@ -1279,18 +1279,19 @@
       "prognosis": "Badio erreichte in neun seiner letzten zehn EuroLeague-Spiele mindestens zwei Assists, auch in allen vier Saisonspielen mit weniger als 16 Minuten. Mit Nunn und Sloukas traf er in allen drei gemeinsamen Spielen und wird gegen Bologna erneut als Starter erwartet. Bologna ließ bislang im Schnitt 19,6 gegnerische Assists zu. Sieben der letzten zehn Spiele endeten bei exakt zwei Assists, daher ist die Line von 1,5 entscheidend."
     }
   ],
-  "publicUpdatedAt": "2026-11-17T05:02:41Z",
+  "publicUpdatedAt": "2026-11-17T11:11:17Z",
   "journalStart": "2026-11-04",
   "openByDate": {
-    "2026-11-17": 2
+    "2026-11-17": 3
   },
   "openDetailsByDate": {
     "2026-11-17": {
-      "count": 2,
-      "stake": 200,
-      "potential": 154,
+      "count": 3,
+      "stake": 300,
+      "potential": 228,
       "tipoffs": [
-        "2026-11-17T21:00"
+        "2026-11-17T21:00",
+        "2026-11-18T05:00"
       ],
       "conditional": 0
     }
