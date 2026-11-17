@@ -1162,6 +1162,30 @@
       "threesAttempted": 4
     },
     {
+      "id": 53,
+      "sport": "NBA",
+      "player": "Jaden McDaniels",
+      "teamCode": "MIN",
+      "matchup": "POR @ MIN",
+      "market": "Rebounds + Assists",
+      "operator": "Over",
+      "line": 8.5,
+      "book": "Proworld",
+      "odds": 2.0,
+      "tipoffCET": "2026-11-17T02:00",
+      "prognosis": "McDaniels erreichte die nötigen neun Rebounds und Assists in neun seiner letzten zehn Spiele bei 10,3 im Schnitt. ⚠️ Ohne Anthony Edwards traf er achtmal in neun Partien, gegenüber vier von vier mit ihm. Mit Gobert und LaMelo Ball sowie ohne Edwards und DiVincenzo traf er in allen acht Vergleichsspielen. Portland lässt wenige Assists zu, und zwei der letzten zehn Spiele endeten genau bei neun R+A.",
+      "date": "2026-11-16",
+      "stake": 100,
+      "status": "win",
+      "actual": 9,
+      "note": "McDaniels kam gegen Portland in 31:09 Minuten auf sechs Rebounds und drei Assists. Anthony Edwards und Donte DiVincenzo fehlten weiterhin, während Rudy Gobert und LaMelo Ball spielten. Mit neun Rebounds und Assists insgesamt erreichte er genau die für das Over nötige Zahl.",
+      "pts": 13,
+      "reb": 6,
+      "ast": 3,
+      "threesMade": 0,
+      "threesAttempted": 2
+    },
+    {
       "id": 54,
       "sport": "NBA",
       "player": "Davion Mitchell",
@@ -1176,27 +1200,67 @@
       "prognosis": "Mitchell erreichte in acht seiner letzten zehn Spiele mindestens 22 Punkte und Assists, bei einem Schnitt von 26,0 und einem Median von 25. Giannis, Bam und Wiggins spielten in allen 13 Saisonpartien mit, in denen Mitchell elfmal die Line traf. ⚠️ Pelle Larsson ist fraglich. Mitchell traf in neun von elf Spielen mit ihm und in zwei von zwei ohne ihn. Houston lässt wenige gegnerische Assists zu, was die Kombi anfälliger macht.",
       "date": "2026-11-16",
       "stake": 100,
-      "status": "open",
-      "actual": null,
-      "note": "",
-      "publicPick": "free"
+      "status": "win",
+      "actual": 26,
+      "note": "Mitchell erzielte gegen Houston in 33:16 Minuten 16 Punkte und 10 Assists. Pelle Larsson kam nicht zum Einsatz, und Mitchell leistete sich keinen Ballverlust. Trotz nur eines Treffers bei sechs Dreierwürfen kam er dank der Assists auf 26 Punkte und Assists insgesamt.",
+      "publicPick": "free",
+      "pts": 16,
+      "reb": 3,
+      "ast": 10,
+      "threesMade": 1,
+      "threesAttempted": 6
+    },
+    {
+      "id": 55,
+      "sport": "NBA",
+      "player": "Zion Williamson",
+      "teamCode": "NOP",
+      "matchup": "GSW @ NOP",
+      "market": "Punkte",
+      "operator": "Over",
+      "line": 21.5,
+      "book": "Cryptorino",
+      "odds": 1.88,
+      "tipoffCET": "2026-11-17T02:00",
+      "prognosis": "Williamson erzielte in acht seiner letzten zehn Spiele mindestens 22 Punkte, zweimal genau 22. ⚠️ Ohne Trey Murphy III traf er in allen vier Saisonspielen bei 24,5 Punkten im Schnitt, mit Murphy in sechs von neun bei 20,8. Auch Dejounte Murray und Bennedict Mathurin fehlen. Gegen Denver, dem einzigen Vergleich ohne alle drei, erzielte Williamson 24 Punkte in 31 Minuten bei 16 Feldwurf- und acht Freiwurfversuchen.",
+      "date": "2026-11-16",
+      "stake": 100,
+      "status": "loss",
+      "actual": 16,
+      "note": "Williamson erzielte beim 115:94 gegen Golden State 16 Punkte in 24:57 Minuten, sechs weniger als für den Tipp nötig. Trey Murphy III, Dejounte Murray und Bennedict Mathurin fehlten wie in der Vorschau erwartet. Williamson spielte nach seiner Auswechslung 3:15 vor Ende des dritten Viertels nicht mehr und kam insgesamt auf 13 Feldwurf- und fünf Freiwurfversuche.",
+      "pts": 16,
+      "reb": 6,
+      "ast": 2,
+      "threesMade": 0,
+      "threesAttempted": 0
+    },
+    {
+      "id": 56,
+      "sport": "NBA",
+      "player": "Terrence Shannon Jr.",
+      "teamCode": "MIN",
+      "matchup": "POR @ MIN",
+      "market": "Rebounds + Assists",
+      "operator": "Over",
+      "line": 4.5,
+      "book": "1bet",
+      "odds": 1.9,
+      "tipoffCET": "2026-11-17T02:00",
+      "prognosis": "Shannon kam in neun seiner letzten zehn Spiele auf mindestens fünf Rebounds und Assists und lag dabei bei 6,1 im Schnitt. ⚠️ Ohne Edwards und DiVincenzo traf er in allen sechs Spielen, davon fünf mit Gobert, LaMelo Ball, Ayo Dosunmu und McDaniels. Nach seiner Hüftverletzung kam er in den ersten drei Spielen zurück auf jeweils sechs R+A in 18, 21 und 22 Minuten. Seine Bankrolle und Portlands niedrige Zahl zugelassener Assists sind die größten Risiken.",
+      "date": "2026-11-16",
+      "stake": 100,
+      "status": "win",
+      "actual": 9,
+      "note": "Shannon kam gegen Portland von der Bank und spielte 35:11 Minuten, deutlich mehr als die 18 bis 22 Minuten in seinen ersten drei Partien nach der Rückkehr. Anthony Edwards und Donte DiVincenzo fehlten weiterhin. Seine sechs Assists reichten allein für das Over, dazu kamen drei Rebounds.",
+      "pts": 34,
+      "reb": 3,
+      "ast": 6,
+      "threesMade": 3,
+      "threesAttempted": 4
     }
   ],
-  "publicUpdatedAt": "2026-11-16T08:50:12Z",
+  "publicUpdatedAt": "2026-11-17T04:14:17Z",
   "journalStart": "2026-11-04",
-  "openByDate": {
-    "2026-11-16": 4
-  },
-  "openDetailsByDate": {
-    "2026-11-16": {
-      "count": 4,
-      "stake": 400,
-      "potential": 378,
-      "tipoffs": [
-        "2026-11-17T01:30",
-        "2026-11-17T02:00"
-      ],
-      "conditional": 0
-    }
-  }
+  "openByDate": {},
+  "openDetailsByDate": {}
 }
