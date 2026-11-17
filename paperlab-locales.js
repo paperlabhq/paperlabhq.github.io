@@ -1406,3 +1406,16 @@ const paperLabLocales = {
     ]
   }
 };
+
+Object.assign(paperLabLocales.analyses, {
+  "Carr erzielte acht Punkte in 20:26 Minuten und blieb damit zwei Punkte unter den benötigten zehn. Er traf drei seiner sechs Feldwürfe, darunter zwei von fünf Dreiern, und erhielt keine Freiwürfe. Seine sieben Assists zeigen die Beteiligung als Passgeber, während die Zahl der eigenen Abschlüsse für das Punkte-Over zu gering blieb.": [
+    "Carr scored eight points in 20:26 and finished two short of the ten required. He made three of six field-goal attempts, including two of five threes, and took no free throws. His seven assists show his involvement as a playmaker, while his own shot volume was too low to clear the points line.",
+    "Карр набрал восемь очков за 20:26, не добрав два до необходимых десяти. Он реализовал три из шести бросков с игры, включая два из пяти трёхочковых, и не исполнял штрафных. Семь передач отражают его участие в организации атак, но собственных бросков для прохода ставки на очки оказалось слишком мало.",
+    "Carr anotó ocho puntos en 20:26 y se quedó a dos de los diez necesarios. Convirtió tres de seis tiros de campo, incluidos dos de cinco triples, y no lanzó tiros libres. Sus siete asistencias reflejan su participación como organizador, mientras que el volumen de sus propios lanzamientos fue insuficiente para superar la línea de puntos."
+  ],
+  "Badio verteilte zwei Assists in nur 9:34 Minuten und erreichte damit genau die Mindestmarke. Er blieb ohne Punkte und holte zwei Rebounds, sodass seine Passproduktion den Assist-Tipp entschied. Die deutlich kürzere Einsatzzeit als erwartet zeigt zugleich, wie knapp der Treffer abgesichert war.": [
+    "Badio delivered two assists in just 9:34 and hit the exact minimum required. He scored no points and collected two rebounds, with his passing production deciding the assists pick. The much shorter playing time than expected also shows how little margin there was behind the win.",
+    "Бадио отдал две передачи всего за 9:34 и достиг ровно необходимого минимума. Он не набрал очков и собрал два подбора, а результат ставки определили его передачи. Заметно меньшее, чем ожидалось, игровое время также показывает, насколько небольшим был запас для прохода.",
+    "Badio repartió dos asistencias en solo 9:34 y alcanzó exactamente el mínimo necesario. Terminó sin puntos y con dos rebotes, y su producción como pasador decidió la apuesta de asistencias. El tiempo de juego, mucho menor de lo previsto, también muestra el escaso margen que tuvo el acierto."
+  ]
+});
