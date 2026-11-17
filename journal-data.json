@@ -1257,10 +1257,42 @@
       "ast": 6,
       "threesMade": 3,
       "threesAttempted": 4
+    },
+    {
+      "date": "2026-11-17",
+      "sport": "EuroLeague",
+      "matchup": "PAN @ VIR",
+      "operator": "Over",
+      "book": "Cryptorino",
+      "tipoffCET": "2026-11-17T21:00",
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "note": "",
+      "id": 58,
+      "player": "Brancou Badio",
+      "teamCode": "PAN",
+      "market": "Assists",
+      "line": 1.5,
+      "odds": 1.63,
+      "publicPick": "free",
+      "prognosis": "Badio erreichte in neun seiner letzten zehn EuroLeague-Spiele mindestens zwei Assists, auch in allen vier Saisonspielen mit weniger als 16 Minuten. Mit Nunn und Sloukas traf er in allen drei gemeinsamen Spielen und wird gegen Bologna erneut als Starter erwartet. Bologna ließ bislang im Schnitt 19,6 gegnerische Assists zu. Sieben der letzten zehn Spiele endeten bei exakt zwei Assists, daher ist die Line von 1,5 entscheidend."
     }
   ],
-  "publicUpdatedAt": "2026-11-17T04:14:17Z",
+  "publicUpdatedAt": "2026-11-17T05:02:41Z",
   "journalStart": "2026-11-04",
-  "openByDate": {},
-  "openDetailsByDate": {}
+  "openByDate": {
+    "2026-11-17": 2
+  },
+  "openDetailsByDate": {
+    "2026-11-17": {
+      "count": 2,
+      "stake": 200,
+      "potential": 154,
+      "tipoffs": [
+        "2026-11-17T21:00"
+      ],
+      "conditional": 0
+    }
+  }
 }
