@@ -1308,24 +1308,85 @@
       "minutes": 9.5667,
       "threesMade": 0,
       "threesAttempted": 0
+    },
+    {
+      "date": "2026-11-17",
+      "sport": "NBA",
+      "matchup": "CHA @ LAL",
+      "operator": "Over",
+      "book": "1bet",
+      "tipoffCET": "2026-11-18T05:00",
+      "stake": 100,
+      "status": "loss",
+      "actual": 1,
+      "note": "Williams blieb gegen Charlotte in 23:42 Minuten bei null Punkten und einem Assist. Sein einziger Feldwurf war ein verfehlter Dreier, und er kam zu keinem Freiwurf. Bei diesem Wurfvolumen fehlten die Punkte, um die Linie von 8,5 Punkten plus Assists zu erreichen.",
+      "id": 59,
+      "player": "Ziaire Williams",
+      "teamCode": "LAL",
+      "market": "Punkte + Assists",
+      "line": 8.5,
+      "odds": 1.74,
+      "prognosis": "Williams erreichte in allen elf Saisonspielen für die Lakers mindestens neun Punkte plus Assists und lag in den letzten zehn bei 12,6 im Schnitt. ⚠️ Austin Reaves fehlt weiterhin. Ohne ihn kam Williams in den beiden bisherigen Spielen auf 14 und neun P+A, mit dem heute verfügbaren Quentin Grimes traf er in neun von neun Partien. Die Spielzeit von der Bank bleibt das Risiko: Gegen Phoenix brauchte er drei Assists zu sechs Punkten, um die Schwelle in 19 Minuten knapp zu erreichen.",
+      "pts": 0,
+      "reb": 1,
+      "ast": 1,
+      "minutes": 23.7,
+      "threesMade": 0,
+      "threesAttempted": 1
+    },
+    {
+      "date": "2026-11-17",
+      "sport": "NBA",
+      "matchup": "DET @ SAS",
+      "operator": "Over",
+      "book": "Rabona",
+      "tipoffCET": "2026-11-18T02:00",
+      "stake": 100,
+      "status": "loss",
+      "actual": 3,
+      "note": "Johnson kam gegen Detroit auf zwei Rebounds und einen Assist, zusammen drei bei einer benötigten Sieben. Er spielte nur 14:39 Minuten von der Bank, rund zwölf Minuten weniger als im Schnitt seiner sechs Spiele vor der Partie. Der kürzere Einsatz begrenzte seine Chancen sowohl am Brett als auch als Passgeber.",
+      "id": 60,
+      "player": "Keldon Johnson",
+      "teamCode": "SAS",
+      "market": "Rebounds + Assists",
+      "line": 6.5,
+      "odds": 2,
+      "prognosis": "Johnson erreichte in neun seiner letzten zehn Spiele mindestens sieben Rebounds plus Assists. In seinen letzten sechs Spielen lag er jedes Mal bei mindestens acht und spielte im Schnitt 27 Minuten. Mit Fox traf er in zehn von 13 Spielen, mit der gesamten erwarteten Starting Five in acht von elf. ⚠️ Jalen Duren fehlt bei Detroit. Schwankende Minuten von der Bank bleiben das Hauptrisiko.",
+      "pts": 4,
+      "reb": 2,
+      "ast": 1,
+      "minutes": 14.65,
+      "threesMade": 0,
+      "threesAttempted": 1
+    },
+    {
+      "date": "2026-11-17",
+      "sport": "NBA",
+      "matchup": "UTA @ LAC",
+      "operator": "Over",
+      "book": "Proworld",
+      "tipoffCET": "2026-11-18T04:30",
+      "stake": 100,
+      "status": "loss",
+      "actual": 0,
+      "note": "Jones startete gegen Utah und spielte 28:22 Minuten, nahm aber nur einen Dreier und verfehlte ihn. Vor dem Spiel hatte er in seinen letzten zehn Einsätzen im Schnitt 4,4 Dreier versucht. Mit einem einzigen Versuch war die Schwelle von zwei Treffern schon durch das geringe Wurfvolumen außer Reichweite.",
+      "id": 61,
+      "player": "Derrick Jones Jr.",
+      "teamCode": "LAC",
+      "market": "Dreier",
+      "line": 1.5,
+      "odds": 2.6,
+      "prognosis": "Jones traf in acht seiner letzten zehn Spiele mindestens zwei Dreier und nahm im Schnitt 4,4 Versuche. Garland, Dunn und Brook Lopez spielten in allen elf Saisonspielen mit, während Ingram und Beal weiterhin fehlen und in keinem dieser Spiele dabei waren. Mit 23 von 44 Dreiern in den letzten zehn Spielen war seine Trefferquote hoch. Das gestiegene Wurfvolumen stützt die Linie, die schwankende Trefferquote bleibt das Risiko.",
+      "pts": 5,
+      "reb": 1,
+      "ast": 1,
+      "minutes": 28.3667,
+      "threesMade": 0,
+      "threesAttempted": 1
     }
   ],
-  "publicUpdatedAt": "2026-11-17T22:16:15Z",
+  "publicUpdatedAt": "2026-11-18T08:42:36Z",
   "journalStart": "2026-11-04",
-  "openByDate": {
-    "2026-11-17": 3
-  },
-  "openDetailsByDate": {
-    "2026-11-17": {
-      "count": 3,
-      "stake": 300,
-      "potential": 334,
-      "tipoffs": [
-        "2026-11-18T02:00",
-        "2026-11-18T04:30",
-        "2026-11-18T05:00"
-      ],
-      "conditional": 0
-    }
-  }
+  "openByDate": {},
+  "openDetailsByDate": {}
 }

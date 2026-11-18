@@ -1419,3 +1419,21 @@ Object.assign(paperLabLocales.analyses, {
     "Badio repartió dos asistencias en solo 9:34 y alcanzó exactamente el mínimo necesario. Terminó sin puntos y con dos rebotes, y su producción como pasador decidió la apuesta de asistencias. El tiempo de juego, mucho menor de lo previsto, también muestra el escaso margen que tuvo el acierto."
   ]
 });
+
+Object.assign(paperLabLocales.analyses, {
+  "Williams blieb gegen Charlotte in 23:42 Minuten bei null Punkten und einem Assist. Sein einziger Feldwurf war ein verfehlter Dreier, und er kam zu keinem Freiwurf. Bei diesem Wurfvolumen fehlten die Punkte, um die Linie von 8,5 Punkten plus Assists zu erreichen.": [
+    "Williams finished with zero points and one assist in 23:42 against Charlotte. His only shot was a missed three, and he did not attempt a free throw. Playing time was not the limiting factor here: with just one shot attempt, he lacked the volume to clear the points-plus-assists line.",
+    "Уильямс за 23:42 против «Шарлотт» не набрал очков и отдал одну передачу. Его единственный бросок с игры, трёхочковый, оказался неточным, а штрафных он не исполнял. При таком игровом времени одного броска было недостаточно для прохода ставки на очки плюс передачи.",
+    "Williams terminó con cero puntos y una asistencia en 23:42 ante Charlotte. Su único tiro de campo fue un triple fallado y no lanzó tiros libres. Contó con minutos, pero el escaso volumen de tiro dejó muy lejos la línea de puntos más asistencias."
+  ],
+  "Johnson kam gegen Detroit auf zwei Rebounds und einen Assist, zusammen drei bei einer benötigten Sieben. Er spielte nur 14:39 Minuten von der Bank, rund zwölf Minuten weniger als im Schnitt seiner sechs Spiele vor der Partie. Der kürzere Einsatz begrenzte seine Chancen sowohl am Brett als auch als Passgeber.": [
+    "Johnson had two rebounds and one assist against Detroit, combining for three of the seven required. He played just 14:39 off the bench, about twelve minutes below his average across the preceding six games. The shorter stint limited his chances on the glass and as a passer.",
+    "Джонсон набрал два подбора и одну передачу против «Детройта», всего три при необходимых семи. Он провёл на площадке всего 14:39 со скамейки, примерно на двенадцать минут меньше своего среднего за предыдущие шесть игр. Меньшее игровое время сократило его возможности и на подборе, и в розыгрыше.",
+    "Johnson sumó dos rebotes y una asistencia ante Detroit, tres de los siete necesarios. Jugó solo 14:39 desde el banquillo, unos doce minutos menos que su media de los seis partidos anteriores. El menor tiempo en pista redujo sus oportunidades tanto en el rebote como en la creación."
+  ],
+  "Jones startete gegen Utah und spielte 28:22 Minuten, nahm aber nur einen Dreier und verfehlte ihn. Vor dem Spiel hatte er in seinen letzten zehn Einsätzen im Schnitt 4,4 Dreier versucht. Mit einem einzigen Versuch war die Schwelle von zwei Treffern schon durch das geringe Wurfvolumen außer Reichweite.": [
+    "Jones started against Utah and played 28:22, but he took just one three and missed it. He had averaged 4.4 attempts from deep in his previous ten games. With only one attempt, he had no route to the two made threes needed.",
+    "Джонс вышел в старте против «Юты» и сыграл 28:22, но исполнил лишь один трёхочковый и промахнулся. В предыдущих десяти матчах он в среднем бросал из-за дуги 4,4 раза. Одной попытки было мало для нужных двух попаданий.",
+    "Jones fue titular ante Utah y jugó 28:22, pero solo intentó un triple y lo falló. Había promediado 4,4 intentos desde fuera en sus diez partidos anteriores. Con un solo lanzamiento era imposible llegar a los dos triples requeridos."
+  ]
+});
