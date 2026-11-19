@@ -1385,6 +1385,31 @@
       "threesAttempted": 1
     },
     {
+      "id": 62,
+      "date": "2026-11-18",
+      "sport": "NBA",
+      "player": "Jabari Smith Jr.",
+      "teamCode": "HOU",
+      "matchup": "HOU @ IND",
+      "market": "Punkte",
+      "operator": "Under",
+      "line": 15.5,
+      "odds": 1.95,
+      "tipoffCET": "2026-11-19T01:00",
+      "note": "Smith erzielte 17 Punkte in 25:51 Minuten. Er traf sieben von zehn Feldwürfen, darunter drei von sechs Dreiern. Die hohe Trefferquote reichte auch ohne Freiwürfe, um über die Linie von 15,5 zu kommen.",
+      "book": "Proworld",
+      "stake": 100,
+      "status": "loss",
+      "actual": 17,
+      "prognosis": "Smith blieb in elf von 15 Saisonspielen und in den letzten fünf Partien unter 15,5 Punkten. Ohne den heute fehlenden Capela traf das Under in neun von neun Spielen bei 11,3 Punkten und 33,4 Minuten im Schnitt, mit ihm in zwei von sechs. Amen Thompson ist fraglich. Im einzigen Vergleich ohne ihn erzielte Smith zwölf Punkte.",
+      "pts": 17,
+      "reb": 4,
+      "ast": 2,
+      "minutes": 25.85,
+      "threesMade": 3,
+      "threesAttempted": 6
+    },
+    {
       "id": 63,
       "date": "2026-11-18",
       "sport": "NBA",
@@ -1396,29 +1421,62 @@
       "line": 14.5,
       "odds": 2.15,
       "tipoffCET": "2026-11-19T01:00",
-      "note": "",
+      "note": "Mitchell hatte im vierten Viertel bereits 22 Punkte und 6 getroffene Dreier. Damit war der Free Pick mit 15+ Punkten durch.",
       "book": "Rabona",
       "stake": 100,
-      "status": "open",
-      "actual": null,
+      "status": "win",
+      "actual": 22,
       "prognosis": "Mitchell erzielte in elf von 14 Saisonspielen und in allen letzten fünf mindestens 15 Punkte. Mit Pelle Larsson traf er in acht von elf, ohne ihn in drei von drei. Bam Adebayo spielte in der gesamten Stichprobe. Milwaukee lässt überdurchschnittlich viele gegnerische Dreierwürfe zu.",
-      "publicPick": "free"
+      "publicPick": "free",
+      "actualMin": true
+    },
+    {
+      "id": 64,
+      "date": "2026-11-18",
+      "sport": "NBA",
+      "player": "Alperen Şengün",
+      "teamCode": "HOU",
+      "matchup": "HOU @ IND",
+      "market": "Dreier",
+      "operator": "Over",
+      "line": 0.5,
+      "odds": 1.9,
+      "tipoffCET": "2026-11-19T01:00",
+      "note": "Şengün traf seinen einzigen Dreier in 14:10 Minuten. Ein verwandelter Versuch genügte für den Tipp auf mindestens einen Dreier.",
+      "book": "Rabona",
+      "stake": 100,
+      "status": "win",
+      "actual": 1,
+      "prognosis": "Şengün traf in elf von 13 Saisonspielen mindestens einen Dreier, darunter in allen letzten fünf. Mit Amen Thompson traf er in zehn von zwölf Spielen und ohne ihn im einzigen Vergleich. Ohne Capela traf er in acht von neun. Im Schnitt nahm er nur 2,1 Dreierwürfe pro Spiel.",
+      "pts": 7,
+      "reb": 7,
+      "ast": 1,
+      "minutes": 14.1667,
+      "threesMade": 1,
+      "threesAttempted": 1
+    },
+    {
+      "id": 65,
+      "date": "2026-11-18",
+      "sport": "NBA",
+      "player": "Dean Wade",
+      "teamCode": "PHI",
+      "matchup": "PHI @ ORL",
+      "market": "Assists",
+      "operator": "Under",
+      "line": 1.5,
+      "odds": 2.19,
+      "tipoffCET": "2026-11-19T01:00",
+      "note": "Wade kam wegen Beschwerden an der linken Oberschenkelrückseite nicht zum Einsatz. Der Einsatz wurde erstattet.",
+      "book": "",
+      "stake": 100,
+      "status": "void",
+      "actual": null,
+      "prognosis": "Wade blieb in zehn von 13 Saisonspielen unter 1,5 Assists. Mit Embiid und LeBron James gemeinsam hielt das Under in sieben von sieben Spielen bei 21,6 Minuten im Schnitt, ohne mindestens einen der beiden in drei von sechs bei 32,7 Minuten. Jaylen Brown fällt aus. Die ursprüngliche Empfehlung setzte voraus, dass Embiid und James beide starten."
     }
   ],
-  "publicUpdatedAt": "2026-11-18T12:56:51Z",
+  "publicUpdatedAt": "2026-11-19T02:44:45Z",
   "journalStart": "2026-11-04",
-  "openByDate": {
-    "2026-11-18": 4
-  },
-  "openDetailsByDate": {
-    "2026-11-18": {
-      "count": 4,
-      "stake": 400,
-      "potential": 419,
-      "tipoffs": [
-        "2026-11-19T01:00"
-      ],
-      "conditional": 0
-    }
-  }
+  "openByDate": {},
+  "openDetailsByDate": {}
 }
