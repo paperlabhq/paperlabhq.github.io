@@ -1473,10 +1473,42 @@
       "status": "void",
       "actual": null,
       "prognosis": "Wade blieb in zehn von 13 Saisonspielen unter 1,5 Assists. Mit Embiid und LeBron James gemeinsam hielt das Under in sieben von sieben Spielen bei 21,6 Minuten im Schnitt, ohne mindestens einen der beiden in drei von sechs bei 32,7 Minuten. Jaylen Brown fällt aus. Die ursprüngliche Empfehlung setzte voraus, dass Embiid und James beide starten."
+    },
+    {
+      "id": 66,
+      "date": "2026-11-19",
+      "sport": "NBA",
+      "player": "Jaden McDaniels",
+      "teamCode": "MIN",
+      "matchup": "NYK @ MIN",
+      "market": "Rebounds + Assists",
+      "operator": "Over",
+      "line": 8.5,
+      "odds": 2.06,
+      "tipoffCET": "2026-11-20T02:00",
+      "note": "",
+      "book": "Cryptorino",
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "prognosis": "McDaniels erreichte mindestens neun Rebounds und Assists in 14 von 15 Saisonspielen, darunter in zehn von elf ohne Edwards und in allen 14 mit Gobert. Kuminga ist fraglich. Im einzigen Spiel ohne ihn kam McDaniels auf neun R+A in 37 Minuten. Die Knicks spielen langsam und drei der letzten fünf Treffer endeten genau bei neun.",
+      "publicPick": "free"
     }
   ],
-  "publicUpdatedAt": "2026-11-19T02:44:45Z",
+  "publicUpdatedAt": "2026-11-19T09:23:47Z",
   "journalStart": "2026-11-04",
-  "openByDate": {},
-  "openDetailsByDate": {}
+  "openByDate": {
+    "2026-11-19": 3
+  },
+  "openDetailsByDate": {
+    "2026-11-19": {
+      "count": 3,
+      "stake": 300,
+      "potential": 278,
+      "tipoffs": [
+        "2026-11-20T02:00"
+      ],
+      "conditional": 1
+    }
+  }
 }
