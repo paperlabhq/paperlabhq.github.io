@@ -1421,14 +1421,19 @@
       "line": 14.5,
       "odds": 2.15,
       "tipoffCET": "2026-11-19T01:00",
-      "note": "Mitchell hatte im vierten Viertel bereits 22 Punkte und 6 getroffene Dreier. Damit war der Free Pick mit 15+ Punkten durch.",
+      "note": "Mitchell erzielte im offiziellen Endstand 24 Punkte. Er traf acht von elf Feldwürfen und sechs von sieben Dreiern. Damit lag er neun Punkte über der Mindestmarke von 15.",
       "book": "Rabona",
       "stake": 100,
       "status": "win",
-      "actual": 22,
+      "actual": 24,
       "prognosis": "Mitchell erzielte in elf von 14 Saisonspielen und in allen letzten fünf mindestens 15 Punkte. Mit Pelle Larsson traf er in acht von elf, ohne ihn in drei von drei. Bam Adebayo spielte in der gesamten Stichprobe. Milwaukee lässt überdurchschnittlich viele gegnerische Dreierwürfe zu.",
       "publicPick": "free",
-      "actualMin": true
+      "pts": 24,
+      "reb": 2,
+      "ast": 6,
+      "minutes": 35.9333,
+      "threesMade": 6,
+      "threesAttempted": 7
     },
     {
       "id": 64,
@@ -1486,29 +1491,74 @@
       "line": 8.5,
       "odds": 2.06,
       "tipoffCET": "2026-11-20T02:00",
-      "note": "",
+      "note": "McDaniels spielte 38:43 Minuten und kam auf vier Rebounds und einen Assist. Kuminga und Gobert waren beide dabei. Die erwartete Einsatzzeit war da, aber bei nur einem Assist blieb er vier Zähler unter den benötigten neun R+A.",
       "book": "Cryptorino",
       "stake": 100,
-      "status": "open",
-      "actual": null,
+      "status": "loss",
+      "actual": 5,
       "prognosis": "McDaniels erreichte mindestens neun Rebounds und Assists in 14 von 15 Saisonspielen, darunter in zehn von elf ohne Edwards und in allen 14 mit Gobert. Kuminga ist fraglich. Im einzigen Spiel ohne ihn kam McDaniels auf neun R+A in 37 Minuten. Die Knicks spielen langsam und drei der letzten fünf Treffer endeten genau bei neun.",
-      "publicPick": "free"
+      "publicPick": "free",
+      "pts": 17,
+      "reb": 4,
+      "ast": 1,
+      "minutes": 38.7167,
+      "threesMade": 4,
+      "threesAttempted": 4
+    },
+    {
+      "id": 67,
+      "date": "2026-11-19",
+      "sport": "NBA",
+      "player": "Keaton Wagler",
+      "teamCode": "LAC",
+      "matchup": "LAC @ SAS",
+      "market": "Punkte",
+      "operator": "Over",
+      "line": 10.5,
+      "odds": 1.95,
+      "tipoffCET": "2026-11-20T02:00",
+      "note": "Wagler erzielte sieben Punkte in 17:28 Minuten. Zehn Feldwurfversuche gaben ihm genug Abschlüsse, aber er traf nur drei und kam zu keinem Freiwurf. Zuvor hatte er in jedem seiner letzten fünf Spiele mindestens vier Freiwurfversuche.",
+      "book": "Rabona",
+      "stake": 100,
+      "status": "loss",
+      "actual": 7,
+      "prognosis": "Wagler erzielte mindestens elf Punkte in elf von 13 Saisonspielen und in den letzten fünf. Garland und Dunn spielten in allen 13 Partien mit, Beal und Ingram in keiner. Mit Hachimura traf Wagler zehnmal in elf Spielen. San Antonio lässt im Schnitt 105,9 Punkte zu und Wagler hatte bei jedem seiner letzten fünf Treffer mindestens vier Freiwurfversuche.",
+      "pts": 7,
+      "reb": 5,
+      "ast": 2,
+      "minutes": 17.4667,
+      "threesMade": 1,
+      "threesAttempted": 4
+    },
+    {
+      "id": 68,
+      "date": "2026-11-19",
+      "sport": "NBA",
+      "player": "Scoot Henderson",
+      "teamCode": "POR",
+      "matchup": "POR @ MIL",
+      "market": "Rebounds + Assists",
+      "operator": "Under",
+      "line": 5.5,
+      "odds": 1.77,
+      "tipoffCET": "2026-11-20T02:00",
+      "note": "Camara und Lillard starteten, Holiday und Henderson kamen von der Bank. Avdija fehlte. Henderson spielte 35:03 Minuten, gut 13 Minuten mehr als im Schnitt der vorherigen fünf Spiele. Mit sieben Rebounds und drei Assists ging das Under verloren. Die Bankrolle allein war kein verlässlicher Hinweis auf seine Einsatzzeit.",
+      "book": "Rabona",
+      "stake": 100,
+      "status": "loss",
+      "actual": 10,
+      "prognosis": "Das Under hielt in allen 14 Saisonspielen und in zehn von zehn ohne den weiterhin fehlenden Ja Morant. Ohne Avdija gab es bisher nur ein Spiel mit zwei R+A in 21 Minuten. Camara und Avdija sind fraglich. Die Analyse setzt voraus, dass Camara spielt und Henderson in seiner üblichen Bankrolle bleibt. Milwaukee lässt 48,1 Rebounds und 27,9 Assists pro Partie zu.",
+      "condition": "Toumani Camara spielt und Henderson bleibt in seiner üblichen Bankrolle hinter Damian Lillard und Jrue Holiday.",
+      "pts": 27,
+      "reb": 7,
+      "ast": 3,
+      "minutes": 35.05,
+      "threesMade": 5,
+      "threesAttempted": 6
     }
   ],
-  "publicUpdatedAt": "2026-11-19T09:23:47Z",
+  "publicUpdatedAt": "2026-11-20T09:41:02Z",
   "journalStart": "2026-11-04",
-  "openByDate": {
-    "2026-11-19": 3
-  },
-  "openDetailsByDate": {
-    "2026-11-19": {
-      "count": 3,
-      "stake": 300,
-      "potential": 278,
-      "tipoffs": [
-        "2026-11-20T02:00"
-      ],
-      "conditional": 1
-    }
-  }
+  "openByDate": {},
+  "openDetailsByDate": {}
 }
