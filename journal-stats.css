@@ -1,0 +1,96 @@
+.stats-filters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  gap: 14px;
+  align-items: end;
+  padding: clamp(14px, 2vw, 20px);
+  margin-bottom: 14px;
+}
+.stats-filter {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+.stats-filter label, .stats-chart-note, .stats-count { color: var(--muted); }
+.stats-filter label, #view-stats .stats-filters .field { font-size: .875rem; }
+#view-stats .stats-filters .field {
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+}
+#view-stats .stats-filters select {
+  appearance: none;
+  padding: 9px 32px 9px 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%2397a6bd' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+}
+.stats-filters button:disabled { opacity: .5; cursor: default; }
+#statKpis { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+#statKpis .metric:has(.metricvalue.bad)::before { background: var(--red); }
+#view-stats .section-top h2 { font-size: 1.125rem; }
+#statKpis .metricvalue { font-size: clamp(1.125rem, 2.3vw, 1.85rem); overflow-wrap: anywhere; }
+#statKpis .metricfoot { font-size: .8125rem; overflow-wrap: anywhere; }
+#view-stats .stats-count { margin: 0 0 14px; font-size: .875rem; }
+.stats-panel { min-width: 0; }
+.stats-panel h3 { margin: 0 0 10px; font-size: 1rem; }
+.stats-chart-note { font-size: .875rem; margin: 0 0 12px; }
+.stats-breakdowns { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; margin-bottom: 14px; }
+.stats-side { display: grid; gap: 14px; align-content: start; min-width: 0; }
+.stats-market-list { margin: 0; padding: 0; list-style: none; }
+.stats-market-list .market-stat { min-height: 48px; }
+.stats-panel .market-stat small { font-size: .8125rem; }
+.stats-record { display: block; }
+.stats-market-list .market-money { min-width: 0; }
+.stats-market-button {
+  display: block;
+  border: 0;
+  background: none;
+  color: var(--text);
+  text-align: left;
+  padding: 4px 0;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+.stats-market-button:hover { color: var(--green); }
+.stats-ledger-item { border-bottom: 1px solid var(--border); }
+.stats-ledger-item:last-child { border-bottom: 0; }
+.stats-ledger-item summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 10px 0;
+  list-style: none;
+  cursor: pointer;
+}
+.stats-ledger-item summary::-webkit-details-marker { display: none; }
+.stats-ledger-item summary:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+.stats-ledger-item summary .muted { font-size: .8125rem; }
+.stats-ledger-item summary span, .stats-ledger-item summary b { overflow-wrap: anywhere; }
+.stats-ledger-day, .stats-ledger-number { display: grid; gap: 1px; min-width: 0; }
+.stats-ledger-number { text-align: right; font-variant-numeric: tabular-nums; }
+.stats-ledger-date { display: flex; align-items: center; gap: 7px; }
+.stats-ledger-date::before {
+  content: '';
+  flex: 0 0 7px;
+  height: 7px;
+  border-right: 1px solid var(--muted);
+  border-bottom: 1px solid var(--muted);
+  transform: rotate(-45deg);
+}
+.stats-ledger-item[open] .stats-ledger-date::before { transform: rotate(45deg) translateY(-2px); }
+.stats-ledger-picks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; padding-bottom: 12px; }
+.stats-ledger-picks .calendar-pick { min-width: 0; margin: 0; }
+.stats-ledger-picks .calendar-pick-head > div { min-width: 0; overflow-wrap: anywhere; }
+.stats-ledger-picks .calendar-pick-match { flex-wrap: wrap; }
+@media (max-width: 900px) {
+  #statKpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .stats-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .stats-breakdowns, .stats-ledger-picks { grid-template-columns: minmax(0, 1fr); }
+  .stats-ledger-item summary { gap: 6px; }
+}

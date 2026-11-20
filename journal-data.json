@@ -1555,9 +1555,29 @@
       "minutes": 35.05,
       "threesMade": 5,
       "threesAttempted": 6
+    },
+    {
+      "id": 70,
+      "date": "2026-11-20",
+      "sport": "NBA",
+      "player": "Jamal Shead",
+      "teamCode": "TOR",
+      "matchup": "TOR @ DET",
+      "market": "Assists",
+      "operator": "Over",
+      "line": 4.5,
+      "odds": 1.6452,
+      "book": "Rabona",
+      "tipoffCET": "2026-11-21T01:30",
+      "stake": 100,
+      "status": "open",
+      "actual": null,
+      "note": "",
+      "prognosis": "Shead kam in 13 von 15 Saisonspielen auf mindestens fünf Assists, darunter elf von 13 neben Immanuel Quickley. Im einzigen Spiel ohne RJ Barrett und Kawhi Leonard verteilte er sechs Assists in 24 Minuten. Detroit lässt im Schnitt 23,6 Assists pro Spiel zu, den drittniedrigsten Wert der Liga.",
+      "publicPick": "free"
     }
   ],
-  "publicUpdatedAt": "2026-11-20T10:45:45Z",
+  "publicUpdatedAt": "2026-11-20T23:23:45Z",
   "journalStart": "2026-11-04",
   "openByDate": {
     "2026-11-20": 2
@@ -1565,8 +1585,6 @@
   "openDetailsByDate": {
     "2026-11-20": {
       "count": 2,
-      "stake": 200,
-      "potential": 141.52,
       "tipoffs": [
         "2026-11-21T01:30"
       ],
