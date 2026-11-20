@@ -1557,8 +1557,20 @@
       "threesAttempted": 6
     }
   ],
-  "publicUpdatedAt": "2026-11-20T09:41:02Z",
+  "publicUpdatedAt": "2026-11-20T10:45:45Z",
   "journalStart": "2026-11-04",
-  "openByDate": {},
-  "openDetailsByDate": {}
+  "openByDate": {
+    "2026-11-20": 2
+  },
+  "openDetailsByDate": {
+    "2026-11-20": {
+      "count": 2,
+      "stake": 200,
+      "potential": 141.52,
+      "tipoffs": [
+        "2026-11-21T01:30"
+      ],
+      "conditional": 0
+    }
+  }
 }
