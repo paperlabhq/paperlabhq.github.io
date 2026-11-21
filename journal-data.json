@@ -1557,6 +1557,31 @@
       "threesAttempted": 6
     },
     {
+      "id": 69,
+      "date": "2026-11-20",
+      "sport": "NBA",
+      "player": "Anthony Black",
+      "teamCode": "ORL",
+      "matchup": "ORL @ BKN",
+      "market": "Assists",
+      "operator": "Over",
+      "line": 4.5,
+      "odds": 1.77,
+      "book": "",
+      "tipoffCET": "2026-11-21T01:30",
+      "stake": 100,
+      "status": "win",
+      "actual": 6,
+      "note": "Black verteilte beim 113:111 gegen Brooklyn sechs Assists in 36:31 Minuten und traf das Over 4,5. Er startete neben Jalen Suggs und hatte zur Halbzeit bereits vier Assists. Der tatsächlich genutzte Buchmacher für die im Journal erfasste Quote 1,77 ist offen.",
+      "prognosis": "Black erreichte in neun von elf Saisonspielen mindestens fünf Assists. Zuletzt waren es fünf Treffer in Folge bei 35,6 Minuten im Schnitt. Banchero fehlte schon in allen elf Vergleichsspielen. Mit Suggs traf Black in vier von vier, ohne ihn in fünf von sieben. Zwei der letzten fünf Treffer lagen genau bei fünf Assists.",
+      "pts": 13,
+      "reb": 7,
+      "ast": 6,
+      "minutes": 36.5167,
+      "threesMade": 2,
+      "threesAttempted": 6
+    },
+    {
       "id": 70,
       "date": "2026-11-20",
       "sport": "NBA",
@@ -1570,25 +1595,21 @@
       "book": "Rabona",
       "tipoffCET": "2026-11-21T01:30",
       "stake": 100,
-      "status": "open",
-      "actual": null,
-      "note": "",
+      "status": "loss",
+      "actual": 4,
+      "note": "Shead verteilte beim 105:102 in Detroit vier Assists in 15:23 Minuten und verfehlte das Over 4,5 um einen Assist. Er kam von der Bank, während Immanuel Quickley als Starter in 32:37 Minuten zehn Assists gab. Shead hatte vor dem Spiel im Saisonschnitt 23,8 Minuten. Für einen ähnlichen Tipp sollte die Einsatzspanne vor der Freigabe stärker geprüft werden.",
       "prognosis": "Shead kam in 13 von 15 Saisonspielen auf mindestens fünf Assists, darunter elf von 13 neben Immanuel Quickley. Im einzigen Spiel ohne RJ Barrett und Kawhi Leonard verteilte er sechs Assists in 24 Minuten. Detroit lässt im Schnitt 23,6 Assists pro Spiel zu, den drittniedrigsten Wert der Liga.",
-      "publicPick": "free"
+      "publicPick": "free",
+      "pts": 0,
+      "reb": 1,
+      "ast": 4,
+      "minutes": 15.3833,
+      "threesMade": 0,
+      "threesAttempted": 2
     }
   ],
-  "publicUpdatedAt": "2026-11-20T23:23:45Z",
+  "publicUpdatedAt": "2026-11-21T09:41:40Z",
   "journalStart": "2026-11-04",
-  "openByDate": {
-    "2026-11-20": 2
-  },
-  "openDetailsByDate": {
-    "2026-11-20": {
-      "count": 2,
-      "tipoffs": [
-        "2026-11-21T01:30"
-      ],
-      "conditional": 0
-    }
-  }
+  "openByDate": {},
+  "openDetailsByDate": {}
 }
