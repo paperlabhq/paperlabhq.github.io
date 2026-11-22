@@ -1682,8 +1682,10 @@
       "resultSource": "https://www.nba.com/sixers/game/0022600274-bucks-vs-sixers-philadelphia-pa-11-21-2026/box-score"
     }
   ],
-  "publicUpdatedAt": "2026-11-22T09:18:33Z",
+  "publicUpdatedAt": "2026-11-22T12:53:53Z",
   "journalStart": "2026-11-04",
-  "openByDate": {},
+  "openByDate": {
+    "2026-11-22": 1
+  },
   "openDetailsByDate": {}
 }
